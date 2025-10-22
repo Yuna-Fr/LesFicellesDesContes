@@ -17,7 +17,11 @@ script = ExtResource("1_lavf1")
 [node name="SceneExecuter" type="Node" parent="."]
 script = ExtResource("2_if72n")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+
+[node name="MusicPlayerA" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+
+[node name="MusicPlayerB" type="AudioStreamPlayer2D" parent="SceneExecuter"]
 
 [node name="Layer-Background" type="CanvasLayer" parent="."]
 layer = 0
