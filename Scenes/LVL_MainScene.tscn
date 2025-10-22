@@ -1,11 +1,14 @@
-[gd_scene format=3 uid="uid://l4d0yoybegsk"]
+[gd_scene load_steps=3 format=3 uid="uid://l4d0yoybegsk"]
+
+[ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_lavf1"]
+[ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_if72n"]
 
 [node name="LVL_MainScene" type="Node2D"]
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_direction = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_lavf1")
+
+[node name="SceneExecuter" type="Node" parent="."]
+script = ExtResource("2_if72n")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SceneExecuter"]
