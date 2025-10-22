@@ -1,9 +1,77 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=2 format=3 uid="uid://dst0uouu4wjwf"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=14 format=3 uid="uid://dst0uouu4wjwf"]
 
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_qgccc"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="1_s4yqs"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="3_34i54"]
+
+[sub_resource type="Resource" id="Resource_s4yqs"]
+resource_local_to_scene = true
+script = ExtResource("1_s4yqs")
+character = "Kat"
+vitesse = 50.0
+target = NodePath("Positions/Kat/Kat_Position_1")
+metadata/_custom_type_script = "uid://bsl3tjlwwx8sl"
+
+[sub_resource type="Resource" id="Resource_34i54"]
+resource_local_to_scene = true
+script = ExtResource("1_s4yqs")
+character = "BB"
+vitesse = 30.0
+target = NodePath("Positions/Kat/Kat_Position_1")
+metadata/_custom_type_script = "uid://bsl3tjlwwx8sl"
+
+[sub_resource type="Resource" id="Resource_smwk3"]
+script = ExtResource("3_34i54")
+direction = "haut"
+target = NodePath("Spawns/Haut/Bush_1")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_uvb7d"]
+script = ExtResource("3_34i54")
+direction = "haut"
+target = NodePath("Spawns/Haut/Bush_5")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_6wlp8"]
+script = ExtResource("3_34i54")
+direction = "bas"
+target = NodePath("Spawns/Bas/Bush_2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_b33um"]
+script = ExtResource("3_34i54")
+direction = "bas"
+target = NodePath("Spawns/Bas/Bush_6")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_6k0b4"]
+script = ExtResource("3_34i54")
+direction = "gauche"
+target = NodePath("Spawns/Gauche/Bush_3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_l621v"]
+script = ExtResource("3_34i54")
+direction = "droite"
+target = NodePath("Spawns/Droite/Bush_4")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_260te"]
+script = ExtResource("3_34i54")
+direction = "haut"
+target = NodePath("Spawns/Haut/Bush_6")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_4febg"]
+script = ExtResource("3_34i54")
+direction = "haut"
+target = NodePath("Spawns/Haut/Bush_7")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
 
 [resource]
 script = ExtResource("1_qgccc")
 description = "Event de test et le premier"
 next_events = Array[String](["data_2"])
+movements = Array[ExtResource("1_s4yqs")]([SubResource("Resource_s4yqs"), SubResource("Resource_34i54")])
+spawns = Array[ExtResource("3_34i54")]([SubResource("Resource_smwk3"), SubResource("Resource_uvb7d"), SubResource("Resource_6wlp8"), SubResource("Resource_b33um"), SubResource("Resource_6k0b4"), SubResource("Resource_l621v"), SubResource("Resource_260te"), SubResource("Resource_4febg")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

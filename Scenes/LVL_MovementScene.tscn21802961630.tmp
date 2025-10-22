@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfdfgl0vd1ktb"]
+
+[ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_wux2h"]
+[ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_0k61y"]
+[ext_resource type="Texture2D" uid="uid://bljxsb784e8af" path="res://Assets/Characters/Kat.png" id="3_0k61y"]
+
+[sub_resource type="Gradient" id="Gradient_0k61y"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ketf7"]
+gradient = SubResource("Gradient_0k61y")
+
+[node name="LVL_MovementScene" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_wux2h")
+
+[node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("Kat")]
+script = ExtResource("2_0k61y")
+Kat = NodePath("../Characters/Kat")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Kat" type="Sprite2D" parent="Characters"]
+position = Vector2(-1873, 0)
+texture = ExtResource("3_0k61y")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.2, 0.2)
+
+[node name="Positions" type="Node" parent="."]
+
+[node name="Kat" type="Node" parent="Positions"]
+
+[node name="Kat_Position_1" type="Sprite2D" parent="Positions/Kat"]
+position = Vector2(2396, 80)
+scale = Vector2(1, 175.5)
+texture = SubResource("GradientTexture1D_ketf7")
