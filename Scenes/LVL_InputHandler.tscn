@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bouhsu6mppjwi"]
+
+[ext_resource type="Script" uid="uid://0tphuxy6a2n6" path="res://Scripts/InputHandler.gd" id="1_p8fyc"]
+[ext_resource type="Script" uid="uid://cev5fcug34pab" path="res://Scripts/TestInput.gd" id="2_lm3uy"]
+
+[node name="Main" type="Node2D"]
+
+[node name="InputHandler" type="Node" parent="."]
+script = ExtResource("1_p8fyc")
+
+[node name="TestInput" type="Node" parent="."]
+script = ExtResource("2_lm3uy")
