@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="LesFicellesDesContes"
-run/main_scene="uid://bouhsu6mppjwi"
+run/main_scene="uid://l4d0yoybegsk"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

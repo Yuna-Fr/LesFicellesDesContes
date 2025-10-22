@@ -1,9 +1,18 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=2 format=3 uid="uid://tcxx5v8557d"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=4 format=3 uid="uid://tcxx5v8557d"]
 
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_4vgof"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0, 0.9933222)
+colors = PackedColorArray(1, 0, 0, 1, 0.26057518, 4.579641e-05, 0.26057312, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
 
 [resource]
 script = ExtResource("1_4vgof")
 description = "Event de test 2"
+background = SubResource("GradientTexture2D_dinbm")
 next_events = Array[String](["data_1"])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

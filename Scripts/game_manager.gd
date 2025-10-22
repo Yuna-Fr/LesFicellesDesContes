@@ -7,6 +7,7 @@ var current_scene: Node
 
 func _ready():
 	load_event(current_event_id)
+	scene_executer.connect("event_finished", Callable(self, "on_event_finished"))
 
 func load_event(event_id: String):
 	if current_scene: 
@@ -18,7 +19,6 @@ func load_event(event_id: String):
 		return
 	
 	scene_executer.execute(load(event_res_path))
-	scene_executer.connect("event_finished", Callable(self, "on_event_finished"))
 
 func on_event_finished(next_event_id: String):
 	current_event_id = next_event_id
