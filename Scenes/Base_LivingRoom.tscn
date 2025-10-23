@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://clsy5vho7xk7i"]
+[gd_scene load_steps=14 format=3 uid="uid://c1xpxhw7p2xo0"]
 
 [ext_resource type="Texture2D" uid="uid://cgiebrxhp88hm" path="res://Assets/Decors/decor_livingroom.png" id="1_hbis5"]
 [ext_resource type="Texture2D" uid="uid://vjahjcwqp8mt" path="res://Assets/Props/Objets/props_painting2.png" id="3_ruqpe"]
@@ -17,7 +17,7 @@
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wg6x7"]
 gradient = SubResource("Gradient_1kdmn")
 
-[node name="Base_Decor" type="Node2D"]
+[node name="Base_Decor3" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)

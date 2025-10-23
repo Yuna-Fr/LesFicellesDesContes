@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhqjb0hl7y61g"]
+
+[ext_resource type="Texture2D" uid="uid://77uosps4yrin" path="res://Assets/Props/Objets/props_painting1.png" id="1_lw5fs"]
+[ext_resource type="Texture2D" uid="uid://vjahjcwqp8mt" path="res://Assets/Props/Objets/props_painting2.png" id="2_tw50n"]
+[ext_resource type="Texture2D" uid="uid://dq81m582kcudl" path="res://Assets/Props/Objets/props_painting3.png" id="3_by4ef"]
+[ext_resource type="Texture2D" uid="uid://8r3i84fpu7jq" path="res://Assets/Props/Objets/props_painting4.png" id="4_h0n60"]
+[ext_resource type="Texture2D" uid="uid://ba8f6ygcfttcl" path="res://Assets/Props/Objets/props_painting5.png" id="5_3cu2v"]
+[ext_resource type="Texture2D" uid="uid://c2fsd1bgl77gm" path="res://Assets/Decors/decor_stairs.png" id="6_6v4ii"]
+
+[sub_resource type="Gradient" id="Gradient_1kdmn"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wg6x7"]
+gradient = SubResource("Gradient_1kdmn")
+
+[node name="Base_Decor" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Spawns" type="Node" parent="."]
+
+[node name="Haut" type="Node" parent="Spawns"]
+
+[node name="Prop_MD_PropsPainting1" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(1071.25, -1020.6224)
+scale = Vector2(1.434732, 1.434732)
+texture = ExtResource("1_lw5fs")
+
+[node name="Prop_MD_PropsPainting2" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(108, -904)
+texture = ExtResource("2_tw50n")
+
+[node name="Prop_MD_PropsPainting3" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(2142, -1462)
+texture = ExtResource("3_by4ef")
+
+[node name="Prop_MD_PropsPainting4" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-270, -1576)
+texture = ExtResource("4_h0n60")
+
+[node name="Prop_MD_PropsPainting5" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(1569, -203.99998)
+scale = Vector2(0.5840708, 0.5840708)
+texture = ExtResource("5_3cu2v")
+
+[node name="Bas" type="Node" parent="Spawns"]
+
+[node name="Prop_BG_DecorStairs" type="Sprite2D" parent="Spawns/Bas"]
+z_index = -1
+position = Vector2(-16.333374, -7)
+scale = Vector2(1.6638888, 1.6638888)
+texture = ExtResource("6_6v4ii")
+metadata/_edit_lock_ = true
+
+[node name="Gauche" type="Node" parent="Spawns"]
+
+[node name="Droite" type="Node" parent="Spawns"]
+
+[node name="Sol" type="Sprite2D" parent="."]
+position = Vector2(-66.00001, 2240.0002)
+scale = Vector2(119.44951, 21.769768)
+texture = SubResource("GradientTexture2D_wg6x7")
