@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://be2pe8tsnrruh"]
+[gd_scene load_steps=19 format=3 uid="uid://cph8b2iow4j6c"]
 
 [ext_resource type="Texture2D" uid="uid://6ae357ry0rar" path="res://Assets/Props/Vegetation/props_grass_green.png" id="3_8gb7s"]
 [ext_resource type="Texture2D" uid="uid://caqpr6qap7pip" path="res://Assets/Props/Vegetation/props_night.png" id="4_1oaxd"]

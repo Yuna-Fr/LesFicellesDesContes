@@ -36,7 +36,7 @@ shader = ExtResource("10_4adrk")
 shader_parameter/grad_tex1 = SubResource("GradientTexture2D_cvmg3")
 shader_parameter/fade = 0.0
 
-[node name="Base_Decor" type="Node2D"]
+[node name="Base_Decor2" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)
