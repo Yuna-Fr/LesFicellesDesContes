@@ -3,35 +3,8 @@ class_name SceneExecuter extends Node
 signal event_finished(next_event_id: String)
 signal scene_ready
 
-
-var movements_finished : bool = false
-var spawns_finished : bool = false
-var waiting_for_scene : bool = false
-
-
-
-var active_movements: Array = []
-var active_tweens = 0
-var active_objects: Dictionary = {}
-
-
 @export var music_fade_time : float = 2.0
 @export var positions_root : Node
-
-var background: BackgroundFader
-var audio_player
-var music_player_a
-var music_player_b
-var event_data: BaseEvent
-#region General
-
-func _init_refs() -> void:
-	#inputHandler = $"../InputHandler"
-	background = $"../CanvaControl/Layer-Background/Background"
-	audio_player = $AudioPlayer
-	music_player_a = $MusicPlayerA
-	music_player_b = $MusicPlayerB
-	#inputHandler.button_pressed.connect(_on_rope_pulled)
 
 '''Characters'''
 @export var Kat : Node2D
@@ -42,14 +15,36 @@ func _init_refs() -> void:
 @export var Dead : Node2D
 @export var Brother : Node2D
 
+var background: BackgroundFader
+var audio_player
+var music_player_a
+var music_player_b
+
+# Mouvments
+var movements_finished : bool = false
+var spawns_finished : bool = false
+var waiting_for_scene : bool = false
+var active_movements: Array = []
+var active_tweens = 0
+var active_objects: Dictionary = {}
+
+var event_data: BaseEvent
+
+#region General
+
+func _init_refs():
+	background = $"../CanvaControl/Layer-Background/Background"
+	audio_player = $AudioPlayer
+	music_player_a = $MusicPlayerA
+	music_player_b = $MusicPlayerB
+
 func execute(_event_data: BaseEvent):
 	if(background == null): _init_refs()
 	
-	event_data = _event_data
 	movements_finished = false
 	spawns_finished = false
 	waiting_for_scene = false
-
+	event_data = _event_data
 	
 	if event_data == null:
 		push_error("No event_data to excute !")
@@ -74,9 +69,9 @@ func execute(_event_data: BaseEvent):
 			if dialogue.delay_after_sound > 0:
 				await get_tree().create_timer(dialogue.delay_after_sound).timeout
 
-	# _show_choices()
-	
+#endregion
 
+#region Mouvements
 
 func _process(delta):
 	if(movements_finished && spawns_finished):
@@ -156,8 +151,6 @@ func get_direction(direction_name: String) -> Vector2:
 		"droite": return Vector2(viewport_size.x, 0)
 		_: return Vector2.ZERO
 
-		
-
 func _on_single_spawn_finished():
 	active_tweens -= 1
 	if active_tweens <= 0:
@@ -234,15 +227,6 @@ func get_character_node(character_name: String) -> Node2D:
 		"Dead": return Dead
 		"Brother": return Brother
 		_: return null
-
-func _show_choices():
-	print("Choose your next path:")
-	#inputHandler.request_button_input() 
-	#TO REMOVE LATER 
-#func _on_rope_pulled(button_name: String):
-	#print("Bouton détecté dans le test :", button_name)
-	#var next_event = event_data.next_events[0]
-	#emit_signal("event_finished", next_event)
 
 #endregion
 
