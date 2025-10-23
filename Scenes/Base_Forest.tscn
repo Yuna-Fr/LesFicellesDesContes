@@ -1,14 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://0538d5nmfvg4"]
+[gd_scene load_steps=18 format=3 uid="uid://0538d5nmfvg4"]
 
 [ext_resource type="Texture2D" uid="uid://cru53htusno8k" path="res://Assets/Props/Vegetation/props_shadow_tree.png" id="1_37qa2"]
 [ext_resource type="Texture2D" uid="uid://bx1uuayckv6g0" path="res://Assets/Props/Vegetation/props_grass2.png" id="2_c5vhi"]
 [ext_resource type="Texture2D" uid="uid://dsvwwsadkqpoc" path="res://Assets/Props/Vegetation/props_bluefar_tree.png" id="3_axng7"]
 [ext_resource type="Texture2D" uid="uid://6ae357ry0rar" path="res://Assets/Props/Vegetation/props_grass_green.png" id="3_igk0r"]
+[ext_resource type="Texture2D" uid="uid://cvnkpp2muoe1p" path="res://Assets/Props/Vegetation/props_blue_tre.png" id="4_cvmg3"]
 [ext_resource type="Texture2D" uid="uid://c855ldv3jynha" path="res://Assets/Props/Vegetation/props_BG_big_tree.png" id="4_igk0r"]
 [ext_resource type="Texture2D" uid="uid://wc4iwthgsc6f" path="res://Assets/Props/Vegetation/props_tree_branches.png" id="4_v7y2b"]
 [ext_resource type="Texture2D" uid="uid://b2pc4kw5xxo63" path="res://Assets/Props/Vegetation/props_branch_leaves.png" id="5_4adrk"]
 [ext_resource type="Texture2D" uid="uid://dvfwa0kf452af" path="res://Assets/Props/Vegetation/props_bush.png" id="8_cvmg3"]
 [ext_resource type="Texture2D" uid="uid://bxn61pmea25ka" path="res://Assets/Props/Vegetation/props_bush_ornement.png" id="9_qm13n"]
+[ext_resource type="Shader" uid="uid://bon1xjardfuqj" path="res://Materials/Shaders/background_shader.gdshader" id="10_4adrk"]
+[ext_resource type="Script" uid="uid://bm0t5saq1cr4k" path="res://Scripts/Specific/background_fader.gd" id="11_cvmg3"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
 offsets = PackedFloat32Array(0, 0.9880952)
@@ -16,6 +19,18 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wg6x7"]
 gradient = SubResource("Gradient_1kdmn")
+
+[sub_resource type="Gradient" id="Gradient_4adrk"]
+colors = PackedColorArray(0.8134, 0.9411267, 0.98, 1, 0.57, 0.59149987, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cvmg3"]
+gradient = SubResource("Gradient_4adrk")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qm13n"]
+shader = ExtResource("10_4adrk")
+shader_parameter/grad_tex1 = SubResource("GradientTexture2D_cvmg3")
+shader_parameter/fade = 0.0
 
 [node name="Base_Decor" type="Node2D"]
 
@@ -27,9 +42,24 @@ zoom = Vector2(0.3, 0.3)
 [node name="Haut" type="Node" parent="Spawns"]
 
 [node name="PropsBGShadowTree" type="Sprite2D" parent="Spawns/Haut"]
+z_index = -1
 position = Vector2(2150.9998, 221)
 rotation = 1.5707964
 scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("1_37qa2")
+
+[node name="PropsBGShadowTree3" type="Sprite2D" parent="Spawns/Haut"]
+z_index = -1
+position = Vector2(-309, 34)
+rotation = -1.5707963
+scale = Vector2(1.1699742, 1.1699742)
+texture = ExtResource("1_37qa2")
+
+[node name="PropsBGShadowTree2" type="Sprite2D" parent="Spawns/Haut"]
+z_index = -1
+position = Vector2(-3858.9998, 572)
+rotation = 1.5707965
+scale = Vector2(2.0355077, 2.0355077)
 texture = ExtResource("1_37qa2")
 
 [node name="PropsBGGrassGreen2" type="Sprite2D" parent="Spawns/Haut"]
@@ -42,22 +72,44 @@ position = Vector2(-1618.9998, 1273)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("3_igk0r")
 
-[node name="PropsBGShadowTree2" type="Sprite2D" parent="Spawns/Haut"]
-position = Vector2(-3858.9998, 572)
-rotation = 1.5707965
-scale = Vector2(2.0355077, 2.0355077)
-texture = ExtResource("1_37qa2")
-
-[node name="PropsBGShadowTree3" type="Sprite2D" parent="Spawns/Haut"]
-position = Vector2(314.99976, 362)
-rotation = -1.5707963
-scale = Vector2(1.8852926, 1.8852926)
-texture = ExtResource("1_37qa2")
-
 [node name="PropsBluefarTree" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-1544, -468)
 scale = Vector2(2.017852, 2.017852)
 texture = ExtResource("3_axng7")
+
+[node name="PropsBlueTre" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-2783, -654.00006)
+rotation = -3.1415927
+scale = Vector2(2.006, -2.006)
+texture = ExtResource("4_cvmg3")
+
+[node name="PropsBlueTre2" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(1161.0001, -414)
+rotation = 3.1415925
+scale = Vector2(2.006, -2.006)
+texture = ExtResource("4_cvmg3")
+
+[node name="PropsBranchLeaves" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(1928.9995, 1290.9999)
+rotation = -2.4997537
+scale = Vector2(1.3010416, 1.3010416)
+texture = ExtResource("5_4adrk")
+
+[node name="PropsBluefarTree2" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(363.99988, -468)
+scale = Vector2(2.017852, 2.017852)
+texture = ExtResource("3_axng7")
+
+[node name="PropsBlueTre3" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-526.99994, -774)
+rotation = 3.2265868
+scale = Vector2(2.235895, -2.235895)
+texture = ExtResource("4_cvmg3")
+
+[node name="PropsBlueTre4" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(2290, -630.0005)
+scale = Vector2(2.184469, 2.184469)
+texture = ExtResource("4_cvmg3")
 
 [node name="PropsTreeBranches" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-2307, 797)
@@ -70,17 +122,6 @@ position = Vector2(2651, 1014.0001)
 rotation = 1.6317333
 scale = Vector2(1.7030162, -1.7578436)
 texture = ExtResource("4_v7y2b")
-
-[node name="PropsBranchLeaves" type="Sprite2D" parent="Spawns/Haut"]
-position = Vector2(1928.9995, 1290.9999)
-rotation = -2.4997537
-scale = Vector2(1.3010416, 1.3010416)
-texture = ExtResource("5_4adrk")
-
-[node name="PropsBluefarTree2" type="Sprite2D" parent="Spawns/Haut"]
-position = Vector2(363.99988, -468)
-scale = Vector2(2.017852, 2.017852)
-texture = ExtResource("3_axng7")
 
 [node name="PropsBGGrass2" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-853.313, 1464.6482)
@@ -147,3 +188,16 @@ texture = ExtResource("9_qm13n")
 position = Vector2(-75.00001, 2249)
 scale = Vector2(119.44951, 21.769768)
 texture = SubResource("GradientTexture2D_wg6x7")
+
+[node name="Layer-Background" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="Background" type="ColorRect" parent="Layer-Background"]
+z_index = -1
+material = SubResource("ShaderMaterial_qm13n")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_cvmg3")

@@ -20,7 +20,7 @@
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wg6x7"]
 gradient = SubResource("Gradient_1kdmn")
 
-[node name="Base_Decor" type="Node2D"]
+[node name="Base_Decor3" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)

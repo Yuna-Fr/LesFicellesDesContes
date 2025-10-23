@@ -1,6 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4d8vjqojxio7"]
+[gd_scene load_steps=9 format=3 uid="uid://b4d8vjqojxio7"]
 
-[ext_resource type="Texture2D" uid="uid://cnv4nqwnhtwei" path="res://Assets/Decors/decor_bedroom.png" id="1_jegwl"]
+[ext_resource type="Texture2D" uid="uid://cnv4nqwnhtwei" path="res://Assets/Decors/decor_bedroom.png" id="1_3fy4p"]
+[ext_resource type="Texture2D" uid="uid://dkjxgps04inbd" path="res://Assets/Props/Objets/props_closet.png" id="2_i3bfc"]
+[ext_resource type="Texture2D" uid="uid://34errp6p6x13" path="res://Assets/Props/Objets/props_bed.png" id="3_84ipy"]
+[ext_resource type="Texture2D" uid="uid://dq81m582kcudl" path="res://Assets/Props/Objets/props_painting3.png" id="4_cj11p"]
+[ext_resource type="Texture2D" uid="uid://vjahjcwqp8mt" path="res://Assets/Props/Objets/props_painting2.png" id="5_bxher"]
+[ext_resource type="Texture2D" uid="uid://cxvowntpht1b4" path="res://Assets/Props/Objets/Prop_mouton2.png" id="6_i3bfc"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
 
@@ -22,12 +27,34 @@ zoom = Vector2(0.3, 0.3)
 
 [node name="Droite" type="Node" parent="Spawns"]
 
+[node name="DecorBedroom" type="Sprite2D" parent="."]
+position = Vector2(1.0000002, 4.9999995)
+scale = Vector2(1.6648481, 1.6648481)
+texture = ExtResource("1_3fy4p")
+
+[node name="PropsCloset" type="Sprite2D" parent="."]
+position = Vector2(-2608, 558)
+scale = Vector2(1.398682, 1.4625198)
+texture = ExtResource("2_i3bfc")
+
 [node name="Sol" type="Sprite2D" parent="."]
 position = Vector2(-66.00001, 2240.0002)
 scale = Vector2(119.44951, 21.769768)
 texture = SubResource("GradientTexture2D_wg6x7")
 
-[node name="DecorBedroom" type="Sprite2D" parent="."]
-position = Vector2(-7.4999523, -4.7810783)
-scale = Vector2(1.6705729, 1.674277)
-texture = ExtResource("1_jegwl")
+[node name="PropsBed" type="Sprite2D" parent="."]
+position = Vector2(1593, 643.00006)
+scale = Vector2(-1.2701914, 1.2799988)
+texture = ExtResource("3_84ipy")
+
+[node name="PropsPainting3" type="Sprite2D" parent="."]
+position = Vector2(2384, -535)
+texture = ExtResource("4_cj11p")
+
+[node name="PropsPainting2" type="Sprite2D" parent="."]
+position = Vector2(1344, -774)
+texture = ExtResource("5_bxher")
+
+[node name="PropMouton2" type="Sprite2D" parent="."]
+position = Vector2(-2227, -365)
+texture = ExtResource("6_i3bfc")
