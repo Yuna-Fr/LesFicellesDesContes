@@ -103,7 +103,7 @@ func _on_button_pressed(button_name: String):
 	await get_tree().create_timer(0.6).timeout
 	var next_event: Scene = current_choices[index]
 	print("Scène choisie :", next_event.name)
-	scene_executer.emit_signal("event_finished", next_event)
+	scene_executer.emit_signal("event_finished", next_event.name)
 	animating = false
 
 func _hide_all_buttons():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://tumew7rsqess"]
+[gd_scene load_steps=17 format=3 uid="uid://tumew7rsqess"]
 
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_5bc5r"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_87gg6"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cpd1kufpe60jq" path="res://Prefab/input_handler.tscn" id="5_2wj3l"]
 [ext_resource type="Script" uid="uid://dam8tr5761ose" path="res://Scenes/choice_container.gd" id="5_yh2ax"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="6_2wj3l"]
+[ext_resource type="Shader" uid="uid://bon1xjardfuqj" path="res://Materials/Shaders/background_shader.gdshader" id="8_da1de"]
+[ext_resource type="Script" uid="uid://bm0t5saq1cr4k" path="res://Scripts/Specific/background_fader.gd" id="9_i7k6y"]
 
 [sub_resource type="Gradient" id="Gradient_0k61y"]
 
@@ -24,6 +26,10 @@ gradient = SubResource("Gradient_5eles")
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_5eles"]
 gradient = SubResource("Gradient_ketf7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_da1de"]
+shader = ExtResource("8_da1de")
+shader_parameter/fade = 0.0
 
 [node name="LVL_UIScene" type="Node"]
 
@@ -219,3 +225,29 @@ texture = ExtResource("6_2wj3l")
 expand_mode = 2
 stretch_mode = 5
 flip_h = true
+
+[node name="CanvaControl" type="Control" parent="."]
+layout_mode = 3
+anchor_left = -1.669
+anchor_top = -1.6660001
+anchor_right = 1.6700001
+anchor_bottom = 1.664
+offset_left = -3204.0
+offset_top = -1799.0
+offset_right = 3207.0
+offset_bottom = 1819.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer-Background" type="CanvasLayer" parent="CanvaControl"]
+layer = -2
+
+[node name="Background" type="ColorRect" parent="CanvaControl/Layer-Background"]
+z_index = -1
+material = SubResource("ShaderMaterial_da1de")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_i7k6y")

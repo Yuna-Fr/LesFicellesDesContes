@@ -69,10 +69,6 @@ func execute(_event_data: BaseEvent):
 			if dialogue.delay_after_sound > 0:
 				await get_tree().create_timer(dialogue.delay_after_sound).timeout
 
-#endregion
-
-#region Mouvements
-
 func _process(delta):
 	if(movements_finished && spawns_finished):
 		if not waiting_for_scene:
@@ -80,8 +76,16 @@ func _process(delta):
 			emit_signal("scene_ready")
 		return
 	process_movements(delta)
-	
+
+#endregion
+
+#region Mouvements
+
 func spawn_objects(spawn_list: Array[SpawnObject]):
+	if spawn_list.size() == 0:
+		spawns_finished = true
+		return
+		
 	var viewport_size = get_viewport().size
 	var z_offsets = {}
 
