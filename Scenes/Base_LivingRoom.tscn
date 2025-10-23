@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://clsy5vho7xk7i"]
+
+[ext_resource type="Texture2D" uid="uid://cgiebrxhp88hm" path="res://Assets/Decors/decor_livingroom.png" id="1_hbis5"]
+
+[sub_resource type="Gradient" id="Gradient_1kdmn"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wg6x7"]
+gradient = SubResource("Gradient_1kdmn")
+
+[node name="Base_Decor" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Spawns" type="Node" parent="."]
+
+[node name="Haut" type="Node" parent="Spawns"]
+
+[node name="Bas" type="Node" parent="Spawns"]
+
+[node name="Gauche" type="Node" parent="Spawns"]
+
+[node name="Droite" type="Node" parent="Spawns"]
+
+[node name="Sol" type="Sprite2D" parent="."]
+position = Vector2(-66.00001, 2240.0002)
+scale = Vector2(119.44951, 21.769768)
+texture = SubResource("GradientTexture2D_wg6x7")
+
+[node name="Decor_Livingroom" type="Sprite2D" parent="."]
+position = Vector2(-2.5832424, -158.14075)
+scale = Vector2(1.668012, 1.6593893)
+texture = ExtResource("1_hbis5")
