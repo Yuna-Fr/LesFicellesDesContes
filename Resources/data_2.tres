@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=12 format=3 uid="uid://tcxx5v8557d"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=13 format=3 uid="uid://tcxx5v8557d"]
 
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_4vgof"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="1_dinbm"]
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_x0rqp"]
 [ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="3_tg785"]
 [ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="4_1f1de"]
+[ext_resource type="AudioStream" uid="uid://e4753mge1wco" path="res://Sounds/Ambiances/Onirique_Loop.wav" id="4_axpku"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="5_tg785"]
 [ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="6_axpku"]
 
@@ -33,6 +34,7 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("1_4vgof")
 description = "Event de test 2"
 background = SubResource("GradientTexture2D_dinbm")
+music = ExtResource("4_axpku")
 movements = Array[ExtResource("3_tg785")]([SubResource("Resource_tg785")])
 characters_des = Array[String](["BB"])
 next_events = Array[ExtResource("4_1f1de")]([SubResource("Resource_x0rqp")])

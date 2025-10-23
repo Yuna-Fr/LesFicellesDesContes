@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=14 format=3 uid="uid://v3y80x2qy7ts"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=19 format=3 uid="uid://v3y80x2qy7ts"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_6wlp8"]
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_qgccc"]
@@ -7,7 +7,10 @@
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_6wlp8"]
 [ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="2_uvb7d"]
 [ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="3_34i54"]
+[ext_resource type="AudioStream" uid="uid://cusj5loeoqkcu" path="res://Sounds/Phrases/BB.wav" id="4_f8afq"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="5_b33um"]
+[ext_resource type="AudioStream" uid="uid://dw72u6ktdgnwc" path="res://Sounds/Phrases/Kat_retourBB.wav" id="5_g4idg"]
+[ext_resource type="AudioStream" uid="uid://n3u45ge0n0dm" path="res://Sounds/Ambiances/Soulagement.wav" id="5_l621v"]
 
 [sub_resource type="Gradient" id="Gradient_4vgof"]
 offsets = PackedFloat32Array(0, 0.78188777, 0.9933222)
@@ -24,6 +27,17 @@ name = "BB"
 sprite = ExtResource("2_6k0b4")
 target = NodePath("Camera2D")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_u68a3"]
+script = ExtResource("2_6wlp8")
+sound = ExtResource("4_f8afq")
+delay_after_sound = 3.0
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_hoguk"]
+script = ExtResource("2_6wlp8")
+sound = ExtResource("5_g4idg")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
 
 [sub_resource type="Resource" id="Resource_b33um"]
 script = ExtResource("1_s4yqs")
@@ -42,6 +56,8 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("1_qgccc")
 description = "Event de test 2"
 background = SubResource("GradientTexture2D_6wlp8")
+music = ExtResource("5_l621v")
+dialogues = Array[ExtResource("2_6wlp8")]([SubResource("Resource_u68a3"), SubResource("Resource_hoguk")])
 movements = Array[ExtResource("1_s4yqs")]([SubResource("Resource_b33um")])
 characters_spawn = Array[ExtResource("1_6wlp8")]([SubResource("Resource_l621v")])
 next_events = Array[ExtResource("2_uvb7d")]([SubResource("Resource_6wlp8")])
