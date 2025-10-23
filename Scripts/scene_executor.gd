@@ -1,9 +1,13 @@
 class_name SceneExecuter extends Node
 
 signal event_finished(next_event_id: String)
+signal scene_ready
+
 
 var movements_finished : bool = false
 var spawns_finished : bool = false
+var waiting_for_scene : bool = false
+
 
 
 var active_movements: Array = []
@@ -35,6 +39,8 @@ func execute(_event_data: BaseEvent):
 	
 	movements_finished = false
 	spawns_finished = false
+	waiting_for_scene = false
+
 	
 	if event_data == null:
 		push_error("No event_data to excute !")
@@ -56,6 +62,9 @@ func execute(_event_data: BaseEvent):
 
 func _process(delta):
 	if(movements_finished && spawns_finished):
+		if not waiting_for_scene:
+			waiting_for_scene = true
+			emit_signal("scene_ready")
 		return
 	process_movements(delta)
 	
@@ -210,8 +219,8 @@ func get_character_node(character_name: String) -> Node2D:
 
 func show_choices():
 	print("Choose your next path:")
-	for i in event_data.next_events.size():
-		print(str(i + 1) + " : " + event_data.next_events[i])
+	#for i in event_data.next_events.size():
+		#print(str(i + 1) + " : " + event_data.next_events[i])
 
 func _input(event):
 	#return #change with Wania code

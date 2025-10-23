@@ -1,12 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjselu0u440x4"]
 
-[ext_resource type="Script" uid="uid://0tphuxy6a2n6" path="res://Scripts/InputHandler.gd" id="1_p8fyc"]
+[ext_resource type="PackedScene" uid="uid://cpd1kufpe60jq" path="res://Prefab/input_handler.tscn" id="1_lm3uy"]
 [ext_resource type="Script" uid="uid://cev5fcug34pab" path="res://Scripts/TestInput.gd" id="2_lm3uy"]
 
 [node name="Main" type="Node2D"]
 
-[node name="InputHandler" type="Node" parent="."]
-script = ExtResource("1_p8fyc")
+[node name="InputHandler" parent="." instance=ExtResource("1_lm3uy")]
 
 [node name="TestInput" type="Node" parent="."]
 script = ExtResource("2_lm3uy")

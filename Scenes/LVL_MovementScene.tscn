@@ -49,9 +49,6 @@ texture = ExtResource("4_ketf7")
 [node name="Sprite2D" type="Sprite2D" parent="Characters/Kat"]
 texture = ExtResource("3_0k61y")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.2, 0.2)
-
 [node name="Positions" type="Node" parent="."]
 
 [node name="Kat" type="Node" parent="Positions"]
@@ -112,3 +109,6 @@ texture = SubResource("GradientTexture2D_5eles")
 position = Vector2(2997, -81)
 scale = Vector2(18.578125, 14.0625)
 texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
