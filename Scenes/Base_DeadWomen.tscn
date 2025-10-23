@@ -24,40 +24,40 @@ zoom = Vector2(0.3, 0.3)
 
 [node name="Haut" type="Node" parent="Spawns"]
 
-[node name="Body1" type="Sprite2D" parent="Spawns/Haut"]
+[node name="Prop_FG_Body1" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-982.9999, -981)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("1_rdjw6")
 
-[node name="Body2" type="Sprite2D" parent="Spawns/Haut"]
+[node name="Prop_MD_Body2" type="Sprite2D" parent="Spawns/Haut"]
 modulate = Color(1, 1, 1, 0.41960785)
 position = Vector2(3087.4524, -451.9724)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("2_yphv3")
 
-[node name="Body3" type="Sprite2D" parent="Spawns/Haut"]
+[node name="Prop_MD_Body3" type="Sprite2D" parent="Spawns/Haut"]
 modulate = Color(1, 1, 1, 0.34509805)
 position = Vector2(-3254.5474, -943.9724)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("3_jhy1g")
 
-[node name="DeadWoman1" type="Sprite2D" parent="Spawns/Haut"]
+[node name="Prop_FG_DeadWoman1" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-1894, -1101)
 texture = ExtResource("4_nrjo1")
 
-[node name="DeadWoman4" type="Sprite2D" parent="Spawns/Haut"]
+[node name="Prop_FG_DeadWoman4" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-2667, -1182)
 texture = ExtResource("5_ppi1n")
 
-[node name="DeadWoman6" type="Sprite2D" parent="Spawns/Haut"]
+[node name="Prop_FG_DeadWoman6" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(711.99994, -1060)
 texture = ExtResource("6_x80t1")
 
-[node name="DeadWoman7" type="Sprite2D" parent="Spawns/Haut"]
+[node name="Prop_FG_DeadWoman7" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-5.000061, -1095)
 texture = ExtResource("7_d0qsa")
 
-[node name="Toit" type="Sprite2D" parent="Spawns/Haut"]
+[node name="Prop_FG_Toit" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-3.0000114, -2446)
 scale = Vector2(119.44951, 21.769768)
 texture = SubResource("GradientTexture2D_wg6x7")
@@ -66,17 +66,17 @@ texture = SubResource("GradientTexture2D_wg6x7")
 
 [node name="Gauche" type="Node" parent="Spawns"]
 
-[node name="PropColonne1" type="Sprite2D" parent="Spawns/Gauche"]
+[node name="Prop_FG_PropColonne1" type="Sprite2D" parent="Spawns/Gauche"]
 position = Vector2(-2308.5, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
 texture = ExtResource("8_hk8cb")
 
-[node name="PropColonne2" type="Sprite2D" parent="Spawns/Gauche"]
+[node name="Prop_FG_PropColonne2" type="Sprite2D" parent="Spawns/Gauche"]
 position = Vector2(360.49994, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
 texture = ExtResource("8_hk8cb")
 
-[node name="PropColonne3" type="Sprite2D" parent="Spawns/Gauche"]
+[node name="Prop_FG_PropColonne3" type="Sprite2D" parent="Spawns/Gauche"]
 position = Vector2(3278, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
 texture = ExtResource("8_hk8cb")

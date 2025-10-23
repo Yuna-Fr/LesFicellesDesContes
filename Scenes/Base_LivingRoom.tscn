@@ -1,6 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://clsy5vho7xk7i"]
+[gd_scene load_steps=14 format=3 uid="uid://clsy5vho7xk7i"]
 
 [ext_resource type="Texture2D" uid="uid://cgiebrxhp88hm" path="res://Assets/Decors/decor_livingroom.png" id="1_hbis5"]
+[ext_resource type="Texture2D" uid="uid://vjahjcwqp8mt" path="res://Assets/Props/Objets/props_painting2.png" id="3_ruqpe"]
+[ext_resource type="Texture2D" uid="uid://dq81m582kcudl" path="res://Assets/Props/Objets/props_painting3.png" id="4_uv4id"]
+[ext_resource type="Texture2D" uid="uid://8r3i84fpu7jq" path="res://Assets/Props/Objets/props_painting4.png" id="5_avm5g"]
+[ext_resource type="Texture2D" uid="uid://ba8f6ygcfttcl" path="res://Assets/Props/Objets/props_painting5.png" id="6_w4yh6"]
+[ext_resource type="Texture2D" uid="uid://xicg34gfuitn" path="res://Assets/Props/Objets/props_painting6.png" id="7_7px0j"]
+[ext_resource type="Texture2D" uid="uid://d1rk13myy2573" path="res://Assets/Props/Objets/Prop_chaise2.png" id="9_avm5g"]
+[ext_resource type="Texture2D" uid="uid://cwgcc0eijopno" path="res://Assets/Props/Objets/Prop_commode_fermee.png" id="10_7px0j"]
+[ext_resource type="Texture2D" uid="uid://cjxwj4lb7xfy5" path="res://Assets/Props/Objets/Prop_colonne1.png" id="10_avm5g"]
+[ext_resource type="Texture2D" uid="uid://cuq67lexlhycf" path="res://Assets/Props/Objets/Prop_deco1.png" id="11_10lpy"]
+[ext_resource type="Texture2D" uid="uid://bnrlshe8vg3dy" path="res://Assets/Props/Objets/Prop_flame.png" id="12_mo1pb"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
 
@@ -27,7 +37,62 @@ position = Vector2(-66.00001, 2240.0002)
 scale = Vector2(119.44951, 21.769768)
 texture = SubResource("GradientTexture2D_wg6x7")
 
-[node name="Decor_Livingroom" type="Sprite2D" parent="."]
-position = Vector2(-2.5832424, -158.14075)
-scale = Vector2(1.668012, 1.6593893)
+[node name="Decor_Livingroom_bg" type="Sprite2D" parent="."]
+position = Vector2(-2.5832424, -81.00021)
+scale = Vector2(1.668012, 1.5879629)
 texture = ExtResource("1_hbis5")
+
+[node name="PropsPainting2" type="Sprite2D" parent="."]
+position = Vector2(-1666.9999, -789)
+scale = Vector2(1.0192305, 0.92186946)
+texture = ExtResource("3_ruqpe")
+
+[node name="PropsPainting3" type="Sprite2D" parent="."]
+position = Vector2(-1166, -96.00001)
+scale = Vector2(0.8175676, 0.8175675)
+texture = ExtResource("4_uv4id")
+
+[node name="PropsPainting4" type="Sprite2D" parent="."]
+position = Vector2(-2265, -285)
+scale = Vector2(0.77768314, 0.77768314)
+texture = ExtResource("5_avm5g")
+
+[node name="PropsPainting5" type="Sprite2D" parent="."]
+position = Vector2(-1166, -1099.2036)
+scale = Vector2(0.8318584, 0.83185846)
+texture = ExtResource("6_w4yh6")
+
+[node name="PropsPainting6" type="Sprite2D" parent="."]
+position = Vector2(-2643.25, -1212.7183)
+scale = Vector2(0.8646409, 0.86464083)
+texture = ExtResource("7_7px0j")
+
+[node name="PropChaise2" type="Sprite2D" parent="."]
+position = Vector2(-2756, 984)
+scale = Vector2(-2.759, 2.759)
+texture = ExtResource("9_avm5g")
+
+[node name="PropColonne1" type="Sprite2D" parent="."]
+position = Vector2(-459.00003, -199)
+scale = Vector2(3.8546507, 4.4099813)
+texture = ExtResource("10_avm5g")
+
+[node name="PropCommodeFermee" type="Sprite2D" parent="."]
+position = Vector2(-1428.0001, 1141)
+scale = Vector2(2.217742, 2.217742)
+texture = ExtResource("10_7px0j")
+
+[node name="PropDeco1" type="Sprite2D" parent="."]
+position = Vector2(-1611.875, 593.1454)
+scale = Vector2(1.9982992, 1.998299)
+texture = ExtResource("11_10lpy")
+
+[node name="PropFlame" type="Sprite2D" parent="."]
+position = Vector2(431.0005, -304.00003)
+scale = Vector2(2.0425532, 2.042553)
+texture = ExtResource("12_mo1pb")
+
+[node name="PropFlame" type="Sprite2D" parent="PropFlame"]
+position = Vector2(454.82263, -243.32292)
+scale = Vector2(0.85282886, 0.85282874)
+texture = ExtResource("12_mo1pb")
