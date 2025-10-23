@@ -121,14 +121,28 @@ zoom = Vector2(0.3, 0.3)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
-[node name="ChoiceContainer" type="HBoxContainer" parent="CanvasLayer" node_paths=PackedStringArray("B1", "B2", "B3", "B4", "B", "scene_executer", "input_handler")]
+[node name="CanvaControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = -1.669
+anchor_top = -1.6660001
+anchor_right = 1.6700001
+anchor_bottom = 1.664
+offset_left = 0.47998047
+offset_top = 0.28015137
+offset_right = 0.5998535
+offset_bottom = -0.11999512
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="CanvasLayer/CanvaControl" node_paths=PackedStringArray("B1", "B2", "B3", "B4", "B", "scene_executer", "input_handler")]
 custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -675.0
-offset_right = 675.0
-offset_bottom = 300.0
+offset_left = -1700.0
+offset_right = 1914.5
+offset_bottom = 633.0
 grow_horizontal = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 50
@@ -138,69 +152,68 @@ B2 = NodePath("B2")
 B3 = NodePath("B3")
 B4 = NodePath("B4")
 B = NodePath("B")
-scene_executer = NodePath("../../SceneExecuter")
-input_handler = NodePath("../../InputHandler")
+scene_executer = NodePath("../../../SceneExecuter")
+input_handler = NodePath("../../../InputHandler")
 
-[node name="B" type="PanelContainer" parent="CanvasLayer/ChoiceContainer"]
-visible = false
+[node name="B" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ChoiceContainer/B"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ChoiceContainer/B/MarginContainer"]
-layout_mode = 2
-texture = ExtResource("6_2wj3l")
-expand_mode = 2
-stretch_mode = 5
-flip_h = true
-
-[node name="B1" type="PanelContainer" parent="CanvasLayer/ChoiceContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ChoiceContainer/B1"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ChoiceContainer/B1/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("6_2wj3l")
 expand_mode = 2
 stretch_mode = 5
 flip_h = true
 
-[node name="B2" type="PanelContainer" parent="CanvasLayer/ChoiceContainer"]
+[node name="B1" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ChoiceContainer/B2"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B1"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ChoiceContainer/B2/MarginContainer"]
-layout_mode = 2
-texture = ExtResource("6_2wj3l")
-expand_mode = 2
-stretch_mode = 5
-flip_h = true
-
-[node name="B3" type="PanelContainer" parent="CanvasLayer/ChoiceContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ChoiceContainer/B3"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ChoiceContainer/B3/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B1/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("6_2wj3l")
 expand_mode = 2
 stretch_mode = 5
 flip_h = true
 
-[node name="B4" type="PanelContainer" parent="CanvasLayer/ChoiceContainer"]
+[node name="B2" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ChoiceContainer/B4"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B2"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ChoiceContainer/B4/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_2wj3l")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B3" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B3/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_2wj3l")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B4" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B4/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("6_2wj3l")
 expand_mode = 2

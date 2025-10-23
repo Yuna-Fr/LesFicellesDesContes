@@ -77,7 +77,6 @@ func _animate_button(button: Control, icon: Texture, delay: float):
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_BOUNCE)
 	tween.set_ease(Tween.EASE_OUT)
-	tween.set_delay(delay)
 	tween.parallel().tween_property(button, "position:y", end_y, 0.6)
 
 func _on_button_pressed(button_name: String):
@@ -97,12 +96,13 @@ func _on_button_pressed(button_name: String):
 			print("Bouton inconnu :", button_name)
 			animating = false
 			return
-
+	if scene_executer.event_data.next_events.size() == 1:
+		index=0
 	_hide_all_buttons()
 
 	await get_tree().create_timer(0.6).timeout
 	var next_event: Scene = current_choices[index]
-	print("➡️ Scène choisie :", next_event.name)
+	print("Scène choisie :", next_event.name)
 	scene_executer.emit_signal("event_finished", next_event)
 	animating = false
 
@@ -118,7 +118,6 @@ func _hide_all_buttons():
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_BACK)
 		tween.set_ease(Tween.EASE_IN)
-		tween.set_delay(i * 0.05)
 		tween.parallel().tween_property(btn, "position:y", btn.position.y + 120, 0.4)
 		await tween.finished
 		btn.visible = false

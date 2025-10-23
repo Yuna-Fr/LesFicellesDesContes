@@ -221,10 +221,3 @@ func show_choices():
 	print("Choose your next path:")
 	#for i in event_data.next_events.size():
 		#print(str(i + 1) + " : " + event_data.next_events[i])
-
-func _input(event):
-	#return #change with Wania code
-	#if event.is_action_pressed((i)):
-	if Input.is_key_pressed(KEY_SPACE):
-		var next_event = event_data.next_events[0]
-		emit_signal("event_finished", next_event)

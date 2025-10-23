@@ -1,16 +1,17 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=17 format=3 uid="uid://dst0uouu4wjwf"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=18 format=3 uid="uid://dst0uouu4wjwf"]
 
+[ext_resource type="Script" path="res://Scripts/CharacterAppear.gd" id="1_6wlp8"]
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_qgccc"]
-[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="1_s4yqs"]
-[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="2_uvb7d"]
+[ext_resource type="Script" path="res://Scripts/Movement.gd" id="1_s4yqs"]
+[ext_resource type="Script" path="res://Scripts/Scene.gd" id="2_uvb7d"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="3_6wlp8"]
-[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="3_34i54"]
+[ext_resource type="Script" path="res://Scripts/SpawnObject.gd" id="3_34i54"]
 
 [sub_resource type="Resource" id="Resource_s4yqs"]
 resource_local_to_scene = true
 script = ExtResource("1_s4yqs")
 character = "Kat"
-vitesse = 50.0
+vitesse = 200.0
 target = NodePath("Positions/Kat/Kat_Position_1")
 metadata/_custom_type_script = "uid://bsl3tjlwwx8sl"
 
@@ -18,7 +19,7 @@ metadata/_custom_type_script = "uid://bsl3tjlwwx8sl"
 resource_local_to_scene = true
 script = ExtResource("1_s4yqs")
 character = "BB"
-vitesse = 30.0
+vitesse = 250.0
 target = NodePath("Positions/Kat/Kat_Position_1")
 metadata/_custom_type_script = "uid://bsl3tjlwwx8sl"
 
