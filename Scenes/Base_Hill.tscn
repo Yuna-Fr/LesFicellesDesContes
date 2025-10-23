@@ -1,13 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dabjxk1cmpdje"]
+[gd_scene load_steps=11 format=3 uid="uid://bnjxe4hyb2e20"]
 
-[ext_resource type="Texture2D" uid="uid://dlekvyy00v4re" path="res://Assets/Props/DeadWomen/body 1.png" id="1_rdjw6"]
-[ext_resource type="Texture2D" uid="uid://cuupg0yof3ky7" path="res://Assets/Props/DeadWomen/body 2.png" id="2_yphv3"]
-[ext_resource type="Texture2D" uid="uid://8lsv0gufbid5" path="res://Assets/Props/DeadWomen/body 3.png" id="3_jhy1g"]
-[ext_resource type="Texture2D" uid="uid://bxxv68360xrcr" path="res://Assets/Props/DeadWomen/dead woman 1.png" id="4_nrjo1"]
-[ext_resource type="Texture2D" uid="uid://cavro5cl2ktmg" path="res://Assets/Props/DeadWomen/dead woman 4.png" id="5_ppi1n"]
-[ext_resource type="Texture2D" uid="uid://crjvqfj3bgk5y" path="res://Assets/Props/DeadWomen/dead woman 6.png" id="6_x80t1"]
-[ext_resource type="Texture2D" uid="uid://dqqb1i5y4t8kf" path="res://Assets/Props/DeadWomen/dead woman 7.png" id="7_d0qsa"]
-[ext_resource type="Texture2D" uid="uid://cjxwj4lb7xfy5" path="res://Assets/Props/Objets/Prop_colonne1.png" id="8_hk8cb"]
+[ext_resource type="Texture2D" uid="uid://dlekvyy00v4re" path="res://Assets/Props/DeadWomen/body 1.png" id="1_om2tc"]
+[ext_resource type="Texture2D" uid="uid://cuupg0yof3ky7" path="res://Assets/Props/DeadWomen/body 2.png" id="2_faluo"]
+[ext_resource type="Texture2D" uid="uid://8lsv0gufbid5" path="res://Assets/Props/DeadWomen/body 3.png" id="3_v84gc"]
+[ext_resource type="Texture2D" uid="uid://bxxv68360xrcr" path="res://Assets/Props/DeadWomen/dead woman 1.png" id="4_fer48"]
+[ext_resource type="Texture2D" uid="uid://cavro5cl2ktmg" path="res://Assets/Props/DeadWomen/dead woman 4.png" id="5_by700"]
+[ext_resource type="Texture2D" uid="uid://crjvqfj3bgk5y" path="res://Assets/Props/DeadWomen/dead woman 6.png" id="6_ohqqr"]
+[ext_resource type="Texture2D" uid="uid://dqqb1i5y4t8kf" path="res://Assets/Props/DeadWomen/dead woman 7.png" id="7_2xw1d"]
+[ext_resource type="Texture2D" uid="uid://cjxwj4lb7xfy5" path="res://Assets/Props/Objets/Prop_colonne1.png" id="8_cicgi"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -27,35 +27,35 @@ zoom = Vector2(0.3, 0.3)
 [node name="Body1" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-982.9999, -981)
 scale = Vector2(1.755, 1.755)
-texture = ExtResource("1_rdjw6")
+texture = ExtResource("1_om2tc")
 
 [node name="Body2" type="Sprite2D" parent="Spawns/Haut"]
 modulate = Color(1, 1, 1, 0.41960785)
 position = Vector2(3087.4524, -451.9724)
 scale = Vector2(1.755, 1.755)
-texture = ExtResource("2_yphv3")
+texture = ExtResource("2_faluo")
 
 [node name="Body3" type="Sprite2D" parent="Spawns/Haut"]
 modulate = Color(1, 1, 1, 0.34509805)
 position = Vector2(-3254.5474, -943.9724)
 scale = Vector2(1.755, 1.755)
-texture = ExtResource("3_jhy1g")
+texture = ExtResource("3_v84gc")
 
 [node name="DeadWoman1" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-1894, -1101)
-texture = ExtResource("4_nrjo1")
+texture = ExtResource("4_fer48")
 
 [node name="DeadWoman4" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-2667, -1182)
-texture = ExtResource("5_ppi1n")
+texture = ExtResource("5_by700")
 
 [node name="DeadWoman6" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(711.99994, -1060)
-texture = ExtResource("6_x80t1")
+texture = ExtResource("6_ohqqr")
 
 [node name="DeadWoman7" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-5.000061, -1095)
-texture = ExtResource("7_d0qsa")
+texture = ExtResource("7_2xw1d")
 
 [node name="Toit" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(-3.0000114, -2446)
@@ -69,17 +69,17 @@ texture = SubResource("GradientTexture2D_wg6x7")
 [node name="PropColonne1" type="Sprite2D" parent="Spawns/Gauche"]
 position = Vector2(-2308.5, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
-texture = ExtResource("8_hk8cb")
+texture = ExtResource("8_cicgi")
 
 [node name="PropColonne2" type="Sprite2D" parent="Spawns/Gauche"]
 position = Vector2(360.49994, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
-texture = ExtResource("8_hk8cb")
+texture = ExtResource("8_cicgi")
 
 [node name="PropColonne3" type="Sprite2D" parent="Spawns/Gauche"]
 position = Vector2(3278, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
-texture = ExtResource("8_hk8cb")
+texture = ExtResource("8_cicgi")
 
 [node name="Droite" type="Node" parent="Spawns"]
 
