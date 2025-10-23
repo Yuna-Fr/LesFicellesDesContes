@@ -120,7 +120,6 @@ func spawn_objects(spawn_list: Array[SpawnObject]):
 		tween.tween_property(obj_node, "global_position", final_pos, 0.5).set_delay(total_delay)
 		tween.finished.connect(Callable(self, "_on_single_spawn_finished"))
 
-
 func remove_unused_objects(new_spawn_list: Array[SpawnObject]):
 	if active_objects.is_empty():
 		return
@@ -162,6 +161,10 @@ func _on_single_spawn_finished():
 		spawns_finished = true
 
 func start_movements(movements: Array[Movement]):
+	if movements.size() == 0:
+		movements_finished = true
+		return
+		
 	active_movements.clear()
 	for move in movements:
 		var char_node = get_character_node(move.character)
