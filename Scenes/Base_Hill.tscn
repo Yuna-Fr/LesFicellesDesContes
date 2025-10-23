@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bnjxe4hyb2e20"]
 
+[ext_resource type="Texture2D" uid="uid://b7ky6aerv76ao" path="res://Assets/Props/Objets/Prop_montagne.png" id="1_h0p2j"]
 [ext_resource type="Texture2D" uid="uid://c263howxqqi8w" path="res://Assets/Props/Objets/Prop_tour.png" id="1_jlvj0"]
 [ext_resource type="Texture2D" uid="uid://crn5dowwadqj6" path="res://Assets/Decors/decor_hill.png" id="1_xeisi"]
-[ext_resource type="Texture2D" uid="uid://ceq17io707k1d" path="res://Assets/Props/Objets/Prop_montagnes.png" id="2_h0p2j"]
 [ext_resource type="Texture2D" uid="uid://bpkqqn8k3fd8i" path="res://Assets/Props/Objets/Prop_mouton1.png" id="3_h0p2j"]
 [ext_resource type="Texture2D" uid="uid://cxvowntpht1b4" path="res://Assets/Props/Objets/Prop_mouton2.png" id="4_4w8k2"]
 [ext_resource type="Texture2D" uid="uid://m8seyj0xivix" path="res://Assets/Props/Objets/Prop_mouton3.png" id="5_om2tc"]
@@ -18,16 +18,16 @@ zoom = Vector2(0.3, 0.3)
 
 [node name="Bas" type="Node" parent="Spawns"]
 
+[node name="Prop_BG_PropMontagne" type="Sprite2D" parent="Spawns/Bas"]
+modulate = Color(0.6, 0.94509804, 0.8235294, 0.6313726)
+position = Vector2(-6.80542, -247.5)
+scale = Vector2(4.055556, 4.0555553)
+texture = ExtResource("1_h0p2j")
+
 [node name="Prop_BG_DecorHill" type="Sprite2D" parent="Spawns/Bas"]
 position = Vector2(-4.9442024, -10.999925)
 scale = Vector2(1.6666956, 1.6648147)
 texture = ExtResource("1_xeisi")
-
-[node name="Prop_BG_PropMontagnes" type="Sprite2D" parent="Spawns/Bas"]
-modulate = Color(1, 1, 1, 0.61960787)
-position = Vector2(-20, -168)
-scale = Vector2(4.067184, 4.067184)
-texture = ExtResource("2_h0p2j")
 
 [node name="Gauche" type="Node" parent="Spawns"]
 

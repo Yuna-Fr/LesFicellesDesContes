@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhqjb0hl7y61g"]
+[gd_scene load_steps=11 format=3 uid="uid://bhqjb0hl7y61g"]
 
 [ext_resource type="Texture2D" uid="uid://77uosps4yrin" path="res://Assets/Props/Objets/props_painting1.png" id="1_lw5fs"]
 [ext_resource type="Texture2D" uid="uid://vjahjcwqp8mt" path="res://Assets/Props/Objets/props_painting2.png" id="2_tw50n"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://8r3i84fpu7jq" path="res://Assets/Props/Objets/props_painting4.png" id="4_h0n60"]
 [ext_resource type="Texture2D" uid="uid://ba8f6ygcfttcl" path="res://Assets/Props/Objets/props_painting5.png" id="5_3cu2v"]
 [ext_resource type="Texture2D" uid="uid://c2fsd1bgl77gm" path="res://Assets/Decors/decor_stairs.png" id="6_6v4ii"]
+[ext_resource type="Texture2D" uid="uid://bo2lms8mdm5xe" path="res://Assets/Props/Objets/Prop_plante1.png" id="7_by4ef"]
+[ext_resource type="Texture2D" uid="uid://fn3lj245myng" path="res://Assets/Props/Objets/Prop_plante2.png" id="8_h0n60"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -61,3 +63,13 @@ metadata/_edit_lock_ = true
 position = Vector2(-66.00001, 2240.0002)
 scale = Vector2(119.44951, 21.769768)
 texture = SubResource("GradientTexture2D_wg6x7")
+
+[node name="PropPlante1" type="Sprite2D" parent="."]
+position = Vector2(2895, 1314)
+scale = Vector2(1.5047961, 1.5047961)
+texture = ExtResource("7_by4ef")
+
+[node name="PropPlante2" type="Sprite2D" parent="."]
+position = Vector2(2313, -555.9999)
+scale = Vector2(1.5486381, 1.4038461)
+texture = ExtResource("8_h0n60")
