@@ -48,11 +48,6 @@ BB = NodePath("../Characters/BB")
 
 [node name="MusicPlayerB" type="AudioStreamPlayer2D" parent="SceneExecuter"]
 
-[node name="InputHandler" parent="." instance=ExtResource("7_7six5")]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.3, 0.3)
-
 [node name="Characters" type="Node" parent="."]
 
 [node name="BB" type="Node2D" parent="Characters"]
@@ -75,6 +70,8 @@ texture = ExtResource("6_efycr")
 position = Vector2(2396, -100)
 scale = Vector2(1, 175.5)
 texture = SubResource("GradientTexture1D_2bdnx")
+
+[node name="InputHandler" parent="." instance=ExtResource("7_7six5")]
 
 [node name="Spawns" type="Node" parent="."]
 
@@ -128,6 +125,9 @@ position = Vector2(2997, -81)
 scale = Vector2(18.578125, 14.0625)
 texture = SubResource("GradientTexture2D_yhk82")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
 [node name="CanvaControl" type="Control" parent="."]
 layout_mode = 3
 anchor_left = -1.669
@@ -148,14 +148,14 @@ follow_viewport_enabled = true
 [node name="ChoiceContainer" type="HBoxContainer" parent="CanvaControl/CanvasLayer" node_paths=PackedStringArray("B1", "B2", "B3", "B4", "B", "scene_executer", "input_handler")]
 custom_minimum_size = Vector2(0, 300)
 anchors_preset = -1
-anchor_left = -1.667
+anchor_left = -1.664
 anchor_top = -1.6660001
 anchor_right = 1.6650001
-anchor_bottom = -1.001
-offset_left = 0.6401367
+anchor_bottom = -0.92100006
+offset_left = 0.88012695
 offset_top = 0.28015137
 offset_right = 0.19995117
-offset_bottom = 0.080078125
+offset_bottom = -0.3199463
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 0

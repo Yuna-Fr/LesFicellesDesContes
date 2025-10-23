@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=10 format=3 uid="uid://v3y80x2qy7ts"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=12 format=3 uid="uid://v3y80x2qy7ts"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_6wlp8"]
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_qgccc"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_6wlp8"]
 [ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="2_uvb7d"]
 [ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="3_34i54"]
+[ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="5_b33um"]
 
 [sub_resource type="Gradient" id="Gradient_4vgof"]
 offsets = PackedFloat32Array(0, 0.78188777, 0.9933222)
@@ -16,14 +17,23 @@ gradient = SubResource("Gradient_4vgof")
 fill = 1
 fill_from = Vector2(0.491453, 0.517094)
 
+[sub_resource type="Resource" id="Resource_b33um"]
+script = ExtResource("1_s4yqs")
+character = "Kat"
+vitesse = 300.0
+target = NodePath("Positions/Kat/Kat_Position_1")
+metadata/_custom_type_script = "uid://bsl3tjlwwx8sl"
+
 [sub_resource type="Resource" id="Resource_6wlp8"]
 script = ExtResource("2_uvb7d")
 name = "data_2"
+icon = ExtResource("5_b33um")
 metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 
 [resource]
 script = ExtResource("1_qgccc")
 description = "Event de test 2"
 background = SubResource("GradientTexture2D_6wlp8")
+movements = Array[ExtResource("1_s4yqs")]([SubResource("Resource_b33um")])
 next_events = Array[ExtResource("2_uvb7d")]([SubResource("Resource_6wlp8")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

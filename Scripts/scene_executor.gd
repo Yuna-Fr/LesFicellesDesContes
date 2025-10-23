@@ -27,7 +27,7 @@ var event_data: BaseEvent
 
 func _init_refs() -> void:
 	#inputHandler = $"../InputHandler"
-	background = $"../Layer-Background/Background"
+	background = $"../CanvaControl/Layer-Background/Background"
 	audio_player = $AudioPlayer
 	music_player_a = $MusicPlayerA
 	music_player_b = $MusicPlayerB
@@ -41,8 +41,6 @@ func _init_refs() -> void:
 @export var Girls : Node2D
 @export var Dead : Node2D
 @export var Brother : Node2D
-
-
 
 func execute(_event_data: BaseEvent):
 	if(background == null): _init_refs()
