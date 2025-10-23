@@ -67,7 +67,8 @@ func show_choices():
 func _animate_button(button: Control, icon: Texture, delay: float):
 	var texture_rect = button.get_node("MarginContainer/TextureRect")
 	texture_rect.texture = icon
-
+	button.position.y = button.position.y - 120
+	
 	button.visible = true
 	button.scale = Vector2(1, 1)
 	var start_y = button.position.y + 100
