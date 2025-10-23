@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=4 format=3 uid="uid://tcxx5v8557d"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=5 format=3 uid="uid://tcxx5v8557d"]
 
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_4vgof"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="1_dinbm"]
 
 [sub_resource type="Gradient" id="Gradient_4vgof"]
 offsets = PackedFloat32Array(0, 0.9933222)
