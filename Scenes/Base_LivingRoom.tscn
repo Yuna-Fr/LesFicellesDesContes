@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://clsy5vho7xk7i"]
+[gd_scene load_steps=17 format=3 uid="uid://clsy5vho7xk7i"]
 
 [ext_resource type="Texture2D" uid="uid://cgiebrxhp88hm" path="res://Assets/Decors/decor_livingroom.png" id="1_hbis5"]
 [ext_resource type="Texture2D" uid="uid://vjahjcwqp8mt" path="res://Assets/Props/Objets/props_painting2.png" id="3_ruqpe"]
@@ -10,7 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://cwgcc0eijopno" path="res://Assets/Props/Objets/Prop_commode_fermee.png" id="10_7px0j"]
 [ext_resource type="Texture2D" uid="uid://cjxwj4lb7xfy5" path="res://Assets/Props/Objets/Prop_colonne1.png" id="10_avm5g"]
 [ext_resource type="Texture2D" uid="uid://cuq67lexlhycf" path="res://Assets/Props/Objets/Prop_deco1.png" id="11_10lpy"]
+[ext_resource type="Texture2D" uid="uid://dp2o343mo6r8y" path="res://Assets/Props/Objets/Prop_buste.png" id="12_10lpy"]
 [ext_resource type="Texture2D" uid="uid://bnrlshe8vg3dy" path="res://Assets/Props/Objets/Prop_flame.png" id="12_mo1pb"]
+[ext_resource type="Texture2D" uid="uid://bvnpecdadpss5" path="res://Assets/Props/Objets/Prop_chandelier.png" id="13_mo1pb"]
+[ext_resource type="Texture2D" uid="uid://nc1k6qwwe7dh" path="res://Assets/Props/Objets/Prop_escalier1.png" id="14_mo1pb"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
 
@@ -43,27 +46,27 @@ scale = Vector2(1.668012, 1.5879629)
 texture = ExtResource("1_hbis5")
 
 [node name="PropsPainting2" type="Sprite2D" parent="."]
-position = Vector2(-1666.9999, -789)
-scale = Vector2(1.0192305, 0.92186946)
+position = Vector2(-1276.0001, -215)
+scale = Vector2(0.86159664, 0.82483435)
 texture = ExtResource("3_ruqpe")
 
 [node name="PropsPainting3" type="Sprite2D" parent="."]
-position = Vector2(-1166, -96.00001)
+position = Vector2(-1507, -599)
 scale = Vector2(0.8175676, 0.8175675)
 texture = ExtResource("4_uv4id")
 
 [node name="PropsPainting4" type="Sprite2D" parent="."]
-position = Vector2(-2265, -285)
+position = Vector2(-2090, -138)
 scale = Vector2(0.77768314, 0.77768314)
 texture = ExtResource("5_avm5g")
 
 [node name="PropsPainting5" type="Sprite2D" parent="."]
-position = Vector2(-1166, -1099.2036)
-scale = Vector2(0.8318584, 0.83185846)
+position = Vector2(-1174.5, -1241.2168)
+scale = Vector2(0.7831858, 0.7831859)
 texture = ExtResource("6_w4yh6")
 
 [node name="PropsPainting6" type="Sprite2D" parent="."]
-position = Vector2(-2643.25, -1212.7183)
+position = Vector2(-2699.0002, -987)
 scale = Vector2(0.8646409, 0.86464083)
 texture = ExtResource("7_7px0j")
 
@@ -96,3 +99,18 @@ texture = ExtResource("12_mo1pb")
 position = Vector2(454.82263, -243.32292)
 scale = Vector2(0.85282886, 0.85282874)
 texture = ExtResource("12_mo1pb")
+
+[node name="PropBuste" type="Sprite2D" parent="."]
+position = Vector2(-1363, 686)
+texture = ExtResource("12_10lpy")
+
+[node name="PropChandelier" type="Sprite2D" parent="."]
+position = Vector2(-1929.9999, -1421)
+rotation = 3.1712632
+scale = Vector2(2.6853225, 2.6853225)
+texture = ExtResource("13_mo1pb")
+
+[node name="PropEscalier1" type="Sprite2D" parent="."]
+position = Vector2(133.37503, 848.5625)
+scale = Vector2(2.9037583, 2.7615638)
+texture = ExtResource("14_mo1pb")
