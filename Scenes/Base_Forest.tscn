@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://0538d5nmfvg4"]
+[gd_scene load_steps=4 format=3 uid="uid://0538d5nmfvg4"]
+
+[ext_resource type="Texture2D" uid="uid://cru53htusno8k" path="res://Assets/Props/Vegetation/props_shadow_tree.png" id="1_37qa2"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
 
@@ -24,3 +26,20 @@ zoom = Vector2(0.3, 0.3)
 position = Vector2(-66.00001, 2240.0002)
 scale = Vector2(119.44951, 21.769768)
 texture = SubResource("GradientTexture2D_wg6x7")
+
+[node name="PropsShadowTree" type="Sprite2D" parent="."]
+position = Vector2(2150.9998, 221)
+rotation = 1.5707964
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("1_37qa2")
+
+[node name="PropsShadowTree2" type="Sprite2D" parent="PropsShadowTree"]
+position = Vector2(201.01231, 3441.8318)
+scale = Vector2(1.165703, 1.165703)
+texture = ExtResource("1_37qa2")
+
+[node name="PropsShadowTree" type="Sprite2D" parent="PropsShadowTree"]
+position = Vector2(80.74852, 1051.4482)
+rotation = 3.1415927
+scale = Vector2(1.0796773, 1.0796773)
+texture = ExtResource("1_37qa2")
