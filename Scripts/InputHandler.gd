@@ -20,7 +20,7 @@ func _ready() -> void:
 		printerr("Impossible de se connecter, passage en mode local")
 		is_connected = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if(waiting_for_button):
 		monitor_serial()
 

@@ -6,6 +6,8 @@ signal scene_ready
 @export var music_fade_time : float = 2.0
 @export var positions_root : Node
 
+var despawn_finished : bool = false
+var spawns_char_finished : bool = false
 '''Characters'''
 @export var Kat : Node2D
 @export var BB : Node2D
@@ -50,10 +52,13 @@ func execute(_event_data: BaseEvent):
 		push_error("No event_data to excute !")
 		return
 	
+	await despawn_characters(event_data.characters_des)
 	remove_unused_objects(event_data.spawns)
 	start_movements(event_data.movements)
 	spawn_objects(event_data.spawns)
 	
+	spawn_characters(event_data.characters_spawn)	
+
 	if (event_data.background): background.fade_to(event_data.background)
 	
 	if (event_data.music): _play_music(event_data.music)
@@ -81,12 +86,99 @@ func _process(delta):
 
 #region Mouvements
 
+	
+func despawn_characters(characters : Array[String]):
+	var viewport_size = get_viewport().size
+	for char in characters:
+		var char_node = get_character_node(char)
+		if not char_node:
+			push_warning("Character not found: " + char)
+			continue
+			
+		var random_delay = randf_range(0.0, 0.3)
+		var random_angle = randf_range(-15.0, 15.0)
+		var fall_distance = randf_range(viewport_size.y * 0.8, viewport_size.y * 1.2)
+		var fall_time = randf_range(0.35, 0.5)
+
+		var target_pos = char_node.global_position + Vector2(0, fall_distance)
+
+		# Animation principale du personnage
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_BACK)
+		tween.set_ease(Tween.EASE_IN)
+
+		active_tweens += 1
+
+		# Mouvement vers le bas + rotation
+		tween.parallel().tween_property(char_node, "global_position", target_pos, fall_time)
+		tween.parallel().tween_property(char_node, "rotation_degrees", random_angle, fall_time * 0.6)
+
+
+		# Quand fini → on cache
+		tween.finished.connect(func ():
+			char_node.visible = false
+			char_node.rotation_degrees = 0
+			active_tweens -= 1
+		)
+			
+func spawn_characters(characters: Array[CharacterAppear]):
+	if characters.is_empty():
+		return
+
+	var viewport_size = get_viewport().size
+	var z_offsets = {}
+
+	for appear_data in characters:
+		var char_node = get_character_node(appear_data.name)
+		if not char_node:
+			push_warning("Character node not found: " + appear_data.name)
+			continue
+
+		# Update du sprite
+		if char_node.get_child_count() > 0:
+			var sprite: Sprite2D = char_node.get_child(0)
+			sprite.texture = appear_data.sprite
+		else:
+			continue
+
+		# Trouver la position cible dans positions_root
+		if not positions_root.has_node(appear_data.target):
+			continue
+
+		var target_node: Node2D = positions_root.get_node(appear_data.target)
+		var final_pos = target_node.global_position
+
+		# Position initiale (entrée depuis le bas de l’écran)
+		char_node.global_position = final_pos + Vector2(0, viewport_size.y)
+		char_node.visible = true
+
+		# Gestion du décalage selon le z_index
+		var z_key = char_node.z_index
+		var same_z_count = z_offsets.get(z_key, 0)
+		z_offsets[z_key] = same_z_count + 1
+
+		var base_delay = z_key * 0.05
+		var extra_delay = same_z_count * 0.03
+		var total_delay = base_delay + extra_delay
+
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_BOUNCE)
+		tween.set_ease(Tween.EASE_OUT)
+		active_tweens += 1
+
+		tween.tween_property(char_node, "global_position", final_pos, 0.6).set_delay(total_delay)
+
+		tween.finished.connect(func ():
+			active_tweens -= 1
+			if active_tweens <= 0:
+				spawns_char_finished = true
+		)
+	
 func spawn_objects(spawn_list: Array[SpawnObject]):
 	if spawn_list.size() == 0:
 		spawns_finished = true
 		return
-		
-	var viewport_size = get_viewport().size
+	
 	var z_offsets = {}
 
 	for spawn in spawn_list:
@@ -99,6 +191,7 @@ func spawn_objects(spawn_list: Array[SpawnObject]):
 			continue # déjà présent, on ne fait rien
 
 		active_objects[obj_node.name] = true
+		print(active_objects)
 
 		var final_pos = obj_node.global_position
 		var offset = get_direction(spawn.direction)
