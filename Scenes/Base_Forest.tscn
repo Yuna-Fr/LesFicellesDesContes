@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://0538d5nmfvg4"]
+[gd_scene load_steps=7 format=3 uid="uid://0538d5nmfvg4"]
 
 [ext_resource type="Texture2D" uid="uid://cru53htusno8k" path="res://Assets/Props/Vegetation/props_shadow_tree.png" id="1_37qa2"]
 [ext_resource type="Texture2D" uid="uid://bx1uuayckv6g0" path="res://Assets/Props/Vegetation/props_grass2.png" id="2_c5vhi"]
 [ext_resource type="Texture2D" uid="uid://6ae357ry0rar" path="res://Assets/Props/Vegetation/props_grass_green.png" id="3_igk0r"]
+[ext_resource type="Texture2D" uid="uid://c855ldv3jynha" path="res://Assets/Props/Vegetation/props_BG_big_tree.png" id="4_igk0r"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
+offsets = PackedFloat32Array(0, 0.9880952)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wg6x7"]
 gradient = SubResource("Gradient_1kdmn")
@@ -18,54 +21,71 @@ zoom = Vector2(0.3, 0.3)
 
 [node name="Haut" type="Node" parent="Spawns"]
 
-[node name="Bas" type="Node" parent="Spawns"]
-
-[node name="Gauche" type="Node" parent="Spawns"]
-
-[node name="Droite" type="Node" parent="Spawns"]
-
-[node name="Sol" type="Sprite2D" parent="."]
-position = Vector2(-66.00001, 2240.0002)
-scale = Vector2(119.44951, 21.769768)
-texture = SubResource("GradientTexture2D_wg6x7")
-
-[node name="PropsShadowTree" type="Sprite2D" parent="."]
+[node name="PropsBGShadowTree" type="Sprite2D" parent="Spawns/Haut"]
 position = Vector2(2150.9998, 221)
 rotation = 1.5707964
 scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("1_37qa2")
 
-[node name="PropsShadowTree2" type="Sprite2D" parent="PropsShadowTree"]
-position = Vector2(201.01231, 3441.8318)
-scale = Vector2(1.165703, 1.165703)
-texture = ExtResource("1_37qa2")
-
-[node name="PropsShadowTree" type="Sprite2D" parent="PropsShadowTree"]
-position = Vector2(80.74852, 1051.4482)
-rotation = 3.1415927
-scale = Vector2(1.0796773, 1.0796773)
-texture = ExtResource("1_37qa2")
-
-[node name="PropsGrass2" type="Sprite2D" parent="PropsShadowTree"]
-position = Vector2(712.2178, 1720.5225)
-rotation = -1.5707964
-texture = ExtResource("2_c5vhi")
-
-[node name="PropsGrass3" type="Sprite2D" parent="PropsShadowTree"]
-position = Vector2(712.21783, 2830.3845)
-rotation = -1.5707964
-texture = ExtResource("2_c5vhi")
-
-[node name="PropsGrass4" type="Sprite2D" parent="PropsShadowTree"]
-position = Vector2(712.2177, 584.3172)
-rotation = -1.5707964
-texture = ExtResource("2_c5vhi")
-
-[node name="PropsGrass5" type="Sprite2D" parent="PropsShadowTree"]
-position = Vector2(712.2177, -371.49265)
-rotation = -1.5707964
-texture = ExtResource("2_c5vhi")
-
-[node name="PropsGrassGreen" type="Sprite2D" parent="."]
-position = Vector2(-1129, 857)
+[node name="PropsBGGrassGreen2" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(1878.9999, 1316)
+scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("3_igk0r")
+
+[node name="PropsBGGrassGreen" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-1618.9998, 1273)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_igk0r")
+
+[node name="PropsBGShadowTree2" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-3858.9998, 572)
+rotation = 1.5707965
+scale = Vector2(2.0355077, 2.0355077)
+texture = ExtResource("1_37qa2")
+
+[node name="PropsBGShadowTree3" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(314.99976, 362)
+rotation = -1.5707963
+scale = Vector2(1.8852926, 1.8852926)
+texture = ExtResource("1_37qa2")
+
+[node name="PropsBGGrass2" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-853.313, 1464.6482)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("2_c5vhi")
+
+[node name="PropsBGGrass3" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-2791.3132, 1464.6482)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("2_c5vhi")
+
+[node name="PropsBGGrass4" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(1130.6865, 1464.6482)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("2_c5vhi")
+
+[node name="PropsBGGrass5" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(2799.6865, 1464.6482)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("2_c5vhi")
+
+[node name="Bas" type="Node" parent="Spawns"]
+
+[node name="Gauche" type="Node" parent="Spawns"]
+
+[node name="PropsMDBigTree" type="Sprite2D" parent="Spawns/Gauche"]
+position = Vector2(-2928, -164)
+scale = Vector2(1.7122005, 1.7122005)
+texture = ExtResource("4_igk0r")
+
+[node name="PropsMGBigTree2" type="Sprite2D" parent="Spawns/Gauche"]
+position = Vector2(3084, -164)
+scale = Vector2(1.7122005, 1.7122005)
+texture = ExtResource("4_igk0r")
+
+[node name="Droite" type="Node" parent="Spawns"]
+
+[node name="Sol" type="Sprite2D" parent="."]
+position = Vector2(-75.00001, 2249)
+scale = Vector2(119.44951, 21.769768)
+texture = SubResource("GradientTexture2D_wg6x7")
