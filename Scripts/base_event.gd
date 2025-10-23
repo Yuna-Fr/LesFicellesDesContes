@@ -3,7 +3,13 @@ class_name BaseEvent extends Resource
 @export var description: String = "" # optional : for clarity
 
 @export var background: GradientTexture2D
+
 @export var music: AudioStream
 @export var dialogues: Array[Dialogue] = []
 
-@export var next_events: Array[String] = []
+@export var movements: Array[Movement] = []
+@export var characters_des: Array[String] = []
+@export var characters_spawn: Array[CharacterAppear] = []
+@export var spawns: Array[SpawnObject] = []
+
+@export var next_events: Array[Scene] = []

@@ -1,35 +1,29 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=8 format=3 uid="uid://dst0uouu4wjwf"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=10 format=3 uid="uid://v3y80x2qy7ts"]
 
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_6wlp8"]
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_qgccc"]
-[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="1_s4yqs"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="1_s4yqs"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_6wlp8"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="2_uvb7d"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="3_34i54"]
 
-[sub_resource type="Gradient" id="Gradient_qgccc"]
-offsets = PackedFloat32Array(0, 0.6126878)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0, 0.78188777, 0.9933222)
+colors = PackedColorArray(6.7383053e-06, 0.57762915, 0.8087183, 1, 7.58364e-08, 0.0065009, 0.009101689, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_s4yqs"]
-gradient = SubResource("Gradient_qgccc")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6wlp8"]
+gradient = SubResource("Gradient_4vgof")
 fill = 1
-fill_from = Vector2(0.5, 0.508547)
+fill_from = Vector2(0.491453, 0.517094)
 
-[sub_resource type="Resource" id="Resource_34i54"]
-script = ExtResource("1_s4yqs")
-delay_after_sound = 2.015
-metadata/_custom_type_script = "uid://dg002uegqj7pq"
-
-[sub_resource type="Resource" id="Resource_s4yqs"]
-script = ExtResource("1_s4yqs")
-delay_after_sound = 1.0
-metadata/_custom_type_script = "uid://dg002uegqj7pq"
-
-[sub_resource type="Resource" id="Resource_smwk3"]
-script = ExtResource("1_s4yqs")
-metadata/_custom_type_script = "uid://dg002uegqj7pq"
+[sub_resource type="Resource" id="Resource_6wlp8"]
+script = ExtResource("2_uvb7d")
+name = "data_2"
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 
 [resource]
 script = ExtResource("1_qgccc")
-description = "Event de test et le premier"
-background = SubResource("GradientTexture2D_s4yqs")
-dialogues = Array[ExtResource("1_s4yqs")]([SubResource("Resource_34i54"), SubResource("Resource_s4yqs"), SubResource("Resource_smwk3")])
-next_events = Array[String](["data_2"])
+description = "Event de test 2"
+background = SubResource("GradientTexture2D_6wlp8")
+next_events = Array[ExtResource("2_uvb7d")]([SubResource("Resource_6wlp8")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

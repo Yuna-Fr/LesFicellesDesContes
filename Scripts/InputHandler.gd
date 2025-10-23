@@ -17,7 +17,7 @@ func _ready() -> void:
 		print("ESP connectée")
 		is_connected = true
 	else:
-		printerr("Impossible de se connecter")
+		printerr("Impossible de se connecter, passage en mode local")
 		is_connected = false
 
 func _process(delta: float) -> void:

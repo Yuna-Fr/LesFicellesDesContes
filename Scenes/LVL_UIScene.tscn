@@ -1,0 +1,221 @@
+[gd_scene load_steps=14 format=3 uid="uid://tumew7rsqess"]
+
+[ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_5bc5r"]
+[ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_87gg6"]
+[ext_resource type="Texture2D" uid="uid://bfjnpt1pgq5th" path="res://Assets/Characters/Mom.PNG" id="3_yh2ax"]
+[ext_resource type="Texture2D" uid="uid://bljxsb784e8af" path="res://Assets/Characters/Kat.png" id="4_2wj3l"]
+[ext_resource type="PackedScene" uid="uid://cpd1kufpe60jq" path="res://Prefab/input_handler.tscn" id="5_2wj3l"]
+[ext_resource type="Script" uid="uid://dam8tr5761ose" path="res://Scenes/choice_container.gd" id="5_yh2ax"]
+[ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="6_2wj3l"]
+
+[sub_resource type="Gradient" id="Gradient_0k61y"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ketf7"]
+gradient = SubResource("Gradient_0k61y")
+
+[sub_resource type="Gradient" id="Gradient_5eles"]
+offsets = PackedFloat32Array(0, 0.41421568, 0.95343137, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 0.03137255, 0.03137255, 1, 0.4877451, 0.4877451, 0.4877451, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w0n3w"]
+gradient = SubResource("Gradient_5eles")
+
+[sub_resource type="Gradient" id="Gradient_ketf7"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5eles"]
+gradient = SubResource("Gradient_ketf7")
+
+[node name="LVL_UIScene" type="Node"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_5bc5r")
+
+[node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB")]
+script = ExtResource("2_87gg6")
+positions_root = NodePath("..")
+Kat = NodePath("../Characters/Kat")
+BB = NodePath("../Characters/BB")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="BB" type="Node2D" parent="Characters"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/BB"]
+position = Vector2(-1000, 0)
+scale = Vector2(0.52269506, 0.52269506)
+texture = ExtResource("3_yh2ax")
+
+[node name="Kat" type="Node2D" parent="Characters"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/Kat"]
+texture = ExtResource("4_2wj3l")
+
+[node name="Positions" type="Node" parent="."]
+
+[node name="Kat" type="Node" parent="Positions"]
+
+[node name="Kat_Position_1" type="Sprite2D" parent="Positions/Kat"]
+position = Vector2(2396, -100)
+scale = Vector2(1, 175.5)
+texture = SubResource("GradientTexture1D_ketf7")
+
+[node name="InputHandler" parent="." instance=ExtResource("5_2wj3l")]
+
+[node name="Spawns" type="Node" parent="."]
+
+[node name="Haut" type="Node" parent="Spawns"]
+
+[node name="Bush_6" type="Sprite2D" parent="Spawns/Haut"]
+z_index = -1
+position = Vector2(1388, -1404.0002)
+scale = Vector2(3.6640625, 968.5)
+texture = SubResource("GradientTexture1D_w0n3w")
+
+[node name="Bush_1" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-7, -1521)
+scale = Vector2(18.578125, 14.0625)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Bush_5" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-1463, -1853)
+scale = Vector2(18.578125, 14.0625)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Bush_7" type="Sprite2D" parent="Spawns/Haut"]
+z_index = -1
+position = Vector2(-2054, -1468)
+scale = Vector2(3.6640625, 968.5)
+texture = SubResource("GradientTexture1D_w0n3w")
+
+[node name="Bas" type="Node" parent="Spawns"]
+
+[node name="Bush_2" type="Sprite2D" parent="Spawns/Bas"]
+position = Vector2(1604, 1430.0002)
+scale = Vector2(23.763643, 15.751529)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Bush_6" type="Sprite2D" parent="Spawns/Bas"]
+position = Vector2(-109, 1494)
+scale = Vector2(18.578125, 14.0625)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Gauche" type="Node" parent="Spawns"]
+
+[node name="Bush_3" type="Sprite2D" parent="Spawns/Gauche"]
+position = Vector2(-3003.9995, 196.00024)
+scale = Vector2(23.763643, 15.751529)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Droite" type="Node" parent="Spawns"]
+
+[node name="Bush_4" type="Sprite2D" parent="Spawns/Droite"]
+position = Vector2(2997, -81)
+scale = Vector2(18.578125, 14.0625)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="CanvaControl" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = -1.669
+anchor_top = -1.6660001
+anchor_right = 1.6700001
+anchor_bottom = 1.664
+offset_left = 0.47998047
+offset_top = 0.28015137
+offset_right = 0.5998535
+offset_bottom = -0.11999512
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="CanvasLayer/CanvaControl" node_paths=PackedStringArray("B1", "B2", "B3", "B4", "B", "scene_executer", "input_handler")]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1700.0
+offset_right = 1914.5
+offset_bottom = 633.0
+grow_horizontal = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 50
+script = ExtResource("5_yh2ax")
+B1 = NodePath("B1")
+B2 = NodePath("B2")
+B3 = NodePath("B3")
+B4 = NodePath("B4")
+B = NodePath("B")
+scene_executer = NodePath("../../../SceneExecuter")
+input_handler = NodePath("../../../InputHandler")
+
+[node name="B" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_2wj3l")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B1" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B1"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B1/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_2wj3l")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B2" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_2wj3l")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B3" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B3/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_2wj3l")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B4" type="PanelContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvaControl/ChoiceContainer/B4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvaControl/ChoiceContainer/B4/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_2wj3l")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true

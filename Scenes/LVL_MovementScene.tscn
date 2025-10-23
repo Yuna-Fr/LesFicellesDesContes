@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://dfdfgl0vd1ktb"]
+
+[ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_wux2h"]
+[ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_0k61y"]
+[ext_resource type="Texture2D" uid="uid://bljxsb784e8af" path="res://Assets/Characters/Kat.png" id="3_0k61y"]
+[ext_resource type="Texture2D" uid="uid://bfjnpt1pgq5th" path="res://Assets/Characters/Mom.PNG" id="4_ketf7"]
+
+[sub_resource type="Gradient" id="Gradient_0k61y"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ketf7"]
+gradient = SubResource("Gradient_0k61y")
+
+[sub_resource type="Gradient" id="Gradient_5eles"]
+offsets = PackedFloat32Array(0, 0.41421568, 0.95343137, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 0.03137255, 0.03137255, 1, 0.4877451, 0.4877451, 0.4877451, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w0n3w"]
+gradient = SubResource("Gradient_5eles")
+
+[sub_resource type="Gradient" id="Gradient_ketf7"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5eles"]
+gradient = SubResource("Gradient_ketf7")
+
+[node name="LVL_MovementScene" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_wux2h")
+
+[node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB")]
+script = ExtResource("2_0k61y")
+positions_root = NodePath("..")
+Kat = NodePath("../Characters/Kat")
+BB = NodePath("../Characters/BB")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="BB" type="Node2D" parent="Characters"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/BB"]
+position = Vector2(-1000, 0)
+scale = Vector2(0.52269506, 0.52269506)
+texture = ExtResource("4_ketf7")
+
+[node name="Kat" type="Node2D" parent="Characters"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/Kat"]
+texture = ExtResource("3_0k61y")
+
+[node name="Positions" type="Node" parent="."]
+
+[node name="Kat" type="Node" parent="Positions"]
+
+[node name="Kat_Position_1" type="Sprite2D" parent="Positions/Kat"]
+position = Vector2(2396, -100)
+scale = Vector2(1, 175.5)
+texture = SubResource("GradientTexture1D_ketf7")
+
+[node name="Spawns" type="Node" parent="."]
+
+[node name="Haut" type="Node" parent="Spawns"]
+
+[node name="Bush_6" type="Sprite2D" parent="Spawns/Haut"]
+z_index = -1
+position = Vector2(1388, -1404.0002)
+scale = Vector2(3.6640625, 968.5)
+texture = SubResource("GradientTexture1D_w0n3w")
+
+[node name="Bush_1" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-7, -1521)
+scale = Vector2(18.578125, 14.0625)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Bush_5" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-1463, -1853)
+scale = Vector2(18.578125, 14.0625)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Bush_7" type="Sprite2D" parent="Spawns/Haut"]
+z_index = -1
+position = Vector2(-2054, -1468)
+scale = Vector2(3.6640625, 968.5)
+texture = SubResource("GradientTexture1D_w0n3w")
+
+[node name="Bas" type="Node" parent="Spawns"]
+
+[node name="Bush_2" type="Sprite2D" parent="Spawns/Bas"]
+position = Vector2(1604, 1430.0002)
+scale = Vector2(23.763643, 15.751529)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Bush_6" type="Sprite2D" parent="Spawns/Bas"]
+position = Vector2(-109, 1494)
+scale = Vector2(18.578125, 14.0625)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Gauche" type="Node" parent="Spawns"]
+
+[node name="Bush_3" type="Sprite2D" parent="Spawns/Gauche"]
+position = Vector2(-3003.9995, 196.00024)
+scale = Vector2(23.763643, 15.751529)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Droite" type="Node" parent="Spawns"]
+
+[node name="Bush_4" type="Sprite2D" parent="Spawns/Droite"]
+position = Vector2(2997, -81)
+scale = Vector2(18.578125, 14.0625)
+texture = SubResource("GradientTexture2D_5eles")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)

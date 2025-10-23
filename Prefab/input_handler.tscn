@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpd1kufpe60jq"]
+
+[ext_resource type="Script" uid="uid://0tphuxy6a2n6" path="res://Scripts/InputHandler.gd" id="1_gxtjs"]
+
+[node name="InputHandler" type="Node"]
+script = ExtResource("1_gxtjs")
