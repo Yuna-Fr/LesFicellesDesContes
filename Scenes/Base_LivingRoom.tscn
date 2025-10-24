@@ -30,7 +30,7 @@ zoom = Vector2(0.3, 0.3)
 [node name="Haut" type="Node" parent="Spawns"]
 
 [node name="PropColonne1_MG" type="Sprite2D" parent="Spawns"]
-position = Vector2(-459.00003, -215)
+position = Vector2(-468.00003, -313)
 scale = Vector2(3.8546507, 4.4099813)
 texture = ExtResource("10_avm5g")
 
