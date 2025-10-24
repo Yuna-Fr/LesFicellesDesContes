@@ -1,0 +1,89 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=23 format=3 uid="uid://dnjo6fw1d2ymk"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterAppear.gd" id="1_unfgc"]
+[ext_resource type="Script" path="res://Scripts/base_dialogue.gd" id="2_ixii3"]
+[ext_resource type="Texture2D" uid="uid://dmlpho6vbhuqc" path="res://Assets/Characters/char_brother1.png" id="3_7pakx"]
+[ext_resource type="Script" path="res://Scripts/Movement.gd" id="3_n6ejw"]
+[ext_resource type="Texture2D" uid="uid://b3iih8vvc4ab6" path="res://Assets/Characters/char_brother2.png" id="4_1b8iv"]
+[ext_resource type="Script" path="res://Scripts/Scene.gd" id="4_7pakx"]
+[ext_resource type="Texture2D" uid="uid://das65c0wtxhil" path="res://Assets/Characters/char_kat.png" id="4_q6qe7"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="5_1b8iv"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="6_q6qe7"]
+[ext_resource type="Script" path="res://Scripts/SpawnObject.gd" id="7_hlnj8"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0.0066778064, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.60784316, 0.85490197, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_q6qe7"]
+script = ExtResource("1_unfgc")
+name = "Brother_1"
+sprite = ExtResource("3_7pakx")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_hlnj8"]
+script = ExtResource("1_unfgc")
+name = "Brother_2"
+sprite = ExtResource("4_1b8iv")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_ixvhp"]
+script = ExtResource("1_unfgc")
+name = "Kat"
+sprite = ExtResource("4_q6qe7")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_8a67e"]
+script = ExtResource("4_7pakx")
+name = "Scene_21"
+icon = ExtResource("5_1b8iv")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_0mqkp"]
+script = ExtResource("7_hlnj8")
+direction = "bas"
+target = NodePath("Decor/Hill/Bas/Prop_BG_PropMontagne")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_pcbjo"]
+script = ExtResource("7_hlnj8")
+direction = "bas"
+target = NodePath("Decor/Hill/Bas/Prop_BG_DecorHill")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_dfpec"]
+script = ExtResource("7_hlnj8")
+direction = "gauche"
+target = NodePath("Decor/Hill/Gauche/Prop_MD_PropMouton1")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_tdgun"]
+script = ExtResource("7_hlnj8")
+direction = "gauche"
+target = NodePath("Decor/Hill/Gauche/Prop_MD_PropMouton2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_opf58"]
+script = ExtResource("7_hlnj8")
+direction = "gauche"
+target = NodePath("Decor/Hill/Gauche/Prop_MD_PropMouton3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_1xvid"]
+script = ExtResource("7_hlnj8")
+direction = "droite"
+target = NodePath("Decor/Hill/Droite/Prop_FG_PropTour")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("6_q6qe7")
+description = "Dans la foret"
+background = SubResource("GradientTexture2D_dinbm")
+characters_spawn = Array[ExtResource("1_unfgc")]([SubResource("Resource_q6qe7"), SubResource("Resource_hlnj8"), SubResource("Resource_ixvhp")])
+spawns = Array[ExtResource("7_hlnj8")]([SubResource("Resource_0mqkp"), SubResource("Resource_pcbjo"), SubResource("Resource_dfpec"), SubResource("Resource_tdgun"), SubResource("Resource_opf58"), SubResource("Resource_1xvid")])
+next_events = Array[ExtResource("4_7pakx")]([SubResource("Resource_8a67e")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

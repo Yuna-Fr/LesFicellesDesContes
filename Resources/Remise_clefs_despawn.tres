@@ -1,0 +1,128 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=27 format=3 uid="uid://chw174a6fdh2"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterAppear.gd" id="1_twxq3"]
+[ext_resource type="Script" path="res://Scripts/base_dialogue.gd" id="2_iptib"]
+[ext_resource type="Script" path="res://Scripts/Movement.gd" id="3_u2ksd"]
+[ext_resource type="Script" path="res://Scripts/Scene.gd" id="4_hg58t"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="5_ts7d4"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="6_fd7qj"]
+[ext_resource type="Script" path="res://Scripts/SpawnObject.gd" id="7_0e3dw"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0.0066778064, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.60784316, 0.85490197, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_8a67e"]
+script = ExtResource("4_hg58t")
+name = "Scene_21"
+icon = ExtResource("5_ts7d4")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_fsokd"]
+script = ExtResource("7_0e3dw")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropColonne1_MG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_1dmjf"]
+script = ExtResource("7_0e3dw")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropEscalier1_MG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_075na"]
+script = ExtResource("7_0e3dw")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropCommodeFermee_FG_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_vob6e"]
+script = ExtResource("7_0e3dw")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropDeco1_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_f23fo"]
+script = ExtResource("7_0e3dw")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropBuste_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_lhu8e"]
+script = ExtResource("7_0e3dw")
+direction = "bas"
+target = NodePath("Decor/LivingRoom/Spawns/Bas/PropFlame_MG2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_v5kl6"]
+script = ExtResource("7_0e3dw")
+direction = "bas"
+target = NodePath("Decor/LivingRoom/Spawns/Bas/PropFlame_MG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_4yn54"]
+script = ExtResource("7_0e3dw")
+direction = "bas"
+target = NodePath("Decor/LivingRoom/Spawns/Bas/PropChandelier_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_ft8w7"]
+script = ExtResource("7_0e3dw")
+direction = "gauche"
+target = NodePath("Decor/LivingRoom/Spawns/Gauche/PropsPainting3_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_l1jhd"]
+script = ExtResource("7_0e3dw")
+direction = "gauche"
+target = NodePath("Decor/LivingRoom/Spawns/Gauche/PropsPainting2_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_gixce"]
+script = ExtResource("7_0e3dw")
+direction = "gauche"
+target = NodePath("Decor/LivingRoom/Spawns/Gauche/PropsPainting5_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_m7js8"]
+script = ExtResource("7_0e3dw")
+direction = "droite"
+target = NodePath("Decor/LivingRoom/Spawns/Droite/PropsPainting4_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_f23fm"]
+script = ExtResource("7_0e3dw")
+direction = "droite"
+target = NodePath("Decor/LivingRoom/Spawns/Droite/PropChaise2_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_1nc8j"]
+script = ExtResource("7_0e3dw")
+direction = "droite"
+target = NodePath("Decor/LivingRoom/Spawns/Droite/PropsPainting6_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_w135l"]
+script = ExtResource("7_0e3dw")
+direction = "bas"
+target = NodePath("Decor/LivingRoom/Decor_Livingroom_bg")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_77ouj"]
+script = ExtResource("7_0e3dw")
+direction = "haut"
+target = NodePath("Decor/PropsKeys")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("6_fd7qj")
+description = "Dans la foret"
+background = SubResource("GradientTexture2D_dinbm")
+characters_des = Array[String](["BB", "Kat"])
+spawns = Array[ExtResource("7_0e3dw")]([SubResource("Resource_fsokd"), SubResource("Resource_1dmjf"), SubResource("Resource_075na"), SubResource("Resource_vob6e"), SubResource("Resource_f23fo"), SubResource("Resource_lhu8e"), SubResource("Resource_v5kl6"), SubResource("Resource_4yn54"), SubResource("Resource_ft8w7"), SubResource("Resource_l1jhd"), SubResource("Resource_gixce"), SubResource("Resource_m7js8"), SubResource("Resource_f23fm"), SubResource("Resource_1nc8j"), SubResource("Resource_w135l"), SubResource("Resource_77ouj")])
+next_events = Array[ExtResource("4_hg58t")]([SubResource("Resource_8a67e")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"
