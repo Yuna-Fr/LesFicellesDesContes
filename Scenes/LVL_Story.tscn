@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://bxtcibqfb4cpo"]
+[gd_scene load_steps=79 format=3 uid="uid://bxtcibqfb4cpo"]
 
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_v8s55"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_iw4l2"]
@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://b2pc4kw5xxo63" path="res://Assets/Props/Vegetation/props_branch_leaves.png" id="36_i2mkb"]
 [ext_resource type="Texture2D" uid="uid://7r4efajup7oe" path="res://Assets/Props/Vegetation/props_grasse1.png" id="37_nnboc"]
 [ext_resource type="Texture2D" uid="uid://c855ldv3jynha" path="res://Assets/Props/Vegetation/props_BG_big_tree.png" id="38_bepfj"]
+[ext_resource type="Texture2D" uid="uid://bdfdvi2pncr5x" path="res://Assets/Props/Objets/props_arch.png" id="38_i2mkb"]
 [ext_resource type="Texture2D" uid="uid://dvfwa0kf452af" path="res://Assets/Props/Vegetation/props_bush.png" id="39_7uc1y"]
 [ext_resource type="Texture2D" uid="uid://bxn61pmea25ka" path="res://Assets/Props/Vegetation/props_bush_ornement.png" id="40_2xfyf"]
 [ext_resource type="Texture2D" uid="uid://b4e1pw731b5b8" path="res://Assets/Props/Vegetation/props_bush4.png" id="41_wbyhb"]
@@ -107,7 +108,7 @@ shader_parameter/fade = 0.0
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_v8s55")
-current_event_id = "BASE_Stairs"
+current_event_id = "BASE_Forest_marriage"
 
 [node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB", "Anne", "Mom", "Girls", "Dead", "Brother")]
 script = ExtResource("2_iw4l2")
@@ -284,7 +285,6 @@ position = Vector2(-2330, 859)
 [node name="Decor" type="Node" parent="."]
 
 [node name="DeadRoom" type="Node2D" parent="Decor"]
-visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/DeadRoom"]
 
@@ -438,7 +438,6 @@ scale = Vector2(1.1709083, 1.1709083)
 texture = ExtResource("23_otauw")
 
 [node name="Bedroom" type="Node2D" parent="Decor"]
-visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/Bedroom"]
 
@@ -486,7 +485,6 @@ scale = Vector2(1.6828868, 1.6828868)
 texture = ExtResource("17_f5ywd")
 
 [node name="Forest" type="Node2D" parent="Decor"]
-visible = false
 
 [node name="Haut" type="Node2D" parent="Decor/Forest"]
 
@@ -647,6 +645,12 @@ texture = ExtResource("31_tdkoh")
 
 [node name="Bas" type="Node2D" parent="Decor/Forest"]
 
+[node name="PropsArch" type="Sprite2D" parent="Decor/Forest/Bas"]
+visible = false
+position = Vector2(8.000015, 19.000006)
+scale = Vector2(1.6875615, 1.9623456)
+texture = ExtResource("38_i2mkb")
+
 [node name="Gauche" type="Node2D" parent="Decor/Forest"]
 
 [node name="PropsFGGrasse2" type="Sprite2D" parent="Decor/Forest/Gauche"]
@@ -732,7 +736,6 @@ texture = ExtResource("41_wbyhb")
 [node name="Droite" type="Node2D" parent="Decor/Forest"]
 
 [node name="LivingRoom" type="Node2D" parent="Decor"]
-visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/LivingRoom"]
 
