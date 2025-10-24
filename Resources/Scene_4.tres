@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=15 format=3 uid="uid://c6a12rlyia6yo"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=16 format=3 uid="uid://b2nlymtsh8n7t"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_dp3np"]
 [ext_resource type="Texture2D" uid="uid://dmlpho6vbhuqc" path="res://Assets/Characters/char_brother1.png" id="2_017d8"]
@@ -32,6 +32,11 @@ sprite = ExtResource("3_ystpo")
 target = NodePath("Positions/Brother_2/0_Presentation")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
+[sub_resource type="Resource" id="Resource_017d8"]
+script = ExtResource("3_1h6mu")
+delay_after_sound = 1.0
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
 [sub_resource type="Resource" id="Resource_jcese"]
 script = ExtResource("5_8w5rw")
 name = "Scene_5"
@@ -42,6 +47,7 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("7_ongbd")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
+dialogues = Array[ExtResource("3_1h6mu")]([SubResource("Resource_017d8")])
 characters_spawn = Array[ExtResource("1_dp3np")]([SubResource("Resource_ia2or"), SubResource("Resource_8w5rw")])
 next_events = Array[ExtResource("5_8w5rw")]([SubResource("Resource_jcese")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

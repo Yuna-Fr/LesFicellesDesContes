@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=13 format=3 uid="uid://dt8hx13el0yw2"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=14 format=3 uid="uid://eoqntyv3u41a"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_mpbvj"]
 [ext_resource type="Texture2D" uid="uid://das65c0wtxhil" path="res://Assets/Characters/char_kat.png" id="2_mpbvj"]
@@ -24,6 +24,11 @@ sprite = ExtResource("2_mpbvj")
 target = NodePath("Positions/Kat/0_Presentation")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
+[sub_resource type="Resource" id="Resource_mpbvj"]
+script = ExtResource("3_02d5b")
+delay_after_sound = 1.0
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
 [sub_resource type="Resource" id="Resource_jcese"]
 script = ExtResource("5_0v2ny")
 name = "Scene_2"
@@ -34,6 +39,7 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("7_vrfa6")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
+dialogues = Array[ExtResource("3_02d5b")]([SubResource("Resource_mpbvj")])
 characters_spawn = Array[ExtResource("1_mpbvj")]([SubResource("Resource_ia2or")])
 next_events = Array[ExtResource("5_0v2ny")]([SubResource("Resource_jcese")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

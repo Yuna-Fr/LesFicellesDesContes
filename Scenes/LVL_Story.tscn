@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://bxtcibqfb4cpo"]
+[gd_scene load_steps=72 format=3 uid="uid://cy8likkb604mn"]
 
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_v8s55"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_iw4l2"]
@@ -97,7 +97,6 @@ shader_parameter/fade = 0.0
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_v8s55")
-current_event_id = "BASE_Forest_marriage"
 
 [node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB", "Anne", "Mom", "Girls", "Dead", "Brother")]
 script = ExtResource("2_iw4l2")
@@ -390,21 +389,25 @@ texture = ExtResource("17_0wein")
 [node name="Droite" type="Node2D" parent="Decor/DeadRoom/Spawns"]
 
 [node name="DeadWoman2" type="Sprite2D" parent="Decor/DeadRoom"]
+visible = false
 z_index = 50
 position = Vector2(2982, -1005)
 texture = ExtResource("18_r3q4u")
 
 [node name="TacheSang" type="Sprite2D" parent="Decor/DeadRoom"]
+visible = false
 z_index = 50
 position = Vector2(-1521, 1489)
 texture = ExtResource("19_yllu4")
 
 [node name="TacheSang2" type="Sprite2D" parent="Decor/DeadRoom"]
+visible = false
 z_index = 50
 position = Vector2(-956, 1489)
 texture = ExtResource("19_yllu4")
 
 [node name="TacheSang3" type="Sprite2D" parent="Decor/DeadRoom"]
+visible = false
 z_index = 50
 position = Vector2(921, 1496)
 texture = ExtResource("19_yllu4")

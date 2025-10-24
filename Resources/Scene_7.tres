@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=11 format=3 uid="uid://lt53632fd4mg"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=12 format=3 uid="uid://b1stdtwyl2kyu"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_tfwns"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_dm8oo"]
@@ -16,6 +16,11 @@ colors = PackedColorArray(1, 0, 0, 1, 0.26057518, 4.579641e-05, 0.26057312, 1)
 gradient = SubResource("Gradient_4vgof")
 fill_from = Vector2(1, 1)
 
+[sub_resource type="Resource" id="Resource_dm8oo"]
+script = ExtResource("2_dm8oo")
+delay_after_sound = 1.0
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
 [sub_resource type="Resource" id="Resource_5muj5"]
 script = ExtResource("4_42o6c")
 name = "Scene_8"
@@ -26,5 +31,6 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("5_hufwk")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
+dialogues = Array[ExtResource("2_dm8oo")]([SubResource("Resource_dm8oo")])
 next_events = Array[ExtResource("4_42o6c")]([SubResource("Resource_5muj5")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

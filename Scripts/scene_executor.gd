@@ -63,7 +63,7 @@ func execute(_event_data: BaseEvent):
 	
 	if (event_data.music): _play_music(event_data.music)
 	
-	await _despawn_characters(event_data.characters_des)
+	_despawn_characters(event_data.characters_des)
 	_remove_unused_objects(event_data.spawns)
 	_start_movements(event_data.movements)
 	_spawn_objects(event_data.spawns)
