@@ -1,0 +1,353 @@
+[gd_scene load_steps=37 format=3 uid="uid://8xy55toxuknr"]
+
+[ext_resource type="Texture2D" uid="uid://cnv4nqwnhtwei" path="res://Assets/Decors/decor_bedroom.png" id="1_0xo3k"]
+[ext_resource type="Texture2D" uid="uid://c32hfm7onur6y" path="res://Assets/Decors/decor_castle.png" id="2_cmik8"]
+[ext_resource type="Texture2D" uid="uid://d2hig58fp5i44" path="res://Assets/Props/White/props_bush (1).png" id="3_0f8bd"]
+[ext_resource type="Texture2D" uid="uid://b1rbalsosmc5q" path="res://Assets/Props/White/moon.png" id="5_jtoqi"]
+[ext_resource type="Texture2D" uid="uid://b8bix7qbill33" path="res://Assets/Props/White/props_BG_big_tree (1).png" id="6_0j4ml"]
+[ext_resource type="Texture2D" uid="uid://bp1a5220wjpqg" path="res://Assets/Props/White/props_bushes1.png" id="7_lg3gu"]
+[ext_resource type="Texture2D" uid="uid://ord2fis1gaps" path="res://Assets/Props/White/props_bushes2.png" id="8_gfc2r"]
+[ext_resource type="Texture2D" uid="uid://bu6wq0p5e244g" path="res://Assets/Props/White/props_bushes3.png" id="9_4cl83"]
+[ext_resource type="Texture2D" uid="uid://d4ckyqqtadj0x" path="res://Assets/Props/White/props_bushes4.png" id="10_y0qhn"]
+[ext_resource type="Texture2D" uid="uid://bbgsfvpe2rx42" path="res://Assets/Props/White/props_bushes5.png" id="11_f41q0"]
+[ext_resource type="Texture2D" uid="uid://rc2cvysokwov" path="res://Assets/Props/White/props_bushes6.png" id="12_mvlse"]
+[ext_resource type="Texture2D" uid="uid://c3rauodnkotbf" path="res://Assets/Props/White/props_bushes7.png" id="13_stocc"]
+[ext_resource type="Texture2D" uid="uid://cpy1rrk0n5byq" path="res://Assets/Props/White/props_bushes8.png" id="14_g0gln"]
+[ext_resource type="Texture2D" uid="uid://cfq60gd3gdato" path="res://Assets/Props/White/props_bushes9.png" id="15_excsb"]
+[ext_resource type="Texture2D" uid="uid://dnokcqbhr3k1q" path="res://Assets/Props/White/props_bushes10.png" id="16_d4eys"]
+[ext_resource type="Texture2D" uid="uid://jatrdsdn2hlg" path="res://Assets/Props/White/props_bushes11.png" id="17_mpmtv"]
+[ext_resource type="Texture2D" uid="uid://be2b866jwammw" path="res://Assets/Props/White/props_bushes12.png" id="18_pihmk"]
+[ext_resource type="Texture2D" uid="uid://7fvpvlaeq31t" path="res://Assets/Props/White/props_bushes13.png" id="19_4s2yo"]
+[ext_resource type="Texture2D" uid="uid://wxy3aiewar6j" path="res://Assets/Props/White/props_bushes14.png" id="20_5sc0v"]
+[ext_resource type="Texture2D" uid="uid://irqt3jedwmgd" path="res://Assets/Props/White/props_bushes15.png" id="21_d1urk"]
+[ext_resource type="Texture2D" uid="uid://oetvxqssu8j2" path="res://Assets/Props/White/props_bushes16.png" id="22_q35mj"]
+[ext_resource type="Texture2D" uid="uid://dnam5ssdsayxr" path="res://Assets/Props/White/props_bushes17.png" id="23_lytdb"]
+[ext_resource type="Texture2D" uid="uid://dvodhs41vkjjc" path="res://Assets/Props/White/props_grass2.png" id="24_3shqx"]
+[ext_resource type="Texture2D" uid="uid://ce0826t75grs8" path="res://Assets/Props/White/props_grasse1.png" id="25_fagf6"]
+[ext_resource type="Texture2D" uid="uid://ce30j5lmrvb2m" path="res://Assets/Props/White/props_ivy (1).png" id="26_jsc5y"]
+[ext_resource type="Texture2D" uid="uid://dcnpcdyjansuv" path="res://Assets/Props/White/props_tree_small2.png" id="27_fmahu"]
+[ext_resource type="Texture2D" uid="uid://ch07uj2db7uw7" path="res://Assets/Props/White/props_tree_small3.png" id="28_j1a66"]
+[ext_resource type="Texture2D" uid="uid://dqrkf8sbu0mpq" path="res://Assets/Props/White/props_tree_small4.png" id="29_h64y6"]
+[ext_resource type="Texture2D" uid="uid://c2rogloo35qxv" path="res://Assets/Props/White/props_tree_small.png" id="30_2ixaa"]
+[ext_resource type="Texture2D" uid="uid://cnjfd43qwjvnt" path="res://Assets/Props/White/Prop_mouton1.png" id="31_uccnm"]
+[ext_resource type="Texture2D" uid="uid://dvv0rq1wxvllx" path="res://Assets/Props/White/Prop_mouton2.png" id="32_75ogk"]
+[ext_resource type="Texture2D" uid="uid://cwyn6ijr3ng8k" path="res://Assets/Props/White/Prop_mouton3.png" id="33_qhrjg"]
+[ext_resource type="Texture2D" uid="uid://b37presr4tuj4" path="res://Assets/Props/White/Prop_oiseau1 (1).png" id="34_3axo7"]
+[ext_resource type="Texture2D" uid="uid://bl3noruovwodi" path="res://Assets/Props/White/Prop_oiseau2 (1).png" id="35_u5cfx"]
+
+[sub_resource type="Gradient" id="Gradient_1kdmn"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wg6x7"]
+gradient = SubResource("Gradient_1kdmn")
+
+[node name="Base_Decor" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Spawns" type="Node" parent="."]
+
+[node name="Haut" type="Node" parent="Spawns"]
+
+[node name="Bas" type="Node" parent="Spawns"]
+
+[node name="Gauche" type="Node" parent="Spawns"]
+
+[node name="Droite" type="Node" parent="Spawns"]
+
+[node name="Sol" type="Sprite2D" parent="."]
+position = Vector2(-50.000008, 2229)
+scale = Vector2(119.44951, 21.769768)
+texture = SubResource("GradientTexture2D_wg6x7")
+
+[node name="PropsBushes18" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.5764706)
+self_modulate = Color(0, 0, 0, 0.25490198)
+show_behind_parent = true
+position = Vector2(2605.9739, 836.02954)
+scale = Vector2(2.7195907, 2.7195907)
+texture = ExtResource("7_lg3gu")
+
+[node name="DecorBedroom" type="Sprite2D" parent="."]
+position = Vector2(1505.0005, 4896)
+scale = Vector2(1.464815, 1.4648149)
+texture = ExtResource("1_0xo3k")
+
+[node name="PropsBush(1)2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.20392157)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-2936.9998, 870)
+scale = Vector2(3.4441895, 3.4441886)
+texture = ExtResource("3_0f8bd")
+
+[node name="DecorCastle" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.77254903)
+show_behind_parent = true
+position = Vector2(247, 264)
+scale = Vector2(1.363426, 1.363426)
+texture = ExtResource("2_cmik8")
+
+[node name="PropsBush(1)" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.20392157)
+position = Vector2(2336, 1138.0001)
+scale = Vector2(1.6949552, 1.6949551)
+texture = ExtResource("3_0f8bd")
+
+[node name="Moon" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-1088.9385, -1298.25)
+scale = Vector2(0.8699871, 0.8699871)
+texture = ExtResource("5_jtoqi")
+
+[node name="PropsBgBigTree(1)" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.13333334)
+show_behind_parent = true
+position = Vector2(-1687.3281, 127.270645)
+scale = Vector2(0.92319816, 0.9231981)
+texture = ExtResource("6_0j4ml")
+
+[node name="PropsBushes1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.5764706)
+self_modulate = Color(1, 1, 1, 0.25490198)
+position = Vector2(9608.001, 1021.0001)
+scale = Vector2(1.6187781, 1.6187782)
+texture = ExtResource("7_lg3gu")
+
+[node name="PropsBushes2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.13725491)
+position = Vector2(-244.99997, 1157.0001)
+scale = Vector2(1.1705652, 1.1705652)
+texture = ExtResource("8_gfc2r")
+
+[node name="PropsBushes3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.25490198)
+position = Vector2(389, 820.99994)
+rotation = 0.0010798424
+scale = Vector2(0.29966065, 0.29966065)
+texture = ExtResource("9_4cl83")
+
+[node name="PropsBushes4" type="Sprite2D" parent="."]
+position = Vector2(-2972, 1226)
+texture = ExtResource("10_y0qhn")
+
+[node name="PropsBushes5" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.6862745)
+position = Vector2(176, 1310)
+texture = ExtResource("11_f41q0")
+
+[node name="PropsBushes6" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.09803922)
+position = Vector2(454, 1212.0001)
+scale = Vector2(0.80042565, 0.8004258)
+texture = ExtResource("12_mvlse")
+
+[node name="PropsBushes7" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.60784316)
+self_modulate = Color(1, 1, 1, 0.6666667)
+position = Vector2(-828.00006, 1306)
+scale = Vector2(1.3885714, 1.3885714)
+texture = ExtResource("13_stocc")
+
+[node name="PropsBushes8" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.4862745)
+position = Vector2(-1958, 1216)
+scale = Vector2(0.8642612, 0.86426115)
+texture = ExtResource("14_g0gln")
+
+[node name="PropsBushes9" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.44705883)
+position = Vector2(1479.328, 1275)
+scale = Vector2(0.88524586, 0.885246)
+texture = ExtResource("15_excsb")
+
+[node name="PropsBushes10" type="Sprite2D" parent="."]
+position = Vector2(-1716.7622, 1410.25)
+scale = Vector2(0.5731707, 0.5731707)
+texture = ExtResource("16_d4eys")
+
+[node name="PropsBushes11" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.6784314)
+position = Vector2(2894, 1334)
+texture = ExtResource("17_mpmtv")
+
+[node name="PropsBushes12" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.36862746)
+position = Vector2(2641.6875, 1399.2114)
+scale = Vector2(1.8530245, 1.8530251)
+texture = ExtResource("18_pihmk")
+
+[node name="PropsBushes12" type="Sprite2D" parent="PropsBushes12"]
+position = Vector2(-88.475494, 24.042229)
+scale = Vector2(-0.6992834, 0.54284257)
+texture = ExtResource("18_pihmk")
+
+[node name="PropsBushes13" type="Sprite2D" parent="."]
+modulate = Color(0.14406255, 0.14406255, 0.14406255, 1)
+position = Vector2(138, 460)
+rotation = 0.25375676
+scale = Vector2(0.29292047, 0.24863517)
+texture = ExtResource("19_4s2yo")
+
+[node name="PropsBushes14" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.38039216)
+position = Vector2(-2327.0002, 1239)
+scale = Vector2(0.6296296, 0.6296296)
+texture = ExtResource("20_5sc0v")
+
+[node name="PropsBushes15" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.14901961)
+position = Vector2(-1385, 1047)
+scale = Vector2(1.7797017, 1.7797017)
+texture = ExtResource("21_d1urk")
+
+[node name="PropsBushes16" type="Sprite2D" parent="."]
+modulate = Color(0.65834004, 0.6583399, 0.6583399, 1)
+position = Vector2(143.10466, 818.1842)
+scale = Vector2(0.21177924, 0.2117792)
+texture = ExtResource("22_q35mj")
+
+[node name="PropsBushes17" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.2)
+position = Vector2(-2464, 1307)
+scale = Vector2(0.32377017, 0.32377008)
+texture = ExtResource("23_lytdb")
+
+[node name="PropsGrass2" type="Sprite2D" parent="."]
+position = Vector2(7921.666, 1221.8438)
+scale = Vector2(0.6666667, 0.6666667)
+texture = ExtResource("24_3shqx")
+
+[node name="PropsGrasse1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.25490198)
+position = Vector2(8794, 1257)
+scale = Vector2(0.6091643, 0.6091644)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsIvy(1)" type="Sprite2D" parent="."]
+modulate = Color(0.16565639, 0.16565642, 0.16565639, 1)
+position = Vector2(1004, 656)
+rotation = 0.018157791
+scale = Vector2(0.34357592, 0.30526775)
+texture = ExtResource("26_jsc5y")
+
+[node name="PropsTreeSmall2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.36862746)
+show_behind_parent = true
+position = Vector2(-2178.7813, -191.30553)
+scale = Vector2(3.5832942, 3.5832942)
+texture = ExtResource("27_fmahu")
+
+[node name="PropsTreeSmall3" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.07058824)
+show_behind_parent = true
+position = Vector2(717.56244, -286.65057)
+scale = Vector2(3.3778358, 3.3778358)
+texture = ExtResource("28_j1a66")
+
+[node name="PropsTreeSmall4" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.12156863)
+position = Vector2(-3239, 28)
+scale = Vector2(3.2687988, 3.2687988)
+texture = ExtResource("29_h64y6")
+
+[node name="PropsTreeSmall" type="Sprite2D" parent="."]
+modulate = Color(10.229394, 18.892157, 9.243387, 0.39607844)
+show_behind_parent = true
+position = Vector2(3462.2188, -561.9728)
+scale = Vector2(4.470848, 4.4708486)
+texture = ExtResource("30_2ixaa")
+
+[node name="PropMouton1" type="Sprite2D" parent="."]
+position = Vector2(2149.6816, 1377.5)
+texture = ExtResource("31_uccnm")
+
+[node name="PropMouton2" type="Sprite2D" parent="."]
+position = Vector2(1006.1232, 811.8125)
+scale = Vector2(0.3004388, 0.30043882)
+texture = ExtResource("32_75ogk")
+
+[node name="PropMouton3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.6666667)
+show_behind_parent = true
+position = Vector2(958, 1344.0001)
+scale = Vector2(0.7091836, 0.7091835)
+texture = ExtResource("33_qhrjg")
+
+[node name="PropOiseau1(1)" type="Sprite2D" parent="."]
+position = Vector2(1477.6625, -680.5)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("34_3axo7")
+
+[node name="PropOiseau2(1)" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.3647059)
+position = Vector2(-2472.0002, -1035.0001)
+scale = Vector2(1.4782206, 1.4782206)
+texture = ExtResource("35_u5cfx")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(277, 1461)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="PropsGrasse2"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(1178, 0)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="PropsGrasse2/PropsGrasse2"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(1178, 0)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse3" type="Sprite2D" parent="PropsGrasse2"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(3528, -1)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="PropsGrasse2/PropsGrasse3"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(1178, 0)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="PropsGrasse2/PropsGrasse3/PropsGrasse2"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(1178, 0)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse4" type="Sprite2D" parent="PropsGrasse2"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(-7056, 6)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="PropsGrasse2/PropsGrasse4"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(1178, 0)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="PropsGrasse2/PropsGrasse4/PropsGrasse2"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(1178, 0)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse3" type="Sprite2D" parent="PropsGrasse2/PropsGrasse4"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(3528, -1)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="PropsGrasse2/PropsGrasse4/PropsGrasse3"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(1178, 0)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsGrasse2" type="Sprite2D" parent="PropsGrasse2/PropsGrasse4/PropsGrasse3/PropsGrasse2"]
+self_modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(1178, 0)
+texture = ExtResource("25_fagf6")
+
+[node name="PropsTreeSmall4" type="Sprite2D" parent="PropsGrasse2/PropsGrasse4/PropsGrasse3/PropsGrasse2"]
+modulate = Color(0, 0, 0, 0.11764706)
+show_behind_parent = true
+position = Vector2(4611, -1549)
+scale = Vector2(3.5673866, 3.567387)
+texture = ExtResource("29_h64y6")
