@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=40 format=3 uid="uid://d3qno6dwgytrm"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=41 format=3 uid="uid://d3qno6dwgytrm"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_7bpwq"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_r201i"]
@@ -195,10 +195,16 @@ direction = "gauche"
 target = NodePath("Decor/Forest/Gauche/PropsFGBush5")
 metadata/_custom_type_script = "uid://dmedebbw0lnsu"
 
+[sub_resource type="Resource" id="Resource_d25yd"]
+script = ExtResource("7_122ui")
+direction = "bas"
+target = NodePath("Decor/Forest/Bas/PropsArch")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
 [resource]
 script = ExtResource("6_kleia")
 description = "Dans la foret"
 background = SubResource("GradientTexture2D_dinbm")
-spawns = Array[ExtResource("7_122ui")]([SubResource("Resource_7bpwq"), SubResource("Resource_r201i"), SubResource("Resource_2kj20"), SubResource("Resource_fmull"), SubResource("Resource_unutt"), SubResource("Resource_kleia"), SubResource("Resource_122ui"), SubResource("Resource_543h4"), SubResource("Resource_0ikb2"), SubResource("Resource_gbc8q"), SubResource("Resource_k3co5"), SubResource("Resource_p52in"), SubResource("Resource_km6kr"), SubResource("Resource_psko2"), SubResource("Resource_av46r"), SubResource("Resource_8rpwn"), SubResource("Resource_t0pv8"), SubResource("Resource_fi14e"), SubResource("Resource_4l0nr"), SubResource("Resource_iltpd"), SubResource("Resource_2cy57"), SubResource("Resource_s4qlr"), SubResource("Resource_krx0l"), SubResource("Resource_fhxmv"), SubResource("Resource_bmm56"), SubResource("Resource_vkqp4"), SubResource("Resource_d4fyq"), SubResource("Resource_i8xxx"), SubResource("Resource_mwkhc")])
+spawns = Array[ExtResource("7_122ui")]([SubResource("Resource_7bpwq"), SubResource("Resource_r201i"), SubResource("Resource_2kj20"), SubResource("Resource_fmull"), SubResource("Resource_unutt"), SubResource("Resource_kleia"), SubResource("Resource_122ui"), SubResource("Resource_543h4"), SubResource("Resource_0ikb2"), SubResource("Resource_gbc8q"), SubResource("Resource_k3co5"), SubResource("Resource_p52in"), SubResource("Resource_km6kr"), SubResource("Resource_psko2"), SubResource("Resource_av46r"), SubResource("Resource_8rpwn"), SubResource("Resource_t0pv8"), SubResource("Resource_fi14e"), SubResource("Resource_4l0nr"), SubResource("Resource_iltpd"), SubResource("Resource_2cy57"), SubResource("Resource_s4qlr"), SubResource("Resource_krx0l"), SubResource("Resource_fhxmv"), SubResource("Resource_bmm56"), SubResource("Resource_vkqp4"), SubResource("Resource_d4fyq"), SubResource("Resource_i8xxx"), SubResource("Resource_mwkhc"), SubResource("Resource_d25yd")])
 next_events = Array[ExtResource("4_fmull")]([SubResource("Resource_8a67e")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"
