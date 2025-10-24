@@ -1,0 +1,219 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=43 format=3 uid="uid://dad88cav1uilk"]
+
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_jk837"]
+[ext_resource type="Texture2D" uid="uid://ys4cb0p48hhd" path="res://Assets/Characters/char_bb_2_reversed.png" id="2_cxhkr"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_pgd7f"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="3_cxhkr"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="4_wvji3"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="5_uw54t"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="6_bvo0d"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="7_pjqb7"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0.0066778064, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.60784316, 0.85490197, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_wvji3"]
+script = ExtResource("1_jk837")
+name = "BB"
+sprite = ExtResource("2_cxhkr")
+target = NodePath("Positions/BB/Marriage")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_8a67e"]
+script = ExtResource("4_wvji3")
+name = "Scene_21"
+icon = ExtResource("5_uw54t")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_7bpwq"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGGrassGreen2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_r201i"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGGrassGreen")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_2kj20"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsMGBlueTre2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_fmull"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGBlueTre3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_unutt"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGBlueTre4")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_kleia"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGGrassGreen4")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_122ui"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsMDTreeBranches")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_543h4"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsMGTreeBranches2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_0ikb2"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsFGGrass2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_gbc8q"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsFGGrass3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_k3co5"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGGrass4")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_p52in"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGGrass5")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_km6kr"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGGrass7")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_psko2"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBranchLeaves")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_av46r"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGGrass6")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_8rpwn"]
+script = ExtResource("7_pjqb7")
+direction = "haut"
+target = NodePath("Decor/Forest/Haut/PropsBGGrassGreen3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_t0pv8"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGGrasse2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_fi14e"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGGrasse1")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_4l0nr"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsMGBigTree3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_iltpd"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGBigTree")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_2cy57"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGBigTree2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_s4qlr"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGBush")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_krx0l"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGBush2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_fhxmv"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsMGBushOrnement")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_bmm56"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGBush3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_vkqp4"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGBushOrnement2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_d4fyq"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_i8xxx"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGBush4")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_mwkhc"]
+script = ExtResource("7_pjqb7")
+direction = "gauche"
+target = NodePath("Decor/Forest/Gauche/PropsFGBush5")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_d25yd"]
+script = ExtResource("7_pjqb7")
+direction = "bas"
+target = NodePath("Decor/Forest/Bas/PropsArch")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("6_bvo0d")
+description = "Dans la foret"
+background = SubResource("GradientTexture2D_dinbm")
+characters_spawn = Array[ExtResource("1_jk837")]([SubResource("Resource_wvji3")])
+spawns = Array[ExtResource("7_pjqb7")]([SubResource("Resource_7bpwq"), SubResource("Resource_r201i"), SubResource("Resource_2kj20"), SubResource("Resource_fmull"), SubResource("Resource_unutt"), SubResource("Resource_kleia"), SubResource("Resource_122ui"), SubResource("Resource_543h4"), SubResource("Resource_0ikb2"), SubResource("Resource_gbc8q"), SubResource("Resource_k3co5"), SubResource("Resource_p52in"), SubResource("Resource_km6kr"), SubResource("Resource_psko2"), SubResource("Resource_av46r"), SubResource("Resource_8rpwn"), SubResource("Resource_t0pv8"), SubResource("Resource_fi14e"), SubResource("Resource_4l0nr"), SubResource("Resource_iltpd"), SubResource("Resource_2cy57"), SubResource("Resource_s4qlr"), SubResource("Resource_krx0l"), SubResource("Resource_fhxmv"), SubResource("Resource_bmm56"), SubResource("Resource_vkqp4"), SubResource("Resource_d4fyq"), SubResource("Resource_i8xxx"), SubResource("Resource_mwkhc"), SubResource("Resource_d25yd")])
+next_events = Array[ExtResource("4_wvji3")]([SubResource("Resource_8a67e")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_v8s55"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_iw4l2"]
 [ext_resource type="PackedScene" uid="uid://cpd1kufpe60jq" path="res://Prefab/input_handler.tscn" id="3_f8mij"]
-[ext_resource type="Texture2D" uid="uid://dyntww4asfd2n" path="res://Assets/Characters/char_bb_2.png" id="4_5mbgf"]
+[ext_resource type="Texture2D" uid="uid://ys4cb0p48hhd" path="res://Assets/Characters/char_bb_2_reversed.png" id="4_bepfj"]
 [ext_resource type="Texture2D" uid="uid://das65c0wtxhil" path="res://Assets/Characters/char_kat.png" id="5_v8s55"]
 [ext_resource type="Texture2D" uid="uid://co167dxnlvfep" path="res://Assets/Characters/char_mom.png" id="6_1cl7o"]
 [ext_resource type="Script" uid="uid://dam8tr5761ose" path="res://Scenes/choice_container.gd" id="6_pr6aj"]
@@ -103,6 +103,7 @@ shader_parameter/fade = 0.0
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_v8s55")
+current_event_id = "Marriage"
 
 [node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB", "Anne", "Mom", "Girls", "Dead", "Brother")]
 script = ExtResource("2_iw4l2")
@@ -131,15 +132,15 @@ zoom = Vector2(0.3, 0.3)
 [node name="BB" type="Node2D" parent="Characters"]
 visible = false
 z_index = 3
-position = Vector2(-2306, 742)
+position = Vector2(781, 730)
 
 [node name="Visual" type="Sprite2D" parent="Characters/BB"]
-texture = ExtResource("4_5mbgf")
+texture = ExtResource("4_bepfj")
 
 [node name="Kat" type="Node2D" parent="Characters"]
 visible = false
 z_index = 3
-position = Vector2(-4110, 897)
+position = Vector2(-511, 873)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Kat"]
 texture = ExtResource("5_v8s55")
@@ -212,6 +213,9 @@ position = Vector2(-2306, 742)
 [node name="25_Move" type="Node2D" parent="Positions/BB"]
 position = Vector2(1434, 742)
 
+[node name="Marriage" type="Node2D" parent="Positions/BB"]
+position = Vector2(781, 730)
+
 [node name="Kat" type="Node" parent="Positions"]
 
 [node name="0_Presentation" type="Node2D" parent="Positions/Kat"]
@@ -234,6 +238,9 @@ position = Vector2(-4110, 897)
 
 [node name="25_Move" type="Node2D" parent="Positions/Kat"]
 position = Vector2(-370, 897)
+
+[node name="Marriage" type="Node2D" parent="Positions/Kat"]
+position = Vector2(1434, 742)
 
 [node name="Mom" type="Node" parent="Positions"]
 
@@ -678,6 +685,7 @@ texture = ExtResource("31_tdkoh")
 
 [node name="PropsArch" type="Sprite2D" parent="Decor/Forest/Bas"]
 visible = false
+z_index = 14
 position = Vector2(8.000015, 19.000006)
 scale = Vector2(1.6875615, 1.9623456)
 texture = ExtResource("38_i2mkb")
