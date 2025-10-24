@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=17 format=3 uid="uid://dyo1tu4f0wxhn"]
+
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_ixvya"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_tbpg6"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="3_8a12c"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="4_uk016"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="5_eb8fk"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="6_o12r2"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="7_0dkn0"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0.0066778064, 1)
+colors = PackedColorArray(0.007843138, 0.21176471, 0.9137255, 1, 0.015686275, 0.003921569, 0.17254902, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_8a67e"]
+script = ExtResource("4_uk016")
+name = "Scene_21"
+icon = ExtResource("5_eb8fk")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_ca8qn"]
+script = ExtResource("7_0dkn0")
+direction = "haut"
+target = NodePath("Decor/Bedroom/Spawns/Haut/PropsCloset")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_y0vkh"]
+script = ExtResource("7_0dkn0")
+direction = "haut"
+target = NodePath("Decor/Bedroom/Spawns/Haut/PropsPainting2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_wfow6"]
+script = ExtResource("7_0dkn0")
+direction = "bas"
+target = NodePath("Decor/Bedroom/Spawns/Bas/PropsBed")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_5e1j8"]
+script = ExtResource("7_0dkn0")
+direction = "gauche"
+target = NodePath("Decor/Bedroom/Spawns/Gauche/PropMouton2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_jxo03"]
+script = ExtResource("7_0dkn0")
+direction = "droite"
+target = NodePath("Decor/Bedroom/Spawns/Droite/PropsPainting3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_ptyvm"]
+script = ExtResource("7_0dkn0")
+direction = "bas"
+target = NodePath("Decor/Bedroom/DecorBedroom")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("6_o12r2")
+description = "Dans la foret"
+background = SubResource("GradientTexture2D_dinbm")
+spawns = Array[ExtResource("7_0dkn0")]([SubResource("Resource_ca8qn"), SubResource("Resource_y0vkh"), SubResource("Resource_wfow6"), SubResource("Resource_5e1j8"), SubResource("Resource_jxo03"), SubResource("Resource_ptyvm")])
+next_events = Array[ExtResource("4_uk016")]([SubResource("Resource_8a67e")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

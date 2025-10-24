@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://bxtcibqfb4cpo"]
+[gd_scene load_steps=72 format=3 uid="uid://bxtcibqfb4cpo"]
 
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_v8s55"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_iw4l2"]
@@ -46,7 +46,6 @@
 [ext_resource type="Texture2D" uid="uid://dvfwa0kf452af" path="res://Assets/Props/Vegetation/props_bush.png" id="39_7uc1y"]
 [ext_resource type="Texture2D" uid="uid://bxn61pmea25ka" path="res://Assets/Props/Vegetation/props_bush_ornement.png" id="40_2xfyf"]
 [ext_resource type="Texture2D" uid="uid://b4e1pw731b5b8" path="res://Assets/Props/Vegetation/props_bush4.png" id="41_wbyhb"]
-[ext_resource type="Texture2D" uid="uid://caqpr6qap7pip" path="res://Assets/Props/Vegetation/props_night.png" id="42_cv6cm"]
 [ext_resource type="Texture2D" uid="uid://nc1k6qwwe7dh" path="res://Assets/Props/Objets/Prop_escalier1.png" id="43_0t86w"]
 [ext_resource type="Texture2D" uid="uid://cwgcc0eijopno" path="res://Assets/Props/Objets/Prop_commode_fermee.png" id="44_sn12m"]
 [ext_resource type="Texture2D" uid="uid://cuq67lexlhycf" path="res://Assets/Props/Objets/Prop_deco1.png" id="45_x0mjk"]
@@ -98,7 +97,7 @@ shader_parameter/fade = 0.0
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_v8s55")
-current_event_id = "Scene_23"
+current_event_id = "BASE_Forest_marriage"
 
 [node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB", "Anne", "Mom", "Girls", "Dead", "Brother")]
 script = ExtResource("2_iw4l2")
@@ -125,6 +124,7 @@ zoom = Vector2(0.3, 0.3)
 [node name="Characters" type="Node" parent="."]
 
 [node name="BB" type="Node2D" parent="Characters"]
+visible = false
 z_index = 3
 position = Vector2(-1233, 742)
 
@@ -132,6 +132,7 @@ position = Vector2(-1233, 742)
 texture = ExtResource("4_5mbgf")
 
 [node name="Kat" type="Node2D" parent="Characters"]
+visible = false
 z_index = 3
 position = Vector2(-3037, 897)
 
@@ -139,6 +140,7 @@ position = Vector2(-3037, 897)
 texture = ExtResource("5_v8s55")
 
 [node name="Mom" type="Node2D" parent="Characters"]
+visible = false
 z_index = 3
 position = Vector2(-5018, 817)
 
@@ -146,6 +148,7 @@ position = Vector2(-5018, 817)
 texture = ExtResource("6_1cl7o")
 
 [node name="Girls" type="Node2D" parent="Characters"]
+visible = false
 z_index = 3
 position = Vector2(724, -46)
 
@@ -153,6 +156,7 @@ position = Vector2(724, -46)
 texture = ExtResource("7_5mbgf")
 
 [node name="Anne" type="Node2D" parent="Characters"]
+visible = false
 z_index = 3
 position = Vector2(-4047, 866)
 
@@ -270,80 +274,93 @@ position = Vector2(-2330, 859)
 [node name="Decor" type="Node" parent="."]
 
 [node name="DeadRoom" type="Node2D" parent="Decor"]
-visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/DeadRoom"]
 
 [node name="Haut" type="Node2D" parent="Decor/DeadRoom/Spawns"]
 
 [node name="Prop_MD_Body5" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 modulate = Color(1, 1, 1, 0.15686275)
 position = Vector2(2394.9998, -896)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("8_68y18")
 
 [node name="DeadWoman6" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 modulate = Color(1, 1, 1, 0.59607846)
 position = Vector2(-727, -1640)
 texture = ExtResource("9_f5ywd")
 
 [node name="Prop_FG_Body1" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-982.9999, -981)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("10_oo0me")
 
 [node name="Prop_MD_Body2" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 modulate = Color(1, 1, 1, 0.41960785)
 position = Vector2(3087.4524, -451.9724)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("8_68y18")
 
 [node name="Prop_MD_Body4" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 modulate = Color(1, 1, 1, 0.13333334)
 position = Vector2(-178.00024, -371.99997)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("8_68y18")
 
 [node name="Prop_MD_Body7" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 position = Vector2(1807, -850)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("8_68y18")
 
 [node name="Prop_MD_Body6" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 modulate = Color(1, 1, 1, 0.13333334)
 position = Vector2(-1503, -977)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("8_68y18")
 
 [node name="Prop_MD_Body3" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 modulate = Color(5.3174357, 5.3174357, 5.3174357, 0.41960785)
 position = Vector2(-3254.5474, -943.9724)
 scale = Vector2(1.755, 1.755)
 texture = ExtResource("11_lnkjc")
 
 [node name="Prop_GD_Body4" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 modulate = Color(1, 1, 1, 0.12156863)
 position = Vector2(1377.0002, -909)
 scale = Vector2(1.8323783, 1.8323781)
 texture = ExtResource("12_qhayi")
 
 [node name="Prop_FG_DeadWoman1" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-1894, -1101)
 texture = ExtResource("13_a7bl0")
 
 [node name="Prop_FG_DeadWoman4" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-2667, -1182)
 texture = ExtResource("14_ran3o")
 
 [node name="Prop_FG_DeadWoman6" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 position = Vector2(711.99994, -1060)
 texture = ExtResource("15_dwedp")
 
 [node name="Prop_FG_DeadWoman7" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-5.000061, -1095)
 texture = ExtResource("16_xn52r")
 
 [node name="Prop_FG_Toit" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-3.0000114, -2446)
 scale = Vector2(119.44951, 21.769768)
 texture = SubResource("GradientTexture2D_lge6m")
@@ -353,40 +370,42 @@ texture = SubResource("GradientTexture2D_lge6m")
 [node name="Gauche" type="Node2D" parent="Decor/DeadRoom/Spawns"]
 
 [node name="Prop_FG_PropColonne1" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Gauche"]
+visible = false
 position = Vector2(-2308.5, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
 texture = ExtResource("17_0wein")
 
 [node name="Prop_FG_PropColonne2" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Gauche"]
+visible = false
 position = Vector2(360.49994, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
 texture = ExtResource("17_0wein")
 
 [node name="Prop_FG_PropColonne3" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Gauche"]
+visible = false
 position = Vector2(3278, -174.66687)
 scale = Vector2(4.4047613, 4.4047613)
 texture = ExtResource("17_0wein")
 
 [node name="Droite" type="Node2D" parent="Decor/DeadRoom/Spawns"]
 
-[node name="Sol" type="Sprite2D" parent="Decor/DeadRoom"]
-position = Vector2(-66.00001, 2240.0002)
-scale = Vector2(119.44951, 21.769768)
-texture = SubResource("GradientTexture2D_lge6m")
-
 [node name="DeadWoman2" type="Sprite2D" parent="Decor/DeadRoom"]
+z_index = 50
 position = Vector2(2982, -1005)
 texture = ExtResource("18_r3q4u")
 
 [node name="TacheSang" type="Sprite2D" parent="Decor/DeadRoom"]
+z_index = 50
 position = Vector2(-1521, 1489)
 texture = ExtResource("19_yllu4")
 
 [node name="TacheSang2" type="Sprite2D" parent="Decor/DeadRoom"]
+z_index = 50
 position = Vector2(-956, 1489)
 texture = ExtResource("19_yllu4")
 
 [node name="TacheSang3" type="Sprite2D" parent="Decor/DeadRoom"]
+z_index = 50
 position = Vector2(921, 1496)
 texture = ExtResource("19_yllu4")
 
@@ -404,24 +423,26 @@ scale = Vector2(1.1709083, 1.1709083)
 texture = ExtResource("23_otauw")
 
 [node name="Bedroom" type="Node2D" parent="Decor"]
-visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/Bedroom"]
 
 [node name="Haut" type="Node2D" parent="Decor/Bedroom/Spawns"]
 
 [node name="PropsCloset" type="Sprite2D" parent="Decor/Bedroom/Spawns/Haut"]
+visible = false
 position = Vector2(-2608, 558)
 scale = Vector2(1.398682, 1.4625198)
 texture = ExtResource("8_46hbo")
 
 [node name="PropsPainting2" type="Sprite2D" parent="Decor/Bedroom/Spawns/Haut"]
+visible = false
 position = Vector2(1344, -774)
 texture = ExtResource("9_2od03")
 
 [node name="Bas" type="Node2D" parent="Decor/Bedroom/Spawns"]
 
 [node name="PropsBed" type="Sprite2D" parent="Decor/Bedroom/Spawns/Bas"]
+visible = false
 position = Vector2(1593, 643.00006)
 rotation = 3.1415925
 scale = Vector2(1.2701914, -1.2799988)
@@ -430,18 +451,22 @@ texture = ExtResource("10_5dy85")
 [node name="Gauche" type="Node2D" parent="Decor/Bedroom/Spawns"]
 
 [node name="PropMouton2" type="Sprite2D" parent="Decor/Bedroom/Spawns/Gauche"]
+visible = false
 position = Vector2(-2227, -365)
 texture = ExtResource("11_yub8v")
 
 [node name="Droite" type="Node2D" parent="Decor/Bedroom/Spawns"]
 
 [node name="PropsPainting3" type="Sprite2D" parent="Decor/Bedroom/Spawns/Droite"]
+visible = false
 position = Vector2(2384, -535)
 texture = ExtResource("12_68y18")
 
 [node name="DecorBedroom" type="Sprite2D" parent="Decor/Bedroom"]
-position = Vector2(1.0000002, 4.9999995)
-scale = Vector2(1.6648481, 1.6648481)
+visible = false
+z_index = -1
+position = Vector2(-5.634407, -14.482096)
+scale = Vector2(1.6828868, 1.6828868)
 texture = ExtResource("17_f5ywd")
 
 [node name="Forest" type="Node2D" parent="Decor"]
@@ -449,6 +474,7 @@ texture = ExtResource("17_f5ywd")
 [node name="Haut" type="Node2D" parent="Decor/Forest"]
 
 [node name="PropsBGShadowTree" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 z_index = -1
 position = Vector2(2110, 213)
 rotation = 1.5707964
@@ -456,125 +482,148 @@ scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("29_866p1")
 
 [node name="PropsBluefarTree3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(1784, -1020)
 scale = Vector2(1.3009707, 2.6373143)
 texture = ExtResource("30_wkry4")
 
 [node name="PropsBGGrassGreen2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(1878.9999, 1316)
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("31_tdkoh")
 
 [node name="PropsBGGrassGreen" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-1806, 1281)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("31_tdkoh")
 
 [node name="PropsBGBluefarTree3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-1027, -236)
 scale = Vector2(1.3113123, 1.6758318)
 texture = ExtResource("30_wkry4")
 
 [node name="PropsBGBluefarTree2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-2651, -414.99994)
 scale = Vector2(1.615824, 1.8926414)
 texture = ExtResource("30_wkry4")
 
 [node name="PropsBGBluefarTree" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-1552, -1108)
 scale = Vector2(1.3009707, 2.6373143)
 texture = ExtResource("30_wkry4")
 
 [node name="PropsMGBlueTre" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-2384, -532.00006)
 rotation = 3.1415925
 scale = Vector2(2.006, -2.006)
 texture = ExtResource("32_mqgvk")
 
 [node name="PropsMGBlueTre2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(1161.0001, -414)
 rotation = 3.1415925
 scale = Vector2(2.006, -2.006)
 texture = ExtResource("32_mqgvk")
 
 [node name="PropsMGBluefarTree2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(363.99988, -468)
 scale = Vector2(2.017852, 2.017852)
 texture = ExtResource("30_wkry4")
 
 [node name="PropsBGBlueTre3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-526.99994, -774)
 rotation = -3.0565984
 scale = Vector2(2.235895, -2.235895)
 texture = ExtResource("32_mqgvk")
 
 [node name="PropsMGTreeSmall4" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-870.99976, -446)
 scale = Vector2(4.391775, 4.391775)
 texture = ExtResource("33_vqoho")
 
 [node name="PropsBGBlueTre4" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(2434.0002, -630)
 scale = Vector2(2.184469, 2.184469)
 texture = ExtResource("32_mqgvk")
 
 [node name="PropsBGGrassGreen4" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-2575, 1126.0001)
 rotation = 0.10960979
 scale = Vector2(0.99999964, 0.99999964)
 texture = ExtResource("31_tdkoh")
 
 [node name="PropsMDTreeBranches" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-2307, 797)
 rotation = 1.488582
 scale = Vector2(2.1289687, 2.1289687)
 texture = ExtResource("34_0ssp0")
 
 [node name="PropsMGTreeBranches2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(2651, 1014.0001)
 rotation = 1.6317333
 scale = Vector2(1.7030162, -1.7578436)
 texture = ExtResource("34_0ssp0")
 
 [node name="PropsFGGrass2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 z_index = 4
 position = Vector2(-1203, 1530)
 scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("35_fvplv")
 
 [node name="PropsFGGrass3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 z_index = 4
 position = Vector2(-2799, 1465)
 scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("35_fvplv")
 
 [node name="PropsBGGrass4" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(442.00006, 1331)
 scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("35_fvplv")
 
 [node name="PropsBGGrass5" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(2799.6865, 1464.6482)
 scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("35_fvplv")
 
 [node name="PropsBGGrass7" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(1656, 1481)
 scale = Vector2(3.0490854, 3.0490854)
 texture = ExtResource("35_fvplv")
 
 [node name="PropsBranchLeaves" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(1899, 1150.0001)
 rotation = -2.4997537
 scale = Vector2(1.3010416, 1.3010416)
 texture = ExtResource("36_i2mkb")
 
 [node name="PropsBGGrass6" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(-2408, 1546)
 scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("35_fvplv")
 
 [node name="PropsBGGrassGreen3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
 position = Vector2(1879, 1210)
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("31_tdkoh")
@@ -584,290 +633,138 @@ texture = ExtResource("31_tdkoh")
 [node name="Gauche" type="Node2D" parent="Decor/Forest"]
 
 [node name="PropsFGGrasse2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(2083, 1680)
 scale = Vector2(3.1928816, 3.1928816)
 texture = ExtResource("37_nnboc")
 
 [node name="PropsFGGrasse1" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(-79, 1570)
 scale = Vector2(2.4900963, 2.4900963)
 texture = ExtResource("37_nnboc")
 
 [node name="PropsMGBigTree3" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 position = Vector2(1216, -940)
 scale = Vector2(2.4900963, 2.4900963)
 texture = ExtResource("38_bepfj")
 
 [node name="PropsFGBigTree" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(-2832, -732)
 scale = Vector2(2.4900963, 2.4900963)
 texture = ExtResource("38_bepfj")
 
 [node name="PropsFGBigTree2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(3084, -164)
 scale = Vector2(1.7122005, 1.7122005)
 texture = ExtResource("38_bepfj")
 
 [node name="PropsFGBush" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(-3335, 1278)
 scale = Vector2(1.8589672, 1.8589672)
 texture = ExtResource("39_7uc1y")
 
 [node name="PropsFGBush2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(3415, 1413)
 scale = Vector2(1.8589672, 1.8589672)
 texture = ExtResource("39_7uc1y")
 
 [node name="PropsMGBushOrnement" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 position = Vector2(-2759, 1386)
 scale = Vector2(1.1803092, 1.1803092)
 texture = ExtResource("40_2xfyf")
 
 [node name="PropsFGBush3" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(-2372, 1539)
 scale = Vector2(1.8589672, 1.8589672)
 texture = ExtResource("39_7uc1y")
 
 [node name="PropsFGBushOrnement2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(2497, 1386.0001)
 scale = Vector2(1.1803092, 1.1803092)
 texture = ExtResource("40_2xfyf")
 
 [node name="PropsFGBush4" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(3177, 1403)
 texture = ExtResource("41_wbyhb")
 
 [node name="PropsFGBush5" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
 z_index = 4
 position = Vector2(515, 1484)
 texture = ExtResource("41_wbyhb")
 
 [node name="Droite" type="Node2D" parent="Decor/Forest"]
 
-[node name="Forest_Marriage" type="Node2D" parent="Decor"]
-visible = false
-
-[node name="Haut" type="Node2D" parent="Decor/Forest_Marriage"]
-
-[node name="PropsBGGrassGreen2" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(1878.9999, 1316)
-scale = Vector2(0.9999998, 0.9999998)
-texture = ExtResource("31_tdkoh")
-
-[node name="PropsBGGrassGreen" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-1806, 1281)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("31_tdkoh")
-
-[node name="PropsMGBlueTre2" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(1161.0001, -414)
-rotation = 3.1415925
-scale = Vector2(2.006, -2.006)
-texture = ExtResource("32_mqgvk")
-
-[node name="PropsBGBlueTre3" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-526.99994, -774)
-rotation = -3.0565984
-scale = Vector2(2.235895, -2.235895)
-texture = ExtResource("32_mqgvk")
-
-[node name="PropsMGTreeSmall4" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-870.99976, -446)
-scale = Vector2(4.391775, 4.391775)
-texture = ExtResource("33_vqoho")
-
-[node name="PropsNight2" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-1089, -1761)
-scale = Vector2(2.0504258, 3.4873433)
-texture = ExtResource("42_cv6cm")
-
-[node name="PropsNight4" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(2904, -883)
-scale = Vector2(2.5874767, 2.5874767)
-texture = ExtResource("42_cv6cm")
-
-[node name="PropsNight3" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(543, -1264.0001)
-scale = Vector2(2.6735868, 2.6735868)
-texture = ExtResource("42_cv6cm")
-
-[node name="PropsNight" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-2233, -628)
-scale = Vector2(1.9430828, 1.9430828)
-texture = ExtResource("42_cv6cm")
-
-[node name="PropsBGBlueTre4" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(2434.0002, -630)
-scale = Vector2(2.184469, 2.184469)
-texture = ExtResource("32_mqgvk")
-
-[node name="PropsBGGrassGreen4" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-2167.9993, 1248.0001)
-scale = Vector2(0.99999964, 0.99999964)
-texture = ExtResource("31_tdkoh")
-
-[node name="PropsMDTreeBranches" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-2307, 797)
-rotation = 1.488582
-scale = Vector2(2.1289687, 2.1289687)
-texture = ExtResource("34_0ssp0")
-
-[node name="PropsMGTreeBranches2" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(2651, 1014.0001)
-rotation = 1.6317333
-scale = Vector2(1.7030162, -1.7578436)
-texture = ExtResource("34_0ssp0")
-
-[node name="PropsFGGrass2" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-1203, 1530)
-scale = Vector2(1.746163, 1.746163)
-texture = ExtResource("35_fvplv")
-
-[node name="PropsFGGrass3" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-2799, 1465)
-scale = Vector2(1.746163, 1.746163)
-texture = ExtResource("35_fvplv")
-
-[node name="PropsBGGrass4" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(442.00006, 1331)
-scale = Vector2(1.746163, 1.746163)
-texture = ExtResource("35_fvplv")
-
-[node name="PropsBGGrass5" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(2799.6865, 1464.6482)
-scale = Vector2(1.746163, 1.746163)
-texture = ExtResource("35_fvplv")
-
-[node name="PropsBGGrass7" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(1656, 1481)
-scale = Vector2(3.0490854, 3.0490854)
-texture = ExtResource("35_fvplv")
-
-[node name="PropsBranchLeaves" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(1899, 1150.0001)
-rotation = -2.4997537
-scale = Vector2(1.3010416, 1.3010416)
-texture = ExtResource("36_i2mkb")
-
-[node name="PropsBGGrass6" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(-2408, 1546)
-scale = Vector2(1.746163, 1.746163)
-texture = ExtResource("35_fvplv")
-
-[node name="PropsBGGrassGreen3" type="Sprite2D" parent="Decor/Forest_Marriage/Haut"]
-position = Vector2(1879, 1210)
-scale = Vector2(0.9999998, 0.9999998)
-texture = ExtResource("31_tdkoh")
-
-[node name="Bas" type="Node2D" parent="Decor/Forest_Marriage"]
-
-[node name="Gauche" type="Node2D" parent="Decor/Forest_Marriage"]
-
-[node name="PropsFGGrasse2" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(2083, 1680)
-scale = Vector2(3.1928816, 3.1928816)
-texture = ExtResource("37_nnboc")
-
-[node name="PropsFGGrasse1" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(-79, 1570)
-scale = Vector2(2.4900963, 2.4900963)
-texture = ExtResource("37_nnboc")
-
-[node name="PropsMGBigTree3" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(1216, -940)
-scale = Vector2(2.4900963, 2.4900963)
-texture = ExtResource("38_bepfj")
-
-[node name="PropsFGBigTree" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(-2832, -732)
-scale = Vector2(2.4900963, 2.4900963)
-texture = ExtResource("38_bepfj")
-
-[node name="PropsFGBigTree2" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(3084, -164)
-scale = Vector2(1.7122005, 1.7122005)
-texture = ExtResource("38_bepfj")
-
-[node name="PropsFGBush" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(-3335, 1278)
-scale = Vector2(1.8589672, 1.8589672)
-texture = ExtResource("39_7uc1y")
-
-[node name="PropsFGBush2" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(3415, 1413)
-scale = Vector2(1.8589672, 1.8589672)
-texture = ExtResource("39_7uc1y")
-
-[node name="PropsMGBushOrnement" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(-2759, 1386)
-scale = Vector2(1.1803092, 1.1803092)
-texture = ExtResource("40_2xfyf")
-
-[node name="PropsFGBush3" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(-2372, 1539)
-scale = Vector2(1.8589672, 1.8589672)
-texture = ExtResource("39_7uc1y")
-
-[node name="PropsFGBushOrnement2" type="Sprite2D" parent="Decor/Forest_Marriage/Gauche"]
-position = Vector2(2497, 1386.0001)
-scale = Vector2(1.1803092, 1.1803092)
-texture = ExtResource("40_2xfyf")
-
-[node name="Droite" type="Node2D" parent="Decor/Forest_Marriage"]
-
 [node name="LivingRoom" type="Node2D" parent="Decor"]
-visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/LivingRoom"]
 
 [node name="Haut" type="Node2D" parent="Decor/LivingRoom/Spawns"]
 
 [node name="PropColonne1_MG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-459.00003, -215)
 scale = Vector2(3.8546507, 4.4099813)
 texture = ExtResource("17_0wein")
 
 [node name="PropEscalier1_MG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
 position = Vector2(133.37503, 848.5625)
 scale = Vector2(2.9037583, 2.7615638)
 texture = ExtResource("43_0t86w")
 
 [node name="PropCommodeFermee_FG_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-1538, 1141)
 scale = Vector2(2.217742, 2.217742)
 texture = ExtResource("44_sn12m")
 
 [node name="PropDeco1_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-1691, 593.1454)
 scale = Vector2(1.9982992, 1.998299)
 texture = ExtResource("45_x0mjk")
 
 [node name="PropBuste_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
 position = Vector2(-1406, 686)
 texture = ExtResource("46_yru6t")
 
 [node name="Bas" type="Node2D" parent="Decor/LivingRoom/Spawns"]
 
 [node name="PropFlame_MG2" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Bas"]
+visible = false
 position = Vector2(1359.9999, -801)
 scale = Vector2(1.7419482, 1.7419479)
 texture = ExtResource("47_gaeq2")
 
 [node name="PropFlame_MG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Bas"]
+visible = false
 position = Vector2(431.0005, -304.00003)
 scale = Vector2(2.0425532, 2.042553)
 texture = ExtResource("47_gaeq2")
 
 [node name="PropChandelier_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Bas"]
+visible = false
 position = Vector2(-1929.9999, -1421)
 rotation = -3.111922
 scale = Vector2(2.6853225, 2.6853225)
@@ -876,16 +773,19 @@ texture = ExtResource("48_1ufha")
 [node name="Gauche" type="Node2D" parent="Decor/LivingRoom/Spawns"]
 
 [node name="PropsPainting3_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Gauche"]
+visible = false
 position = Vector2(-1507, -599)
 scale = Vector2(0.8175676, 0.8175675)
 texture = ExtResource("12_68y18")
 
 [node name="PropsPainting2_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Gauche"]
+visible = false
 position = Vector2(-1276.0002, -215)
 scale = Vector2(0.86159664, 0.8248343)
 texture = ExtResource("9_2od03")
 
 [node name="PropsPainting5_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Gauche"]
+visible = false
 position = Vector2(-1174.5, -1241.2168)
 scale = Vector2(0.7831858, 0.7831859)
 texture = ExtResource("49_i1ahv")
@@ -893,22 +793,26 @@ texture = ExtResource("49_i1ahv")
 [node name="Droite" type="Node2D" parent="Decor/LivingRoom/Spawns"]
 
 [node name="PropsPainting4_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Droite"]
+visible = false
 position = Vector2(-2090, -138)
 scale = Vector2(0.77768314, 0.77768314)
 texture = ExtResource("50_ldi36")
 
 [node name="PropChaise2_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Droite"]
+visible = false
 position = Vector2(-2756, 984)
 rotation = 3.1415925
 scale = Vector2(2.759, -2.759)
 texture = ExtResource("51_yq4i7")
 
 [node name="PropsPainting6_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Droite"]
+visible = false
 position = Vector2(-2699.0002, -987)
 scale = Vector2(0.8646409, 0.86464083)
 texture = ExtResource("52_o3doa")
 
 [node name="Decor_Livingroom_bg" type="Sprite2D" parent="Decor/LivingRoom"]
+visible = false
 z_index = -1
 position = Vector2(-2.5832424, -81.00021)
 scale = Vector2(1.668012, 1.5879629)
