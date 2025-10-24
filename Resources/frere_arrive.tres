@@ -23,18 +23,21 @@ fill_from = Vector2(1, 1)
 script = ExtResource("1_unfgc")
 name = "Brother_1"
 sprite = ExtResource("3_7pakx")
+target = NodePath("Positions/Brother_1/free_arrive1")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_hlnj8"]
 script = ExtResource("1_unfgc")
 name = "Brother_2"
 sprite = ExtResource("4_1b8iv")
+target = NodePath("Positions/Brother_2/frere_arrive2")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_ixvhp"]
 script = ExtResource("1_unfgc")
 name = "Kat"
 sprite = ExtResource("4_q6qe7")
+target = NodePath("Positions/Kat/Frere_arrive")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_8a67e"]

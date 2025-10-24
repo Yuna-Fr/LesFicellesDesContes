@@ -22,12 +22,14 @@ fill_from = Vector2(1, 1)
 script = ExtResource("1_yfjhu")
 name = "BB"
 sprite = ExtResource("2_ryyg0")
+target = NodePath("Positions/BB/Conversation")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_vm7oy"]
 script = ExtResource("1_yfjhu")
 name = "Kat"
 sprite = ExtResource("3_46fxc")
+target = NodePath("Positions/Kat/Conversation")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_8a67e"]
