@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://bxtcibqfb4cpo"]
+[gd_scene load_steps=84 format=3 uid="uid://bxtcibqfb4cpo"]
 
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_v8s55"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_iw4l2"]
@@ -7,9 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://das65c0wtxhil" path="res://Assets/Characters/char_kat.png" id="5_v8s55"]
 [ext_resource type="Texture2D" uid="uid://co167dxnlvfep" path="res://Assets/Characters/char_mom.png" id="6_1cl7o"]
 [ext_resource type="Script" uid="uid://dam8tr5761ose" path="res://Scenes/choice_container.gd" id="6_pr6aj"]
+[ext_resource type="AudioStream" uid="uid://pwavl6756xqe" path="res://Sounds/Ambiances/Tension_Loop.wav" id="6_sn12m"]
 [ext_resource type="Texture2D" uid="uid://c1cvnnhlxfdks" path="res://Assets/Characters/char_girls.png" id="7_5mbgf"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="7_6ai3g"]
 [ext_resource type="Texture2D" uid="uid://b1fn4mlbqde3p" path="res://Assets/Characters/char_anne.png" id="7_dn353"]
+[ext_resource type="AudioStream" uid="uid://da1tx38rar055" path="res://Sounds/Ambiances/Violin_Loop.wav" id="7_x0mjk"]
 [ext_resource type="Texture2D" uid="uid://dkjxgps04inbd" path="res://Assets/Props/Objets/props_closet.png" id="8_46hbo"]
 [ext_resource type="Texture2D" uid="uid://cuupg0yof3ky7" path="res://Assets/Props/DeadWomen/body 2.png" id="8_68y18"]
 [ext_resource type="Shader" uid="uid://bon1xjardfuqj" path="res://Materials/Shaders/background_shader.gdshader" id="8_uw34g"]
@@ -119,6 +121,11 @@ Mom = NodePath("../Characters/Mom")
 Girls = NodePath("../Characters/Girls")
 Dead = NodePath("../Characters/Brother_1")
 Brother = NodePath("../Characters/Brother_2")
+Onirique = ExtResource("3_wbyhb")
+Revelations = ExtResource("4_cv6cm")
+Soulagement = ExtResource("5_0t86w")
+Tension = ExtResource("6_sn12m")
+Violin = ExtResource("7_x0mjk")
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="SceneExecuter"]
 

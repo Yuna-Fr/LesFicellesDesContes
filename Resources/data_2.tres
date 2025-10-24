@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=12 format=3 uid="uid://tcxx5v8557d"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=15 format=3 uid="uid://tcxx5v8557d"]
 
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="1_4vgof"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="1_dinbm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="4_1f1de"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="5_tg785"]
 [ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="6_axpku"]
+[ext_resource type="Texture2D" uid="uid://c0gkj1wxyhbcu" path="res://icon.svg" id="7_axpku"]
 
 [sub_resource type="Gradient" id="Gradient_4vgof"]
 offsets = PackedFloat32Array(0, 0.9933222)
@@ -15,6 +16,10 @@ colors = PackedColorArray(1, 0, 0, 1, 0.26057518, 4.579641e-05, 0.26057312, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
 gradient = SubResource("Gradient_4vgof")
 fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_1f1de"]
+script = ExtResource("1_dinbm")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
 
 [sub_resource type="Resource" id="Resource_tg785"]
 script = ExtResource("3_tg785")
@@ -29,11 +34,18 @@ name = "data_1"
 icon = ExtResource("5_tg785")
 metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 
+[sub_resource type="Resource" id="Resource_plhg2"]
+script = ExtResource("4_1f1de")
+name = "data_1"
+icon = ExtResource("7_axpku")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
 [resource]
 script = ExtResource("1_4vgof")
 description = "Event de test 2"
 background = SubResource("GradientTexture2D_dinbm")
+dialogues = Array[ExtResource("1_dinbm")]([SubResource("Resource_1f1de")])
 movements = Array[ExtResource("3_tg785")]([SubResource("Resource_tg785")])
 characters_des = Array[String](["BB"])
-next_events = Array[ExtResource("4_1f1de")]([SubResource("Resource_x0rqp")])
+next_events = Array[ExtResource("4_1f1de")]([SubResource("Resource_x0rqp"), SubResource("Resource_plhg2")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

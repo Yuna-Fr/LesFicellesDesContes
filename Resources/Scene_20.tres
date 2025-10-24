@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=25 format=3 uid="uid://8c66ut8rxeif"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=25 format=3 uid="uid://cts5q4jj0ky85"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_jharj"]
 [ext_resource type="Texture2D" uid="uid://ys4cb0p48hhd" path="res://Assets/Characters/char_bb_2_reversed.png" id="2_amtcr"]

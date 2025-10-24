@@ -3,12 +3,8 @@ class_name SceneExecuter extends Node
 signal event_finished(next_event_id: String)
 signal scene_ready
 
-@export var music_fade_time : float = 2.0
+@export_category("Characters")
 @export var positions_root : Node
-
-var despawn_finished : bool = false
-var spawns_char_finished : bool = false
-'''Characters'''
 @export var Kat : Node2D
 @export var BB : Node2D
 @export var Anne : Node2D
@@ -17,19 +13,34 @@ var spawns_char_finished : bool = false
 @export var Dead : Node2D
 @export var Brother : Node2D
 
-var background: BackgroundFader
-var audio_player
-var music_player_a
-var music_player_b
+@export_category("Ambiances")
+@export var music_fade_time : float = 2.0
+@export var Onirique : AudioStream
+@export var Revelations : AudioStream
+@export var Soulagement : AudioStream
+@export var Tension : AudioStream
+@export var Violin : AudioStream
 
 # Mouvments
-var movements_finished : bool = false
-var spawns_finished : bool = false
-var waiting_for_scene : bool = false
+var movements_finished: bool = false
+var spawns_finished: bool = false
+var despawn_finished: bool = false
+var spawns_char_finished: bool = false
+var waiting_for_scene: bool = false
 var active_movements: Array = []
 var active_tweens = 0
 var active_objects: Dictionary = {}
 
+# Audio
+var audio_player
+var music_player_a
+var music_player_b
+var current_music_name := BaseEvent.MusicName.None
+var current_music_player: AudioStreamPlayer2D
+var next_music_player: AudioStreamPlayer2D
+var dialogues_finished: bool = false
+
+var background: BackgroundFader 
 var event_data: BaseEvent
 
 #region General
@@ -39,12 +50,15 @@ func _init_refs():
 	audio_player = $AudioPlayer
 	music_player_a = $MusicPlayerA
 	music_player_b = $MusicPlayerB
+	current_music_player = music_player_a
+	next_music_player = music_player_b
 
 func execute(_event_data: BaseEvent):
 	if(background == null): _init_refs()
 	
 	movements_finished = false
 	spawns_finished = false
+	dialogues_finished = false
 	waiting_for_scene = false
 	event_data = _event_data
 	
@@ -52,30 +66,19 @@ func execute(_event_data: BaseEvent):
 		push_error("No event_data to excute !")
 		return
 	
-	despawn_characters(event_data.characters_des)
-	remove_unused_objects(event_data.spawns)
-	start_movements(event_data.movements)
-	spawn_objects(event_data.spawns)
-	
-	spawn_characters(event_data.characters_spawn)	
-
 	if (event_data.background): background.fade_to(event_data.background)
 	
-	if (event_data.music): _play_music(event_data.music)
+	_play_music(event_data.music)
 	
-	if event_data.dialogues.size() > 0:
-		for dialogue in event_data.dialogues: 
-			print(dialogue) 
-			if dialogue.sound:
-				audio_player.stream = dialogue.sound
-				audio_player.play()
-				await audio_player.finished
-				
-			if dialogue.delay_after_sound > 0:
-				await get_tree().create_timer(dialogue.delay_after_sound).timeout
+	_despawn_characters(event_data.characters_des)
+	_remove_unused_objects(event_data.spawns)
+	_start_movements(event_data.movements)
+	_spawn_objects(event_data.spawns)
+	_spawn_characters(event_data.characters_spawn)	
+	_start_dialogues(event_data.dialogues)
 
 func _process(delta):
-	if(movements_finished && spawns_finished):
+	if(movements_finished && spawns_finished && dialogues_finished):
 		if not waiting_for_scene:
 			waiting_for_scene = true
 			emit_signal("scene_ready")
@@ -86,8 +89,7 @@ func _process(delta):
 
 #region Mouvements
 
-	
-func despawn_characters(characters : Array[String]):
+func _despawn_characters(characters : Array[String]):
 	var viewport_size = get_viewport().size
 	for char in characters:
 		var char_node = get_character_node(char)
@@ -121,7 +123,7 @@ func despawn_characters(characters : Array[String]):
 			active_tweens -= 1
 		)
 			
-func spawn_characters(characters: Array[CharacterAppear]):
+func _spawn_characters(characters: Array[CharacterAppear]):
 	if characters.is_empty():
 		return
 		
@@ -176,45 +178,52 @@ func spawn_characters(characters: Array[CharacterAppear]):
 				spawns_char_finished = true
 		)
 	
-func spawn_objects(spawn_list: Array[SpawnObject]):
-	if spawn_list.size() == 0:
+func _spawn_objects(spawn_list: Array[SpawnObject]):
+	if spawn_list.is_empty():
 		spawns_finished = true
 		return
 	
 	var z_offsets = {}
+	var spawned_count = 0
 
 	for spawn in spawn_list:
 		if not positions_root.has_node(spawn.target):
 			push_warning("Target node not found: " + str(spawn.target))
 			continue
-
+		
 		var obj_node: Node2D = positions_root.get_node(spawn.target)
+		
 		if active_objects.has(spawn.target):
 			continue # déjà présent, on ne fait rien
-
+			
+		spawned_count += 1
 		active_objects[spawn.target] = obj_node
-
+		
 		var final_pos = obj_node.global_position
-		var offset = get_direction(spawn.direction)
+		var offset = _get_direction(spawn.direction)
 		obj_node.global_position = final_pos + offset
 		obj_node.visible = true
-
+		
 		var z_key = obj_node.z_index
 		var same_z_count = z_offsets.get(z_key, 0)
 		z_offsets[z_key] = same_z_count + 1
-
+		
 		var base_delay = z_key * 0.05
 		var extra_delay = same_z_count * 0.03
 		var total_delay = base_delay + extra_delay
-
+		
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_SINE)
 		tween.set_ease(Tween.EASE_OUT)
 		active_tweens += 1
 		tween.tween_property(obj_node, "global_position", final_pos, 0.5).set_delay(total_delay)
 		tween.finished.connect(Callable(self, "_on_single_spawn_finished"))
+	
+	# if nothing was spawned mark as finished
+	if spawned_count == 0:
+		spawns_finished = true
 
-func remove_unused_objects(new_spawn_list: Array[SpawnObject]):
+func _remove_unused_objects(new_spawn_list: Array[SpawnObject]):
 	if active_objects.is_empty():
 		return
 
@@ -264,7 +273,7 @@ func remove_unused_objects(new_spawn_list: Array[SpawnObject]):
 					spawns_finished = true
 			)
 
-func get_direction(direction_name: String) -> Vector2:
+func _get_direction(direction_name: String) -> Vector2:
 	var viewport_size = get_viewport().size
 	print(viewport_size)
 	match direction_name:
@@ -280,7 +289,7 @@ func _on_single_spawn_finished():
 		print("Tous est affiché")
 		spawns_finished = true
 
-func start_movements(movements: Array[Movement]):
+func _start_movements(movements: Array[Movement]):
 	if movements.size() == 0:
 		movements_finished = true
 		return
@@ -359,21 +368,45 @@ func get_character_node(character_name: String) -> Node2D:
 
 #region Sounds
 
-var current_music_player : AudioStreamPlayer
-var next_music_player : AudioStreamPlayer
+func _start_dialogues(dialogues : Array[Dialogue]):
+	if dialogues.is_empty():
+		dialogues_finished = true
+		return
+	
+	for dialogue in dialogues:
+		if dialogue.sound:
+			audio_player.stream = dialogue.sound
+			audio_player.play()
+			await audio_player.finished
+		
+		if dialogue.delay_after_sound > 0:
+			await get_tree().create_timer(dialogue.delay_after_sound).timeout
+			
+	dialogues_finished = true
 
-func _play_music(new_stream: AudioStream):
-	if current_music_player.stream == new_stream: return  # same track, no need to fade
-
-	next_music_player.stream = new_stream
+func _play_music(new_stream: BaseEvent.MusicName):
+	if current_music_name == new_stream: 
+		return  # same track, no need to fade
+	
+	current_music_name = new_stream
+	next_music_player.stream = _find_music(new_stream)
 	next_music_player.volume_db = -80
 	next_music_player.play()
-
+	
 	var tween = create_tween()
 	tween.tween_property(current_music_player, "volume_db", -80, music_fade_time)
 	tween.parallel().tween_property(next_music_player, "volume_db", 0, music_fade_time)
-
+	
 	tween.tween_callback(Callable(self, "_swap_music_players"))
+
+func _find_music(new_stream: BaseEvent.MusicName) -> AudioStream:
+	if new_stream == BaseEvent.MusicName.None: return null
+	if new_stream == BaseEvent.MusicName.Violin: return Violin
+	if new_stream == BaseEvent.MusicName.Tension: return Tension
+	if new_stream == BaseEvent.MusicName.Onirique: return Onirique
+	if new_stream == BaseEvent.MusicName.Revelation: return Revelations
+	if new_stream == BaseEvent.MusicName.Soulagement: return Soulagement
+	return null
 
 func _swap_music_players():
 	current_music_player.stop()

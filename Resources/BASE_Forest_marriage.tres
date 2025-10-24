@@ -205,6 +205,7 @@ metadata/_custom_type_script = "uid://dmedebbw0lnsu"
 script = ExtResource("6_kleia")
 description = "Dans la foret"
 background = SubResource("GradientTexture2D_dinbm")
+music = 1
 spawns = Array[ExtResource("7_122ui")]([SubResource("Resource_7bpwq"), SubResource("Resource_r201i"), SubResource("Resource_2kj20"), SubResource("Resource_fmull"), SubResource("Resource_unutt"), SubResource("Resource_kleia"), SubResource("Resource_122ui"), SubResource("Resource_543h4"), SubResource("Resource_0ikb2"), SubResource("Resource_gbc8q"), SubResource("Resource_k3co5"), SubResource("Resource_p52in"), SubResource("Resource_km6kr"), SubResource("Resource_psko2"), SubResource("Resource_av46r"), SubResource("Resource_8rpwn"), SubResource("Resource_t0pv8"), SubResource("Resource_fi14e"), SubResource("Resource_4l0nr"), SubResource("Resource_iltpd"), SubResource("Resource_2cy57"), SubResource("Resource_s4qlr"), SubResource("Resource_krx0l"), SubResource("Resource_fhxmv"), SubResource("Resource_bmm56"), SubResource("Resource_vkqp4"), SubResource("Resource_d4fyq"), SubResource("Resource_i8xxx"), SubResource("Resource_mwkhc"), SubResource("Resource_d25yd")])
 next_events = Array[ExtResource("4_fmull")]([SubResource("Resource_8a67e")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

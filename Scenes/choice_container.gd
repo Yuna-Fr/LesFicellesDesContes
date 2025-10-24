@@ -37,18 +37,24 @@ func hide_all():
 
 
 func show_choices():
-	if animating:
-			return
-	animating = true
-
-	input_handler.request_button_input()
-	hide_all()
-
+	if animating: return
+	
 	if scene_executer == null or scene_executer.event_data == null:
 		animating = false
 		return
 		
-	current_choices = scene_executer.event_data.next_events
+	animating = true
+	current_choices = scene_executer.event_data.next_events 
+	
+	if scene_executer.event_data.next_events.size() == 1:
+		print("Scène choisie automatiquement :", current_choices[0].name)
+		scene_executer.emit_signal("event_finished", current_choices[0].name)
+		animating = false
+		return
+	
+	input_handler.request_button_input()
+	hide_all()
+		
 	var count = current_choices.size()
 	if count == 0:
 		animating = false

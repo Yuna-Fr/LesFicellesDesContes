@@ -242,6 +242,7 @@ metadata/_custom_type_script = "uid://dmedebbw0lnsu"
 script = ExtResource("6_pmgf0")
 description = "Dans la foret"
 background = SubResource("GradientTexture2D_dinbm")
+music = 1
 spawns = Array[ExtResource("7_j65ad")]([SubResource("Resource_onbki"), SubResource("Resource_8881u"), SubResource("Resource_lc8r1"), SubResource("Resource_nfo6c"), SubResource("Resource_ih6gx"), SubResource("Resource_l00ox"), SubResource("Resource_fpvba"), SubResource("Resource_lgbdf"), SubResource("Resource_251mv"), SubResource("Resource_gdg8i"), SubResource("Resource_orv18"), SubResource("Resource_buol1"), SubResource("Resource_dpg1l"), SubResource("Resource_mont5"), SubResource("Resource_jwo4y"), SubResource("Resource_51o65"), SubResource("Resource_58x4p"), SubResource("Resource_2pjg7"), SubResource("Resource_1oo4d"), SubResource("Resource_ioyb0"), SubResource("Resource_dxier"), SubResource("Resource_glks2"), SubResource("Resource_rd0si"), SubResource("Resource_i0cvp"), SubResource("Resource_xwlxp"), SubResource("Resource_hku6h"), SubResource("Resource_4xryu"), SubResource("Resource_3su7n"), SubResource("Resource_rwo3u"), SubResource("Resource_687yd"), SubResource("Resource_h7pjr"), SubResource("Resource_4g03d"), SubResource("Resource_txksj"), SubResource("Resource_6g1y5"), SubResource("Resource_f6sws"), SubResource("Resource_nrh6e")])
 next_events = Array[ExtResource("4_ijdi5")]([SubResource("Resource_8a67e")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

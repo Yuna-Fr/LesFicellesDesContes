@@ -4,7 +4,7 @@ class_name BaseEvent extends Resource
 
 @export var background: GradientTexture2D
 
-@export var music: AudioStream
+@export var music: MusicName = MusicName.None
 @export var dialogues: Array[Dialogue] = []
 
 @export var movements: Array[Movement] = []
@@ -13,3 +13,5 @@ class_name BaseEvent extends Resource
 @export var spawns: Array[SpawnObject] = []
 
 @export var next_events: Array[Scene] = []
+
+enum MusicName { None, Onirique, Revelation, Soulagement, Tension, Violin }     

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=17 format=3 uid="uid://c05g3ihrhrhv7"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=17 format=3 uid="uid://cd48hpvmvfdaq"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_u0sp0"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="6_osmvu"]

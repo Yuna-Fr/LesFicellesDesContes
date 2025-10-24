@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=47 format=3 uid="uid://biv0anacb1sbi"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=47 format=3 uid="uid://qfcfu72br8ne"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_ca8qn"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_y0vkh"]
@@ -18,7 +18,7 @@ fill_from = Vector2(1, 1)
 
 [sub_resource type="Resource" id="Resource_8a67e"]
 script = ExtResource("4_5e1j8")
-name = "Scene_21"
+name = "Scene_0"
 icon = ExtResource("5_jxo03")
 metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 
