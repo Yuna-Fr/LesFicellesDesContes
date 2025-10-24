@@ -166,6 +166,7 @@ position = Vector2(724, -46)
 texture = ExtResource("7_5mbgf")
 
 [node name="Anne" type="Node2D" parent="Characters"]
+visible = false
 z_index = 3
 position = Vector2(-5120, 866)
 

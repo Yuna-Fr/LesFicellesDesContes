@@ -50,7 +50,7 @@ metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_8a67e"]
 script = ExtResource("4_8dv3v")
-name = "Scene_22"
+name = "Scene_25"
 icon = ExtResource("5_gk302")
 metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 
