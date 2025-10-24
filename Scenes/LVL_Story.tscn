@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://bxtcibqfb4cpo"]
+[gd_scene load_steps=79 format=3 uid="uid://bo3ssfclbml3s"]
 
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_v8s55"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_iw4l2"]
@@ -108,7 +108,7 @@ shader_parameter/fade = 0.0
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_v8s55")
-current_event_id = "BASE_Forest_marriage"
+current_event_id = "FIN"
 
 [node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB", "Anne", "Mom", "Girls", "Dead", "Brother")]
 script = ExtResource("2_iw4l2")
@@ -143,11 +143,11 @@ position = Vector2(-1233, 742)
 texture = ExtResource("4_5mbgf")
 
 [node name="Kat" type="Node2D" parent="Characters"]
-visible = false
 z_index = 3
 position = Vector2(-3037, 897)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Kat"]
+scale = Vector2(-1, 1)
 texture = ExtResource("5_v8s55")
 
 [node name="Mom" type="Node2D" parent="Characters"]
@@ -167,7 +167,6 @@ position = Vector2(724, -46)
 texture = ExtResource("7_5mbgf")
 
 [node name="Anne" type="Node2D" parent="Characters"]
-visible = false
 z_index = 3
 position = Vector2(-4047, 866)
 
@@ -175,17 +174,13 @@ position = Vector2(-4047, 866)
 texture = ExtResource("7_dn353")
 
 [node name="Brother_1" type="Node2D" parent="Characters"]
-visible = false
 z_index = 3
-position = Vector2(-1695, 912)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Brother_1"]
 texture = ExtResource("9_otauw")
 
 [node name="Brother_2" type="Node2D" parent="Characters"]
-visible = false
 z_index = 3
-position = Vector2(-2330, 859)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Brother_2"]
 texture = ExtResource("10_3xn1l")
@@ -229,6 +224,9 @@ position = Vector2(-926, 844)
 [node name="19_Spawn" type="Node2D" parent="Positions/Kat"]
 position = Vector2(-1072, 844)
 
+[node name="Fin-Kat" type="Node2D" parent="Positions/Kat"]
+position = Vector2(2271, 863)
+
 [node name="Mom" type="Node" parent="Positions"]
 
 [node name="0_Presentation" type="Node2D" parent="Positions/Mom"]
@@ -263,6 +261,10 @@ position = Vector2(-1784, 846)
 [node name="19_Spawn" type="Node2D" parent="Positions/Anne"]
 position = Vector2(-2082, 846)
 
+[node name="Fin-Anne" type="Node2D" parent="Positions/Anne"]
+position = Vector2(948, 887)
+scale = Vector2(-1, 1)
+
 [node name="Girls" type="Node" parent="Positions"]
 
 [node name="Middle" type="Node2D" parent="Positions/Girls"]
@@ -277,14 +279,21 @@ texture = SubResource("GradientTexture2D_f8mij")
 [node name="0_Presentation" type="Node2D" parent="Positions/Brother_1"]
 position = Vector2(-1695, 912)
 
+[node name="Fin-brother1" type="Node2D" parent="Positions/Brother_1"]
+position = Vector2(-1163, 727)
+
 [node name="Brother_2" type="Node" parent="Positions"]
 
 [node name="0_Presentation" type="Node2D" parent="Positions/Brother_2"]
 position = Vector2(-2330, 859)
 
+[node name="Fin-brother2" type="Node2D" parent="Positions/Brother_2"]
+position = Vector2(17, 727)
+
 [node name="Decor" type="Node" parent="."]
 
 [node name="DeadRoom" type="Node2D" parent="Decor"]
+visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/DeadRoom"]
 
@@ -438,6 +447,7 @@ scale = Vector2(1.1709083, 1.1709083)
 texture = ExtResource("23_otauw")
 
 [node name="Bedroom" type="Node2D" parent="Decor"]
+visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/Bedroom"]
 
@@ -485,6 +495,7 @@ scale = Vector2(1.6828868, 1.6828868)
 texture = ExtResource("17_f5ywd")
 
 [node name="Forest" type="Node2D" parent="Decor"]
+visible = false
 
 [node name="Haut" type="Node2D" parent="Decor/Forest"]
 
@@ -736,6 +747,7 @@ texture = ExtResource("41_wbyhb")
 [node name="Droite" type="Node2D" parent="Decor/Forest"]
 
 [node name="LivingRoom" type="Node2D" parent="Decor"]
+visible = false
 
 [node name="Spawns" type="Node2D" parent="Decor/LivingRoom"]
 
@@ -840,6 +852,7 @@ scale = Vector2(1.668012, 1.5879629)
 texture = ExtResource("53_hun6g")
 
 [node name="Hill" type="Node2D" parent="Decor"]
+visible = false
 
 [node name="Haut" type="Node" parent="Decor/Hill"]
 
@@ -887,6 +900,7 @@ scale = Vector2(5.1017966, 3.5405338)
 texture = ExtResource("59_i2mkb")
 
 [node name="Stairs" type="Node2D" parent="Decor"]
+visible = false
 
 [node name="Spawns" type="Node" parent="Decor/Stairs"]
 
@@ -951,6 +965,7 @@ scale = Vector2(1.5486381, 1.4038461)
 texture = ExtResource("62_bepfj")
 
 [node name="CanvaControl" type="Control" parent="."]
+visible = false
 z_index = 20
 layout_mode = 3
 anchor_left = -1.669
