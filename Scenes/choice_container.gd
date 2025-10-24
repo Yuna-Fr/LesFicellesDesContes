@@ -46,11 +46,13 @@ func show_choices():
 	animating = true
 	current_choices = scene_executer.event_data.next_events 
 	
+	'''
 	if scene_executer.event_data.next_events.size() == 1:
 		print("Scène choisie automatiquement :", current_choices[0].name)
 		scene_executer.emit_signal("event_finished", current_choices[0].name)
 		animating = false
 		return
+	'''
 	
 	input_handler.request_button_input()
 	hide_all()
