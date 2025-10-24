@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=13 format=3 uid="uid://kkfdc1a1aj8u"]
+
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_m6j6a"]
+[ext_resource type="Texture2D" uid="uid://chogws0qletcn" path="res://Assets/Characters/char_bb_1.png" id="2_8e3ig"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="3_wann8"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="4_nmqwj"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="5_gbwoc"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="6_r6vsl"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="7_kp68g"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="8_lrx3d"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0, 0.9933222)
+colors = PackedColorArray(1, 0, 0, 1, 0.26057518, 4.579641e-05, 0.26057312, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_twkgu"]
+script = ExtResource("1_m6j6a")
+name = "BB"
+sprite = ExtResource("2_8e3ig")
+target = NodePath("Positions/BB/9_Moving")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_4q8h0"]
+script = ExtResource("5_gbwoc")
+name = "Scene_17"
+icon = ExtResource("6_r6vsl")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[resource]
+script = ExtResource("7_kp68g")
+description = "Titre"
+background = SubResource("GradientTexture2D_dinbm")
+characters_spawn = Array[ExtResource("1_m6j6a")]([SubResource("Resource_twkgu")])
+next_events = Array[ExtResource("5_gbwoc")]([SubResource("Resource_4q8h0")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

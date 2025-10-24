@@ -52,7 +52,7 @@ func execute(_event_data: BaseEvent):
 		push_error("No event_data to excute !")
 		return
 	
-	await despawn_characters(event_data.characters_des)
+	despawn_characters(event_data.characters_des)
 	remove_unused_objects(event_data.spawns)
 	start_movements(event_data.movements)
 	spawn_objects(event_data.spawns)
@@ -124,6 +124,8 @@ func despawn_characters(characters : Array[String]):
 func spawn_characters(characters: Array[CharacterAppear]):
 	if characters.is_empty():
 		return
+		
+	print(characters)
 
 	var viewport_size = get_viewport().size
 	var z_offsets = {}
@@ -187,11 +189,10 @@ func spawn_objects(spawn_list: Array[SpawnObject]):
 			continue
 
 		var obj_node: Node2D = positions_root.get_node(spawn.target)
-		if active_objects.has(obj_node.name):
+		if active_objects.has(spawn.target):
 			continue # déjà présent, on ne fait rien
 
-		active_objects[obj_node.name] = true
-		print(active_objects)
+		active_objects[spawn.target] = obj_node
 
 		var final_pos = obj_node.global_position
 		var offset = get_direction(spawn.direction)
@@ -216,26 +217,52 @@ func spawn_objects(spawn_list: Array[SpawnObject]):
 func remove_unused_objects(new_spawn_list: Array[SpawnObject]):
 	if active_objects.is_empty():
 		return
-	var new_targets: Dictionary = {}
-	for spawn in new_spawn_list:
-		new_targets[spawn.target] = true
 
-	for obj_node in active_objects:
-		if not obj_node is Node2D:
+	var keep_targets: Dictionary = {}
+	for spawn in new_spawn_list:
+		keep_targets[str(spawn.target)] = true
+
+	var keys = active_objects.keys()
+	for key in keys:
+		if keep_targets.has(str(key)):
 			continue
-		if new_targets.has(obj_node.name):
-			continue # on garde
+
+		var obj_node = active_objects.get(key)
+		if not obj_node:
+			active_objects.erase(key)
+			continue
+
+		if not obj_node is Node2D:
+			active_objects.erase(key)
+			continue
 
 		if obj_node.visible:
 			var final_pos = obj_node.global_position + Vector2(0, get_viewport().size.y)
 			var tween = create_tween()
 			tween.set_trans(Tween.TRANS_SINE)
 			tween.set_ease(Tween.EASE_OUT)
+
 			active_tweens += 1
+
 			tween.tween_property(obj_node, "global_position", final_pos, 0.5)
-			tween.finished.connect(Callable(self, "_on_single_spawn_finished"))
-			active_objects.erase(obj_node.name)
-			obj_node.visible = false
+			tween.parallel().tween_property(obj_node, "modulate:a", 0.0, 0.4)
+
+
+			tween.finished.connect(func (k = key, n = obj_node):
+				if active_objects.has(k):
+					active_objects.erase(k)
+				n.visible = false
+				# restore alpha in case reused later
+				if n.has_method("get_child_count") and n.get_child_count() > 0:
+					var child = n.get_child(0)
+					if typeof(child) == TYPE_OBJECT and child.has_method("set_modulate"):
+						# attempt safe restore of child alpha if needed (optional)
+						pass
+				active_tweens -= 1
+				# si tu veux mettre spawns_finished ici selon ta logique :
+				if active_tweens <= 0:
+					spawns_finished = true
+			)
 
 func get_direction(direction_name: String) -> Vector2:
 	var viewport_size = get_viewport().size
