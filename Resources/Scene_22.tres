@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=19 format=3 uid="uid://dsq2054ojnbus"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=19 format=3 uid="uid://cnk6npogk4uol"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_yc7ua"]
 [ext_resource type="Texture2D" uid="uid://dyntww4asfd2n" path="res://Assets/Characters/char_bb_2.png" id="2_bfwpi"]
@@ -26,7 +26,7 @@ metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_8a67e"]
 script = ExtResource("8_bkwdn")
-name = "Scene_21"
+name = "Scene_23"
 icon = ExtResource("9_ugb7s")
 metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 
