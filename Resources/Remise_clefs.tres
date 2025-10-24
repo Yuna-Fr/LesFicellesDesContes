@@ -1,0 +1,142 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=31 format=3 uid="uid://cofgxl8fky2mf"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterAppear.gd" id="1_yfjhu"]
+[ext_resource type="Script" path="res://Scripts/base_dialogue.gd" id="2_77ouj"]
+[ext_resource type="Texture2D" uid="uid://ys4cb0p48hhd" path="res://Assets/Characters/char_bb_2_reversed.png" id="2_ryyg0"]
+[ext_resource type="Texture2D" uid="uid://das65c0wtxhil" path="res://Assets/Characters/char_kat.png" id="3_46fxc"]
+[ext_resource type="Script" path="res://Scripts/Movement.gd" id="3_ryyg0"]
+[ext_resource type="Script" path="res://Scripts/Scene.gd" id="4_46fxc"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="5_vm7oy"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="6_u0jo1"]
+[ext_resource type="Script" path="res://Scripts/SpawnObject.gd" id="7_dmdmo"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0.0066778064, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.60784316, 0.85490197, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_46fxc"]
+script = ExtResource("1_yfjhu")
+name = "BB"
+sprite = ExtResource("2_ryyg0")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_vm7oy"]
+script = ExtResource("1_yfjhu")
+name = "Kat"
+sprite = ExtResource("3_46fxc")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_8a67e"]
+script = ExtResource("4_46fxc")
+name = "Scene_21"
+icon = ExtResource("5_vm7oy")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_fsokd"]
+script = ExtResource("7_dmdmo")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropColonne1_MG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_1dmjf"]
+script = ExtResource("7_dmdmo")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropEscalier1_MG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_075na"]
+script = ExtResource("7_dmdmo")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropCommodeFermee_FG_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_vob6e"]
+script = ExtResource("7_dmdmo")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropDeco1_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_f23fo"]
+script = ExtResource("7_dmdmo")
+direction = "haut"
+target = NodePath("Decor/LivingRoom/Spawns/Haut/PropBuste_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_lhu8e"]
+script = ExtResource("7_dmdmo")
+direction = "bas"
+target = NodePath("Decor/LivingRoom/Spawns/Bas/PropFlame_MG2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_v5kl6"]
+script = ExtResource("7_dmdmo")
+direction = "bas"
+target = NodePath("Decor/LivingRoom/Spawns/Bas/PropFlame_MG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_4yn54"]
+script = ExtResource("7_dmdmo")
+direction = "bas"
+target = NodePath("Decor/LivingRoom/Spawns/Bas/PropChandelier_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_ft8w7"]
+script = ExtResource("7_dmdmo")
+direction = "gauche"
+target = NodePath("Decor/LivingRoom/Spawns/Gauche/PropsPainting3_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_l1jhd"]
+script = ExtResource("7_dmdmo")
+direction = "gauche"
+target = NodePath("Decor/LivingRoom/Spawns/Gauche/PropsPainting2_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_gixce"]
+script = ExtResource("7_dmdmo")
+direction = "gauche"
+target = NodePath("Decor/LivingRoom/Spawns/Gauche/PropsPainting5_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_m7js8"]
+script = ExtResource("7_dmdmo")
+direction = "droite"
+target = NodePath("Decor/LivingRoom/Spawns/Droite/PropsPainting4_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_f23fm"]
+script = ExtResource("7_dmdmo")
+direction = "droite"
+target = NodePath("Decor/LivingRoom/Spawns/Droite/PropChaise2_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_1nc8j"]
+script = ExtResource("7_dmdmo")
+direction = "droite"
+target = NodePath("Decor/LivingRoom/Spawns/Droite/PropsPainting6_FG")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_w135l"]
+script = ExtResource("7_dmdmo")
+direction = "bas"
+target = NodePath("Decor/LivingRoom/Decor_Livingroom_bg")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_77ouj"]
+script = ExtResource("7_dmdmo")
+direction = "haut"
+target = NodePath("Decor/PropsKeys")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("6_u0jo1")
+description = "Dans la foret"
+background = SubResource("GradientTexture2D_dinbm")
+characters_spawn = Array[ExtResource("1_yfjhu")]([SubResource("Resource_46fxc"), SubResource("Resource_vm7oy")])
+spawns = Array[ExtResource("7_dmdmo")]([SubResource("Resource_fsokd"), SubResource("Resource_1dmjf"), SubResource("Resource_075na"), SubResource("Resource_vob6e"), SubResource("Resource_f23fo"), SubResource("Resource_lhu8e"), SubResource("Resource_v5kl6"), SubResource("Resource_4yn54"), SubResource("Resource_ft8w7"), SubResource("Resource_l1jhd"), SubResource("Resource_gixce"), SubResource("Resource_m7js8"), SubResource("Resource_f23fm"), SubResource("Resource_1nc8j"), SubResource("Resource_w135l"), SubResource("Resource_77ouj")])
+next_events = Array[ExtResource("4_46fxc")]([SubResource("Resource_8a67e")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"
