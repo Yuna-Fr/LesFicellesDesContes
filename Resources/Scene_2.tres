@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=13 format=3 uid="uid://b6f1b8eyaeufl"]
+
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_xp7su"]
+[ext_resource type="Texture2D" uid="uid://b1fn4mlbqde3p" path="res://Assets/Characters/char_anne.png" id="2_xp7su"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="3_h33fn"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="4_6ij1s"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="5_slmt4"]
+[ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="6_j0u8w"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="7_bwx6f"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="8_kp3je"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0, 0.9933222)
+colors = PackedColorArray(1, 0, 0, 1, 0.26057518, 4.579641e-05, 0.26057312, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_ia2or"]
+script = ExtResource("1_xp7su")
+name = "Anne"
+sprite = ExtResource("2_xp7su")
+target = NodePath("Positions/Anne/0_Presentation")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_jcese"]
+script = ExtResource("5_slmt4")
+name = "Scene_3"
+icon = ExtResource("6_j0u8w")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[resource]
+script = ExtResource("7_bwx6f")
+description = "Titre"
+background = SubResource("GradientTexture2D_dinbm")
+characters_spawn = Array[ExtResource("1_xp7su")]([SubResource("Resource_ia2or")])
+next_events = Array[ExtResource("5_slmt4")]([SubResource("Resource_jcese")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

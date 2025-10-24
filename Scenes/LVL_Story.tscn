@@ -1,0 +1,987 @@
+[gd_scene load_steps=72 format=3 uid="uid://bxtcibqfb4cpo"]
+
+[ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_v8s55"]
+[ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_iw4l2"]
+[ext_resource type="PackedScene" uid="uid://cpd1kufpe60jq" path="res://Prefab/input_handler.tscn" id="3_f8mij"]
+[ext_resource type="Texture2D" uid="uid://dyntww4asfd2n" path="res://Assets/Characters/char_bb_2.png" id="4_5mbgf"]
+[ext_resource type="Texture2D" uid="uid://das65c0wtxhil" path="res://Assets/Characters/char_kat.png" id="5_v8s55"]
+[ext_resource type="Texture2D" uid="uid://co167dxnlvfep" path="res://Assets/Characters/char_mom.png" id="6_1cl7o"]
+[ext_resource type="Script" uid="uid://dam8tr5761ose" path="res://Scenes/choice_container.gd" id="6_pr6aj"]
+[ext_resource type="Texture2D" uid="uid://c1cvnnhlxfdks" path="res://Assets/Characters/char_girls.png" id="7_5mbgf"]
+[ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="7_6ai3g"]
+[ext_resource type="Texture2D" uid="uid://b1fn4mlbqde3p" path="res://Assets/Characters/char_anne.png" id="7_dn353"]
+[ext_resource type="Texture2D" uid="uid://dkjxgps04inbd" path="res://Assets/Props/Objets/props_closet.png" id="8_46hbo"]
+[ext_resource type="Texture2D" uid="uid://cuupg0yof3ky7" path="res://Assets/Props/DeadWomen/body 2.png" id="8_68y18"]
+[ext_resource type="Shader" uid="uid://bon1xjardfuqj" path="res://Materials/Shaders/background_shader.gdshader" id="8_uw34g"]
+[ext_resource type="Script" uid="uid://bm0t5saq1cr4k" path="res://Scripts/Specific/background_fader.gd" id="9_1cl7o"]
+[ext_resource type="Texture2D" uid="uid://vjahjcwqp8mt" path="res://Assets/Props/Objets/props_painting2.png" id="9_2od03"]
+[ext_resource type="Texture2D" uid="uid://cgo5ja32r5ic1" path="res://Assets/Props/DeadWomen/dead woman 5.png" id="9_f5ywd"]
+[ext_resource type="Texture2D" uid="uid://dmlpho6vbhuqc" path="res://Assets/Characters/char_brother1.png" id="9_otauw"]
+[ext_resource type="Texture2D" uid="uid://b3iih8vvc4ab6" path="res://Assets/Characters/char_brother2.png" id="10_3xn1l"]
+[ext_resource type="Texture2D" uid="uid://34errp6p6x13" path="res://Assets/Props/Objets/props_bed.png" id="10_5dy85"]
+[ext_resource type="Texture2D" uid="uid://dlekvyy00v4re" path="res://Assets/Props/DeadWomen/body 1.png" id="10_oo0me"]
+[ext_resource type="Texture2D" uid="uid://8lsv0gufbid5" path="res://Assets/Props/DeadWomen/body 3.png" id="11_lnkjc"]
+[ext_resource type="Texture2D" uid="uid://cxvowntpht1b4" path="res://Assets/Props/Objets/Prop_mouton2.png" id="11_yub8v"]
+[ext_resource type="Texture2D" uid="uid://dq81m582kcudl" path="res://Assets/Props/Objets/props_painting3.png" id="12_68y18"]
+[ext_resource type="Texture2D" uid="uid://cgrilfciryboy" path="res://Assets/Props/DeadWomen/body 4.png" id="12_qhayi"]
+[ext_resource type="Texture2D" uid="uid://bxxv68360xrcr" path="res://Assets/Props/DeadWomen/dead woman 1.png" id="13_a7bl0"]
+[ext_resource type="Texture2D" uid="uid://cavro5cl2ktmg" path="res://Assets/Props/DeadWomen/dead woman 4.png" id="14_ran3o"]
+[ext_resource type="Texture2D" uid="uid://crjvqfj3bgk5y" path="res://Assets/Props/DeadWomen/dead woman 6.png" id="15_dwedp"]
+[ext_resource type="Texture2D" uid="uid://dqqb1i5y4t8kf" path="res://Assets/Props/DeadWomen/dead woman 7.png" id="16_xn52r"]
+[ext_resource type="Texture2D" uid="uid://cjxwj4lb7xfy5" path="res://Assets/Props/Objets/Prop_colonne1.png" id="17_0wein"]
+[ext_resource type="Texture2D" uid="uid://cnv4nqwnhtwei" path="res://Assets/Decors/decor_bedroom.png" id="17_f5ywd"]
+[ext_resource type="Texture2D" uid="uid://12fyhi0sou0c" path="res://Assets/Props/DeadWomen/dead woman 2.png" id="18_r3q4u"]
+[ext_resource type="Texture2D" uid="uid://c4fvf3bk1qsor" path="res://Assets/Props/DeadWomen/tache sang.png" id="19_yllu4"]
+[ext_resource type="Texture2D" uid="uid://c5vbn6b3agje1" path="res://Assets/Props/Objets/ring.png" id="23_otauw"]
+[ext_resource type="Texture2D" uid="uid://cru53htusno8k" path="res://Assets/Props/Vegetation/props_shadow_tree.png" id="29_866p1"]
+[ext_resource type="Texture2D" uid="uid://dsvwwsadkqpoc" path="res://Assets/Props/Vegetation/props_bluefar_tree.png" id="30_wkry4"]
+[ext_resource type="Texture2D" uid="uid://6ae357ry0rar" path="res://Assets/Props/Vegetation/props_grass_green.png" id="31_tdkoh"]
+[ext_resource type="Texture2D" uid="uid://cvnkpp2muoe1p" path="res://Assets/Props/Vegetation/props_blue_tre.png" id="32_mqgvk"]
+[ext_resource type="Texture2D" uid="uid://c6a2xvp5vhq07" path="res://Assets/Props/Vegetation/props_tree_small4.png" id="33_vqoho"]
+[ext_resource type="Texture2D" uid="uid://wc4iwthgsc6f" path="res://Assets/Props/Vegetation/props_tree_branches.png" id="34_0ssp0"]
+[ext_resource type="Texture2D" uid="uid://bx1uuayckv6g0" path="res://Assets/Props/Vegetation/props_grass2.png" id="35_fvplv"]
+[ext_resource type="Texture2D" uid="uid://b2pc4kw5xxo63" path="res://Assets/Props/Vegetation/props_branch_leaves.png" id="36_i2mkb"]
+[ext_resource type="Texture2D" uid="uid://7r4efajup7oe" path="res://Assets/Props/Vegetation/props_grasse1.png" id="37_nnboc"]
+[ext_resource type="Texture2D" uid="uid://c855ldv3jynha" path="res://Assets/Props/Vegetation/props_BG_big_tree.png" id="38_bepfj"]
+[ext_resource type="Texture2D" uid="uid://dvfwa0kf452af" path="res://Assets/Props/Vegetation/props_bush.png" id="39_7uc1y"]
+[ext_resource type="Texture2D" uid="uid://bxn61pmea25ka" path="res://Assets/Props/Vegetation/props_bush_ornement.png" id="40_2xfyf"]
+[ext_resource type="Texture2D" uid="uid://b4e1pw731b5b8" path="res://Assets/Props/Vegetation/props_bush4.png" id="41_wbyhb"]
+[ext_resource type="Texture2D" uid="uid://nc1k6qwwe7dh" path="res://Assets/Props/Objets/Prop_escalier1.png" id="43_0t86w"]
+[ext_resource type="Texture2D" uid="uid://cwgcc0eijopno" path="res://Assets/Props/Objets/Prop_commode_fermee.png" id="44_sn12m"]
+[ext_resource type="Texture2D" uid="uid://cuq67lexlhycf" path="res://Assets/Props/Objets/Prop_deco1.png" id="45_x0mjk"]
+[ext_resource type="Texture2D" uid="uid://dp2o343mo6r8y" path="res://Assets/Props/Objets/Prop_buste.png" id="46_yru6t"]
+[ext_resource type="Texture2D" uid="uid://bnrlshe8vg3dy" path="res://Assets/Props/Objets/Prop_flame.png" id="47_gaeq2"]
+[ext_resource type="Texture2D" uid="uid://bvnpecdadpss5" path="res://Assets/Props/Objets/Prop_chandelier.png" id="48_1ufha"]
+[ext_resource type="Texture2D" uid="uid://ba8f6ygcfttcl" path="res://Assets/Props/Objets/props_painting5.png" id="49_i1ahv"]
+[ext_resource type="Texture2D" uid="uid://8r3i84fpu7jq" path="res://Assets/Props/Objets/props_painting4.png" id="50_ldi36"]
+[ext_resource type="Texture2D" uid="uid://d1rk13myy2573" path="res://Assets/Props/Objets/Prop_chaise2.png" id="51_yq4i7"]
+[ext_resource type="Texture2D" uid="uid://xicg34gfuitn" path="res://Assets/Props/Objets/props_painting6.png" id="52_o3doa"]
+[ext_resource type="Texture2D" uid="uid://cgiebrxhp88hm" path="res://Assets/Decors/decor_livingroom.png" id="53_hun6g"]
+[ext_resource type="Texture2D" uid="uid://b7ky6aerv76ao" path="res://Assets/Props/Objets/Prop_montagne.png" id="55_mqgvk"]
+[ext_resource type="Texture2D" uid="uid://crn5dowwadqj6" path="res://Assets/Decors/decor_hill.png" id="56_vqoho"]
+[ext_resource type="Texture2D" uid="uid://bpkqqn8k3fd8i" path="res://Assets/Props/Objets/Prop_mouton1.png" id="57_0ssp0"]
+[ext_resource type="Texture2D" uid="uid://m8seyj0xivix" path="res://Assets/Props/Objets/Prop_mouton3.png" id="58_fvplv"]
+[ext_resource type="Texture2D" uid="uid://c263howxqqi8w" path="res://Assets/Props/Objets/Prop_tour.png" id="59_i2mkb"]
+
+[sub_resource type="Gradient" id="Gradient_1kdmn"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_31fy3"]
+gradient = SubResource("Gradient_1kdmn")
+
+[sub_resource type="Gradient" id="Gradient_iw4l2"]
+offsets = PackedFloat32Array(0, 0.99747473)
+colors = PackedColorArray(0, 0, 1, 1, 0, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f8mij"]
+gradient = SubResource("Gradient_iw4l2")
+
+[sub_resource type="Gradient" id="Gradient_wf1x7"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lge6m"]
+gradient = SubResource("Gradient_wf1x7")
+
+[sub_resource type="Gradient" id="Gradient_v8s55"]
+offsets = PackedFloat32Array(0.97979796, 1)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 18.892157, 18.892157, 18.892157, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iw4l2"]
+gradient = SubResource("Gradient_v8s55")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1prbd"]
+shader = ExtResource("8_uw34g")
+shader_parameter/fade = 0.0
+
+[node name="LVL_Story" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_v8s55")
+current_event_id = "BASE_Forest_marriage"
+
+[node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB", "Anne", "Mom", "Girls", "Dead", "Brother")]
+script = ExtResource("2_iw4l2")
+positions_root = NodePath("..")
+Kat = NodePath("../Characters/Kat")
+BB = NodePath("../Characters/BB")
+Anne = NodePath("../Characters/Anne")
+Mom = NodePath("../Characters/Mom")
+Girls = NodePath("../Characters/Girls")
+Dead = NodePath("../Characters/Brother_1")
+Brother = NodePath("../Characters/Brother_2")
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+
+[node name="MusicPlayerA" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+
+[node name="MusicPlayerB" type="AudioStreamPlayer2D" parent="SceneExecuter"]
+
+[node name="InputHandler" parent="." instance=ExtResource("3_f8mij")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="BB" type="Node2D" parent="Characters"]
+visible = false
+z_index = 3
+position = Vector2(-1233, 742)
+
+[node name="Visual" type="Sprite2D" parent="Characters/BB"]
+texture = ExtResource("4_5mbgf")
+
+[node name="Kat" type="Node2D" parent="Characters"]
+visible = false
+z_index = 3
+position = Vector2(-3037, 897)
+
+[node name="Visual" type="Sprite2D" parent="Characters/Kat"]
+texture = ExtResource("5_v8s55")
+
+[node name="Mom" type="Node2D" parent="Characters"]
+visible = false
+z_index = 3
+position = Vector2(-5018, 817)
+
+[node name="Visual" type="Sprite2D" parent="Characters/Mom"]
+texture = ExtResource("6_1cl7o")
+
+[node name="Girls" type="Node2D" parent="Characters"]
+visible = false
+z_index = 3
+position = Vector2(724, -46)
+
+[node name="Visual" type="Sprite2D" parent="Characters/Girls"]
+texture = ExtResource("7_5mbgf")
+
+[node name="Anne" type="Node2D" parent="Characters"]
+visible = false
+z_index = 3
+position = Vector2(-4047, 866)
+
+[node name="Visual" type="Sprite2D" parent="Characters/Anne"]
+texture = ExtResource("7_dn353")
+
+[node name="Brother_1" type="Node2D" parent="Characters"]
+visible = false
+z_index = 3
+position = Vector2(-1695, 912)
+
+[node name="Visual" type="Sprite2D" parent="Characters/Brother_1"]
+texture = ExtResource("9_otauw")
+
+[node name="Brother_2" type="Node2D" parent="Characters"]
+visible = false
+z_index = 3
+position = Vector2(-2330, 859)
+
+[node name="Visual" type="Sprite2D" parent="Characters/Brother_2"]
+texture = ExtResource("10_3xn1l")
+
+[node name="Positions" type="Node" parent="."]
+
+[node name="Sol" type="Sprite2D" parent="Positions"]
+z_index = 25
+position = Vector2(-66.00001, 2240.0002)
+scale = Vector2(119.44951, 21.769768)
+texture = SubResource("GradientTexture2D_31fy3")
+
+[node name="BB" type="Node" parent="Positions"]
+
+[node name="0_Presentation" type="Node2D" parent="Positions/BB"]
+position = Vector2(-727, 732)
+
+[node name="8_TalkingM" type="Node2D" parent="Positions/BB"]
+position = Vector2(1628, 732)
+
+[node name="9_Moving" type="Node2D" parent="Positions/BB"]
+position = Vector2(624, 732)
+
+[node name="19_Spawn" type="Node2D" parent="Positions/BB"]
+position = Vector2(732, 732)
+
+[node name="Kat" type="Node" parent="Positions"]
+
+[node name="0_Presentation" type="Node2D" parent="Positions/Kat"]
+position = Vector2(380, 856)
+
+[node name="12_Spawn" type="Node2D" parent="Positions/Kat"]
+position = Vector2(-3854, 856)
+
+[node name="13_Move" type="Node2D" parent="Positions/Kat"]
+position = Vector2(-780, 844)
+
+[node name="14_Move" type="Node2D" parent="Positions/Kat"]
+position = Vector2(-926, 844)
+
+[node name="19_Spawn" type="Node2D" parent="Positions/Kat"]
+position = Vector2(-1072, 844)
+
+[node name="Mom" type="Node" parent="Positions"]
+
+[node name="0_Presentation" type="Node2D" parent="Positions/Mom"]
+position = Vector2(2497, 802)
+
+[node name="8_Starting" type="Node2D" parent="Positions/Mom"]
+position = Vector2(-792, 802)
+
+[node name="12_Spawn" type="Node2D" parent="Positions/Mom"]
+position = Vector2(-5689, 802)
+
+[node name="13_Move" type="Node2D" parent="Positions/Mom"]
+position = Vector2(-2735, 802)
+
+[node name="19_Spawn" type="Node2D" parent="Positions/Mom"]
+position = Vector2(-3053, 802)
+
+[node name="Anne" type="Node" parent="Positions"]
+
+[node name="0_Presentation" type="Node2D" parent="Positions/Anne"]
+position = Vector2(1413, 858)
+
+[node name="12_Spawn" type="Node2D" parent="Positions/Anne"]
+position = Vector2(-4712, 858)
+
+[node name="13_Move" type="Node2D" parent="Positions/Anne"]
+position = Vector2(-1638, 846)
+
+[node name="14_Move" type="Node2D" parent="Positions/Anne"]
+position = Vector2(-1784, 846)
+
+[node name="19_Spawn" type="Node2D" parent="Positions/Anne"]
+position = Vector2(-2082, 846)
+
+[node name="Girls" type="Node" parent="Positions"]
+
+[node name="Middle" type="Node2D" parent="Positions/Girls"]
+visible = false
+position = Vector2(-103, 858)
+
+[node name="Sprite2D" type="Sprite2D" parent="Positions/Girls/Middle"]
+texture = SubResource("GradientTexture2D_f8mij")
+
+[node name="Brother_1" type="Node" parent="Positions"]
+
+[node name="0_Presentation" type="Node2D" parent="Positions/Brother_1"]
+position = Vector2(-1695, 912)
+
+[node name="Brother_2" type="Node" parent="Positions"]
+
+[node name="0_Presentation" type="Node2D" parent="Positions/Brother_2"]
+position = Vector2(-2330, 859)
+
+[node name="Decor" type="Node" parent="."]
+
+[node name="DeadRoom" type="Node2D" parent="Decor"]
+
+[node name="Spawns" type="Node2D" parent="Decor/DeadRoom"]
+
+[node name="Haut" type="Node2D" parent="Decor/DeadRoom/Spawns"]
+
+[node name="Prop_MD_Body5" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+modulate = Color(1, 1, 1, 0.15686275)
+position = Vector2(2394.9998, -896)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("8_68y18")
+
+[node name="DeadWoman6" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+modulate = Color(1, 1, 1, 0.59607846)
+position = Vector2(-727, -1640)
+texture = ExtResource("9_f5ywd")
+
+[node name="Prop_FG_Body1" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-982.9999, -981)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("10_oo0me")
+
+[node name="Prop_MD_Body2" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+modulate = Color(1, 1, 1, 0.41960785)
+position = Vector2(3087.4524, -451.9724)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("8_68y18")
+
+[node name="Prop_MD_Body4" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+modulate = Color(1, 1, 1, 0.13333334)
+position = Vector2(-178.00024, -371.99997)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("8_68y18")
+
+[node name="Prop_MD_Body7" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+position = Vector2(1807, -850)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("8_68y18")
+
+[node name="Prop_MD_Body6" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+modulate = Color(1, 1, 1, 0.13333334)
+position = Vector2(-1503, -977)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("8_68y18")
+
+[node name="Prop_MD_Body3" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+modulate = Color(5.3174357, 5.3174357, 5.3174357, 0.41960785)
+position = Vector2(-3254.5474, -943.9724)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("11_lnkjc")
+
+[node name="Prop_GD_Body4" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+modulate = Color(1, 1, 1, 0.12156863)
+position = Vector2(1377.0002, -909)
+scale = Vector2(1.8323783, 1.8323781)
+texture = ExtResource("12_qhayi")
+
+[node name="Prop_FG_DeadWoman1" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-1894, -1101)
+texture = ExtResource("13_a7bl0")
+
+[node name="Prop_FG_DeadWoman4" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-2667, -1182)
+texture = ExtResource("14_ran3o")
+
+[node name="Prop_FG_DeadWoman6" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+position = Vector2(711.99994, -1060)
+texture = ExtResource("15_dwedp")
+
+[node name="Prop_FG_DeadWoman7" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-5.000061, -1095)
+texture = ExtResource("16_xn52r")
+
+[node name="Prop_FG_Toit" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-3.0000114, -2446)
+scale = Vector2(119.44951, 21.769768)
+texture = SubResource("GradientTexture2D_lge6m")
+
+[node name="Bas" type="Node2D" parent="Decor/DeadRoom/Spawns"]
+
+[node name="Gauche" type="Node2D" parent="Decor/DeadRoom/Spawns"]
+
+[node name="Prop_FG_PropColonne1" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Gauche"]
+visible = false
+position = Vector2(-2308.5, -174.66687)
+scale = Vector2(4.4047613, 4.4047613)
+texture = ExtResource("17_0wein")
+
+[node name="Prop_FG_PropColonne2" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Gauche"]
+visible = false
+position = Vector2(360.49994, -174.66687)
+scale = Vector2(4.4047613, 4.4047613)
+texture = ExtResource("17_0wein")
+
+[node name="Prop_FG_PropColonne3" type="Sprite2D" parent="Decor/DeadRoom/Spawns/Gauche"]
+visible = false
+position = Vector2(3278, -174.66687)
+scale = Vector2(4.4047613, 4.4047613)
+texture = ExtResource("17_0wein")
+
+[node name="Droite" type="Node2D" parent="Decor/DeadRoom/Spawns"]
+
+[node name="DeadWoman2" type="Sprite2D" parent="Decor/DeadRoom"]
+z_index = 50
+position = Vector2(2982, -1005)
+texture = ExtResource("18_r3q4u")
+
+[node name="TacheSang" type="Sprite2D" parent="Decor/DeadRoom"]
+z_index = 50
+position = Vector2(-1521, 1489)
+texture = ExtResource("19_yllu4")
+
+[node name="TacheSang2" type="Sprite2D" parent="Decor/DeadRoom"]
+z_index = 50
+position = Vector2(-956, 1489)
+texture = ExtResource("19_yllu4")
+
+[node name="TacheSang3" type="Sprite2D" parent="Decor/DeadRoom"]
+z_index = 50
+position = Vector2(921, 1496)
+texture = ExtResource("19_yllu4")
+
+[node name="Title" type="Sprite2D" parent="Decor"]
+visible = false
+z_index = 5
+position = Vector2(0, -94)
+scale = Vector2(51.120003, 14.879999)
+texture = SubResource("GradientTexture2D_iw4l2")
+
+[node name="Ring" type="Sprite2D" parent="Decor"]
+visible = false
+position = Vector2(-121.99997, 274)
+scale = Vector2(1.1709083, 1.1709083)
+texture = ExtResource("23_otauw")
+
+[node name="Bedroom" type="Node2D" parent="Decor"]
+
+[node name="Spawns" type="Node2D" parent="Decor/Bedroom"]
+
+[node name="Haut" type="Node2D" parent="Decor/Bedroom/Spawns"]
+
+[node name="PropsCloset" type="Sprite2D" parent="Decor/Bedroom/Spawns/Haut"]
+visible = false
+position = Vector2(-2608, 558)
+scale = Vector2(1.398682, 1.4625198)
+texture = ExtResource("8_46hbo")
+
+[node name="PropsPainting2" type="Sprite2D" parent="Decor/Bedroom/Spawns/Haut"]
+visible = false
+position = Vector2(1344, -774)
+texture = ExtResource("9_2od03")
+
+[node name="Bas" type="Node2D" parent="Decor/Bedroom/Spawns"]
+
+[node name="PropsBed" type="Sprite2D" parent="Decor/Bedroom/Spawns/Bas"]
+visible = false
+position = Vector2(1593, 643.00006)
+rotation = 3.1415925
+scale = Vector2(1.2701914, -1.2799988)
+texture = ExtResource("10_5dy85")
+
+[node name="Gauche" type="Node2D" parent="Decor/Bedroom/Spawns"]
+
+[node name="PropMouton2" type="Sprite2D" parent="Decor/Bedroom/Spawns/Gauche"]
+visible = false
+position = Vector2(-2227, -365)
+texture = ExtResource("11_yub8v")
+
+[node name="Droite" type="Node2D" parent="Decor/Bedroom/Spawns"]
+
+[node name="PropsPainting3" type="Sprite2D" parent="Decor/Bedroom/Spawns/Droite"]
+visible = false
+position = Vector2(2384, -535)
+texture = ExtResource("12_68y18")
+
+[node name="DecorBedroom" type="Sprite2D" parent="Decor/Bedroom"]
+visible = false
+z_index = -1
+position = Vector2(-5.634407, -14.482096)
+scale = Vector2(1.6828868, 1.6828868)
+texture = ExtResource("17_f5ywd")
+
+[node name="Forest" type="Node2D" parent="Decor"]
+
+[node name="Haut" type="Node2D" parent="Decor/Forest"]
+
+[node name="PropsBGShadowTree" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+z_index = -1
+position = Vector2(2110, 213)
+rotation = 1.5707964
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("29_866p1")
+
+[node name="PropsBluefarTree3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(1784, -1020)
+scale = Vector2(1.3009707, 2.6373143)
+texture = ExtResource("30_wkry4")
+
+[node name="PropsBGGrassGreen2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(1878.9999, 1316)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("31_tdkoh")
+
+[node name="PropsBGGrassGreen" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-1806, 1281)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("31_tdkoh")
+
+[node name="PropsBGBluefarTree3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-1027, -236)
+scale = Vector2(1.3113123, 1.6758318)
+texture = ExtResource("30_wkry4")
+
+[node name="PropsBGBluefarTree2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-2651, -414.99994)
+scale = Vector2(1.615824, 1.8926414)
+texture = ExtResource("30_wkry4")
+
+[node name="PropsBGBluefarTree" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-1552, -1108)
+scale = Vector2(1.3009707, 2.6373143)
+texture = ExtResource("30_wkry4")
+
+[node name="PropsMGBlueTre" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-2384, -532.00006)
+rotation = 3.1415925
+scale = Vector2(2.006, -2.006)
+texture = ExtResource("32_mqgvk")
+
+[node name="PropsMGBlueTre2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(1161.0001, -414)
+rotation = 3.1415925
+scale = Vector2(2.006, -2.006)
+texture = ExtResource("32_mqgvk")
+
+[node name="PropsMGBluefarTree2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(363.99988, -468)
+scale = Vector2(2.017852, 2.017852)
+texture = ExtResource("30_wkry4")
+
+[node name="PropsBGBlueTre3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-526.99994, -774)
+rotation = -3.0565984
+scale = Vector2(2.235895, -2.235895)
+texture = ExtResource("32_mqgvk")
+
+[node name="PropsMGTreeSmall4" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-870.99976, -446)
+scale = Vector2(4.391775, 4.391775)
+texture = ExtResource("33_vqoho")
+
+[node name="PropsBGBlueTre4" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(2434.0002, -630)
+scale = Vector2(2.184469, 2.184469)
+texture = ExtResource("32_mqgvk")
+
+[node name="PropsBGGrassGreen4" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-2575, 1126.0001)
+rotation = 0.10960979
+scale = Vector2(0.99999964, 0.99999964)
+texture = ExtResource("31_tdkoh")
+
+[node name="PropsMDTreeBranches" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-2307, 797)
+rotation = 1.488582
+scale = Vector2(2.1289687, 2.1289687)
+texture = ExtResource("34_0ssp0")
+
+[node name="PropsMGTreeBranches2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(2651, 1014.0001)
+rotation = 1.6317333
+scale = Vector2(1.7030162, -1.7578436)
+texture = ExtResource("34_0ssp0")
+
+[node name="PropsFGGrass2" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+z_index = 4
+position = Vector2(-1203, 1530)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("35_fvplv")
+
+[node name="PropsFGGrass3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+z_index = 4
+position = Vector2(-2799, 1465)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("35_fvplv")
+
+[node name="PropsBGGrass4" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(442.00006, 1331)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("35_fvplv")
+
+[node name="PropsBGGrass5" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(2799.6865, 1464.6482)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("35_fvplv")
+
+[node name="PropsBGGrass7" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(1656, 1481)
+scale = Vector2(3.0490854, 3.0490854)
+texture = ExtResource("35_fvplv")
+
+[node name="PropsBranchLeaves" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(1899, 1150.0001)
+rotation = -2.4997537
+scale = Vector2(1.3010416, 1.3010416)
+texture = ExtResource("36_i2mkb")
+
+[node name="PropsBGGrass6" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(-2408, 1546)
+scale = Vector2(1.746163, 1.746163)
+texture = ExtResource("35_fvplv")
+
+[node name="PropsBGGrassGreen3" type="Sprite2D" parent="Decor/Forest/Haut"]
+visible = false
+position = Vector2(1879, 1210)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("31_tdkoh")
+
+[node name="Bas" type="Node2D" parent="Decor/Forest"]
+
+[node name="Gauche" type="Node2D" parent="Decor/Forest"]
+
+[node name="PropsFGGrasse2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(2083, 1680)
+scale = Vector2(3.1928816, 3.1928816)
+texture = ExtResource("37_nnboc")
+
+[node name="PropsFGGrasse1" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(-79, 1570)
+scale = Vector2(2.4900963, 2.4900963)
+texture = ExtResource("37_nnboc")
+
+[node name="PropsMGBigTree3" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+position = Vector2(1216, -940)
+scale = Vector2(2.4900963, 2.4900963)
+texture = ExtResource("38_bepfj")
+
+[node name="PropsFGBigTree" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(-2832, -732)
+scale = Vector2(2.4900963, 2.4900963)
+texture = ExtResource("38_bepfj")
+
+[node name="PropsFGBigTree2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(3084, -164)
+scale = Vector2(1.7122005, 1.7122005)
+texture = ExtResource("38_bepfj")
+
+[node name="PropsFGBush" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(-3335, 1278)
+scale = Vector2(1.8589672, 1.8589672)
+texture = ExtResource("39_7uc1y")
+
+[node name="PropsFGBush2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(3415, 1413)
+scale = Vector2(1.8589672, 1.8589672)
+texture = ExtResource("39_7uc1y")
+
+[node name="PropsMGBushOrnement" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+position = Vector2(-2759, 1386)
+scale = Vector2(1.1803092, 1.1803092)
+texture = ExtResource("40_2xfyf")
+
+[node name="PropsFGBush3" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(-2372, 1539)
+scale = Vector2(1.8589672, 1.8589672)
+texture = ExtResource("39_7uc1y")
+
+[node name="PropsFGBushOrnement2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(2497, 1386.0001)
+scale = Vector2(1.1803092, 1.1803092)
+texture = ExtResource("40_2xfyf")
+
+[node name="PropsFGBush4" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(3177, 1403)
+texture = ExtResource("41_wbyhb")
+
+[node name="PropsFGBush5" type="Sprite2D" parent="Decor/Forest/Gauche"]
+visible = false
+z_index = 4
+position = Vector2(515, 1484)
+texture = ExtResource("41_wbyhb")
+
+[node name="Droite" type="Node2D" parent="Decor/Forest"]
+
+[node name="LivingRoom" type="Node2D" parent="Decor"]
+
+[node name="Spawns" type="Node2D" parent="Decor/LivingRoom"]
+
+[node name="Haut" type="Node2D" parent="Decor/LivingRoom/Spawns"]
+
+[node name="PropColonne1_MG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-459.00003, -215)
+scale = Vector2(3.8546507, 4.4099813)
+texture = ExtResource("17_0wein")
+
+[node name="PropEscalier1_MG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
+position = Vector2(133.37503, 848.5625)
+scale = Vector2(2.9037583, 2.7615638)
+texture = ExtResource("43_0t86w")
+
+[node name="PropCommodeFermee_FG_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-1538, 1141)
+scale = Vector2(2.217742, 2.217742)
+texture = ExtResource("44_sn12m")
+
+[node name="PropDeco1_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-1691, 593.1454)
+scale = Vector2(1.9982992, 1.998299)
+texture = ExtResource("45_x0mjk")
+
+[node name="PropBuste_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Haut"]
+visible = false
+position = Vector2(-1406, 686)
+texture = ExtResource("46_yru6t")
+
+[node name="Bas" type="Node2D" parent="Decor/LivingRoom/Spawns"]
+
+[node name="PropFlame_MG2" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Bas"]
+visible = false
+position = Vector2(1359.9999, -801)
+scale = Vector2(1.7419482, 1.7419479)
+texture = ExtResource("47_gaeq2")
+
+[node name="PropFlame_MG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Bas"]
+visible = false
+position = Vector2(431.0005, -304.00003)
+scale = Vector2(2.0425532, 2.042553)
+texture = ExtResource("47_gaeq2")
+
+[node name="PropChandelier_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Bas"]
+visible = false
+position = Vector2(-1929.9999, -1421)
+rotation = -3.111922
+scale = Vector2(2.6853225, 2.6853225)
+texture = ExtResource("48_1ufha")
+
+[node name="Gauche" type="Node2D" parent="Decor/LivingRoom/Spawns"]
+
+[node name="PropsPainting3_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Gauche"]
+visible = false
+position = Vector2(-1507, -599)
+scale = Vector2(0.8175676, 0.8175675)
+texture = ExtResource("12_68y18")
+
+[node name="PropsPainting2_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Gauche"]
+visible = false
+position = Vector2(-1276.0002, -215)
+scale = Vector2(0.86159664, 0.8248343)
+texture = ExtResource("9_2od03")
+
+[node name="PropsPainting5_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Gauche"]
+visible = false
+position = Vector2(-1174.5, -1241.2168)
+scale = Vector2(0.7831858, 0.7831859)
+texture = ExtResource("49_i1ahv")
+
+[node name="Droite" type="Node2D" parent="Decor/LivingRoom/Spawns"]
+
+[node name="PropsPainting4_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Droite"]
+visible = false
+position = Vector2(-2090, -138)
+scale = Vector2(0.77768314, 0.77768314)
+texture = ExtResource("50_ldi36")
+
+[node name="PropChaise2_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Droite"]
+visible = false
+position = Vector2(-2756, 984)
+rotation = 3.1415925
+scale = Vector2(2.759, -2.759)
+texture = ExtResource("51_yq4i7")
+
+[node name="PropsPainting6_FG" type="Sprite2D" parent="Decor/LivingRoom/Spawns/Droite"]
+visible = false
+position = Vector2(-2699.0002, -987)
+scale = Vector2(0.8646409, 0.86464083)
+texture = ExtResource("52_o3doa")
+
+[node name="Decor_Livingroom_bg" type="Sprite2D" parent="Decor/LivingRoom"]
+visible = false
+z_index = -1
+position = Vector2(-2.5832424, -81.00021)
+scale = Vector2(1.668012, 1.5879629)
+texture = ExtResource("53_hun6g")
+
+[node name="Castle" type="Node2D" parent="Decor"]
+
+[node name="Haut" type="Node" parent="Decor/Castle"]
+
+[node name="Bas" type="Node" parent="Decor/Castle"]
+
+[node name="Prop_BG_PropMontagne" type="Sprite2D" parent="Decor/Castle/Bas"]
+visible = false
+modulate = Color(0.6, 0.94509804, 0.8235294, 0.6313726)
+position = Vector2(-6.80542, -247.5)
+scale = Vector2(4.055556, 4.0555553)
+texture = ExtResource("55_mqgvk")
+
+[node name="Prop_BG_DecorHill" type="Sprite2D" parent="Decor/Castle/Bas"]
+visible = false
+position = Vector2(-4.9442024, -10.999925)
+scale = Vector2(1.6666956, 1.6648147)
+texture = ExtResource("56_vqoho")
+
+[node name="Gauche" type="Node" parent="Decor/Castle"]
+
+[node name="Prop_MD_PropMouton1" type="Sprite2D" parent="Decor/Castle/Gauche"]
+visible = false
+position = Vector2(-1634, 589)
+scale = Vector2(0.5381819, 0.53818184)
+texture = ExtResource("57_0ssp0")
+
+[node name="Prop_MD_PropMouton2" type="Sprite2D" parent="Decor/Castle/Gauche"]
+visible = false
+position = Vector2(-1386, 695)
+scale = Vector2(0.8210526, 0.8210526)
+texture = ExtResource("11_yub8v")
+
+[node name="Prop_MD_PropMouton3" type="Sprite2D" parent="Decor/Castle/Gauche"]
+visible = false
+position = Vector2(-1499.9379, 516.75006)
+scale = Vector2(0.569728, 0.569728)
+texture = ExtResource("58_fvplv")
+
+[node name="Droite" type="Node" parent="Decor/Castle"]
+
+[node name="Prop_FG_PropTour" type="Sprite2D" parent="Decor/Castle/Droite"]
+visible = false
+position = Vector2(2751, 1184)
+scale = Vector2(5.1017966, 3.5405338)
+texture = ExtResource("59_i2mkb")
+
+[node name="CanvaControl" type="Control" parent="."]
+z_index = 20
+layout_mode = 3
+anchor_left = -1.669
+anchor_top = -1.6660001
+anchor_right = 1.6700001
+anchor_bottom = 1.664
+offset_left = -3204.0
+offset_top = -1799.0
+offset_right = 3207.0
+offset_bottom = 1819.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvaControl"]
+layer = 2
+follow_viewport_enabled = true
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="CanvaControl/CanvasLayer" node_paths=PackedStringArray("B1", "B2", "B3", "B4", "B", "scene_executer", "input_handler")]
+custom_minimum_size = Vector2(0, 300)
+anchors_preset = -1
+anchor_left = -1.667
+anchor_top = -1.6660001
+anchor_right = 1.6650001
+anchor_bottom = -1.001
+offset_left = 0.6401367
+offset_top = 0.28015137
+offset_right = 0.19995117
+offset_bottom = 0.080078125
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 50
+alignment = 1
+script = ExtResource("6_pr6aj")
+B1 = NodePath("B1")
+B2 = NodePath("B2")
+B3 = NodePath("B3")
+B4 = NodePath("B4")
+B = NodePath("B")
+scene_executer = NodePath("../../../SceneExecuter")
+input_handler = NodePath("../../../InputHandler")
+
+[node name="B" type="PanelContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer/B"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvaControl/CanvasLayer/ChoiceContainer/B/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_6ai3g")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B1" type="PanelContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer/B1"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvaControl/CanvasLayer/ChoiceContainer/B1/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_6ai3g")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B2" type="PanelContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer/B2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvaControl/CanvasLayer/ChoiceContainer/B2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_6ai3g")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B3" type="PanelContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer/B3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvaControl/CanvasLayer/ChoiceContainer/B3/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_6ai3g")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="B4" type="PanelContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvaControl/CanvasLayer/ChoiceContainer/B4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvaControl/CanvasLayer/ChoiceContainer/B4/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_6ai3g")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="Layer-Background" type="CanvasLayer" parent="CanvaControl"]
+layer = -2
+
+[node name="Background" type="ColorRect" parent="CanvaControl/Layer-Background"]
+z_index = -1
+material = SubResource("ShaderMaterial_1prbd")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_1cl7o")

@@ -1,0 +1,157 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=32 format=3 uid="uid://b6vhe4j8h66we"]
+
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_lh7ms"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_x6brc"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="3_opg74"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="4_d1e7s"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="5_wu1f6"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="6_cs51a"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="7_l111g"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0.0066778064, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.60784316, 0.85490197, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_8a67e"]
+script = ExtResource("4_d1e7s")
+name = "Scene_21"
+icon = ExtResource("5_wu1f6")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_lh7ms"]
+script = ExtResource("7_l111g")
+direction = "gauche"
+target = NodePath("Decor/DeadRoom/Spawns/Gauche/Prop_FG_PropColonne1")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_x6brc"]
+script = ExtResource("7_l111g")
+direction = "gauche"
+target = NodePath("Decor/DeadRoom/Spawns/Gauche/Prop_FG_PropColonne2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_opg74"]
+script = ExtResource("7_l111g")
+direction = "gauche"
+target = NodePath("Decor/DeadRoom/Spawns/Gauche/Prop_FG_PropColonne3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_d1e7s"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_MD_Body5")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_wu1f6"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/DeadWoman6")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_cs51a"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_FG_Body1")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_l111g"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_MD_Body2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_ho5te"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_MD_Body4")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_qwsav"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_MD_Body7")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_tadw2"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_MD_Body6")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_5laca"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_MD_Body3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_ur0ca"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_GD_Body4")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_s35tv"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_FG_DeadWoman1")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_fyi28"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_FG_DeadWoman4")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_milp8"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_FG_DeadWoman6")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_6f2ls"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_FG_DeadWoman7")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_dkufb"]
+script = ExtResource("7_l111g")
+direction = "haut"
+target = NodePath("Decor/DeadRoom/Spawns/Haut/Prop_FG_Toit")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_vqyii"]
+script = ExtResource("7_l111g")
+direction = "bas"
+target = NodePath("Decor/DeadRoom/TacheSang3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_tc8fw"]
+script = ExtResource("7_l111g")
+direction = "bas"
+target = NodePath("Decor/DeadRoom/TacheSang2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_kjkni"]
+script = ExtResource("7_l111g")
+direction = "bas"
+target = NodePath("Decor/DeadRoom/TacheSang")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_n0vus"]
+script = ExtResource("7_l111g")
+direction = "bas"
+target = NodePath("Decor/DeadRoom/DeadWoman2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("6_cs51a")
+description = "Dans la foret"
+background = SubResource("GradientTexture2D_dinbm")
+spawns = Array[ExtResource("7_l111g")]([SubResource("Resource_lh7ms"), SubResource("Resource_x6brc"), SubResource("Resource_opg74"), SubResource("Resource_d1e7s"), SubResource("Resource_wu1f6"), SubResource("Resource_cs51a"), SubResource("Resource_l111g"), SubResource("Resource_ho5te"), SubResource("Resource_qwsav"), SubResource("Resource_tadw2"), SubResource("Resource_5laca"), SubResource("Resource_ur0ca"), SubResource("Resource_s35tv"), SubResource("Resource_fyi28"), SubResource("Resource_milp8"), SubResource("Resource_6f2ls"), SubResource("Resource_dkufb"), SubResource("Resource_vqyii"), SubResource("Resource_tc8fw"), SubResource("Resource_kjkni"), SubResource("Resource_n0vus")])
+next_events = Array[ExtResource("4_d1e7s")]([SubResource("Resource_8a67e")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

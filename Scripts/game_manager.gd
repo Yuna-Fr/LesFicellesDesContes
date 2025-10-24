@@ -2,7 +2,7 @@ class_name GameManager extends Node
 
 @onready var scene_executer : SceneExecuter = $"../SceneExecuter"
 
-var current_event_id: String = "data_1"
+@export var current_event_id: String = "Scene_0"
 var current_scene: Node
 
 func _ready():

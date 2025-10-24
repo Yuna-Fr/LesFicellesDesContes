@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=25 format=3 uid="uid://8c66ut8rxeif"]
+
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_jharj"]
+[ext_resource type="Texture2D" uid="uid://ys4cb0p48hhd" path="res://Assets/Characters/char_bb_2_reversed.png" id="2_amtcr"]
+[ext_resource type="Texture2D" uid="uid://das65c0wtxhil" path="res://Assets/Characters/char_kat.png" id="3_8a67e"]
+[ext_resource type="Texture2D" uid="uid://b1fn4mlbqde3p" path="res://Assets/Characters/char_anne.png" id="4_ryv0d"]
+[ext_resource type="Texture2D" uid="uid://co167dxnlvfep" path="res://Assets/Characters/char_mom.png" id="5_ymins"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="6_7xoa0"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="7_o550l"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="8_m32ti"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="9_2cptq"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="9_amtcr"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="10_mop4r"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0.0066778064, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.60784316, 0.85490197, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_acrol"]
+script = ExtResource("1_jharj")
+name = "BB"
+sprite = ExtResource("2_amtcr")
+target = NodePath("Positions/BB/19_Spawn")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_ah7v3"]
+script = ExtResource("1_jharj")
+name = "Kat"
+sprite = ExtResource("3_8a67e")
+target = NodePath("Positions/Kat/19_Spawn")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_jj2y8"]
+script = ExtResource("1_jharj")
+name = "Anne"
+sprite = ExtResource("4_ryv0d")
+target = NodePath("Positions/Anne/19_Spawn")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_05di7"]
+script = ExtResource("1_jharj")
+name = "Mom"
+sprite = ExtResource("5_ymins")
+target = NodePath("Positions/Mom/19_Spawn")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_8a67e"]
+script = ExtResource("8_m32ti")
+name = "Scene_21"
+icon = ExtResource("9_amtcr")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_gkkog"]
+script = ExtResource("10_mop4r")
+direction = "bas"
+target = NodePath("Decor/Castle/Bas/Prop_BG_PropMontagne")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_0md7w"]
+script = ExtResource("10_mop4r")
+direction = "bas"
+target = NodePath("Decor/Castle/Bas/Prop_BG_DecorHill")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_abdnw"]
+script = ExtResource("10_mop4r")
+direction = "gauche"
+target = NodePath("Decor/Castle/Gauche/Prop_MD_PropMouton1")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_xsdwq"]
+script = ExtResource("10_mop4r")
+direction = "gauche"
+target = NodePath("Decor/Castle/Gauche/Prop_MD_PropMouton2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_pidnb"]
+script = ExtResource("10_mop4r")
+direction = "gauche"
+target = NodePath("Decor/Castle/Gauche/Prop_MD_PropMouton3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_u8uf5"]
+script = ExtResource("10_mop4r")
+direction = "droite"
+target = NodePath("Decor/Castle/Droite/Prop_FG_PropTour")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("9_2cptq")
+description = "Titre"
+background = SubResource("GradientTexture2D_dinbm")
+characters_spawn = Array[ExtResource("1_jharj")]([SubResource("Resource_acrol"), SubResource("Resource_ah7v3"), SubResource("Resource_jj2y8"), SubResource("Resource_05di7")])
+spawns = Array[ExtResource("10_mop4r")]([SubResource("Resource_gkkog"), SubResource("Resource_0md7w"), SubResource("Resource_abdnw"), SubResource("Resource_xsdwq"), SubResource("Resource_pidnb"), SubResource("Resource_u8uf5")])
+next_events = Array[ExtResource("8_m32ti")]([SubResource("Resource_8a67e")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

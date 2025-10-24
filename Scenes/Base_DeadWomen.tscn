@@ -1,0 +1,170 @@
+[gd_scene load_steps=20 format=3 uid="uid://dabjxk1cmpdje"]
+
+[ext_resource type="Texture2D" uid="uid://dlekvyy00v4re" path="res://Assets/Props/DeadWomen/body 1.png" id="1_rdjw6"]
+[ext_resource type="Texture2D" uid="uid://cuupg0yof3ky7" path="res://Assets/Props/DeadWomen/body 2.png" id="2_yphv3"]
+[ext_resource type="Texture2D" uid="uid://8lsv0gufbid5" path="res://Assets/Props/DeadWomen/body 3.png" id="3_jhy1g"]
+[ext_resource type="Texture2D" uid="uid://cgrilfciryboy" path="res://Assets/Props/DeadWomen/body 4.png" id="4_jhy1g"]
+[ext_resource type="Texture2D" uid="uid://bxxv68360xrcr" path="res://Assets/Props/DeadWomen/dead woman 1.png" id="4_nrjo1"]
+[ext_resource type="Texture2D" uid="uid://cavro5cl2ktmg" path="res://Assets/Props/DeadWomen/dead woman 4.png" id="5_ppi1n"]
+[ext_resource type="Texture2D" uid="uid://crjvqfj3bgk5y" path="res://Assets/Props/DeadWomen/dead woman 6.png" id="6_x80t1"]
+[ext_resource type="Texture2D" uid="uid://dqqb1i5y4t8kf" path="res://Assets/Props/DeadWomen/dead woman 7.png" id="7_d0qsa"]
+[ext_resource type="Texture2D" uid="uid://cjxwj4lb7xfy5" path="res://Assets/Props/Objets/Prop_colonne1.png" id="8_hk8cb"]
+[ext_resource type="Texture2D" uid="uid://12fyhi0sou0c" path="res://Assets/Props/DeadWomen/dead woman 2.png" id="10_nrjo1"]
+[ext_resource type="Texture2D" uid="uid://cgo5ja32r5ic1" path="res://Assets/Props/DeadWomen/dead woman 5.png" id="11_x80t1"]
+[ext_resource type="Shader" uid="uid://bon1xjardfuqj" path="res://Materials/Shaders/background_shader.gdshader" id="12_d0qsa"]
+[ext_resource type="Script" uid="uid://bm0t5saq1cr4k" path="res://Scripts/Specific/background_fader.gd" id="13_hk8cb"]
+[ext_resource type="Texture2D" uid="uid://c4fvf3bk1qsor" path="res://Assets/Props/DeadWomen/tache sang.png" id="14_d0qsa"]
+
+[sub_resource type="Gradient" id="Gradient_1kdmn"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wg6x7"]
+gradient = SubResource("Gradient_1kdmn")
+
+[sub_resource type="Gradient" id="Gradient_x80t1"]
+colors = PackedColorArray(0.60129386, 0.1670275, 0.2800975, 1, 0.26586816, 0, 0.039523482, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d0qsa"]
+gradient = SubResource("Gradient_x80t1")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ha8q"]
+shader = ExtResource("12_d0qsa")
+shader_parameter/grad_tex1 = SubResource("GradientTexture2D_d0qsa")
+shader_parameter/fade = 0.0
+
+[node name="Base_Decor2" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Spawns" type="Node" parent="."]
+
+[node name="Haut" type="Node" parent="Spawns"]
+
+[node name="Prop_MD_Body5" type="Sprite2D" parent="Spawns/Haut"]
+modulate = Color(1, 1, 1, 0.15686275)
+position = Vector2(2394.9998, -896)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("2_yphv3")
+
+[node name="DeadWoman6" type="Sprite2D" parent="Spawns/Haut"]
+modulate = Color(1, 1, 1, 0.59607846)
+position = Vector2(-727, -1640)
+texture = ExtResource("11_x80t1")
+
+[node name="Prop_FG_Body1" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-982.9999, -981)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("1_rdjw6")
+
+[node name="Prop_MD_Body2" type="Sprite2D" parent="Spawns/Haut"]
+modulate = Color(1, 1, 1, 0.41960785)
+position = Vector2(3087.4524, -451.9724)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("2_yphv3")
+
+[node name="Prop_MD_Body4" type="Sprite2D" parent="Spawns/Haut"]
+modulate = Color(1, 1, 1, 0.13333334)
+position = Vector2(-178.00024, -371.99997)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("2_yphv3")
+
+[node name="Prop_MD_Body7" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(1807, -850)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("2_yphv3")
+
+[node name="Prop_MD_Body6" type="Sprite2D" parent="Spawns/Haut"]
+modulate = Color(1, 1, 1, 0.13333334)
+position = Vector2(-1503, -977)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("2_yphv3")
+
+[node name="Prop_MD_Body3" type="Sprite2D" parent="Spawns/Haut"]
+modulate = Color(5.3174357, 5.3174357, 5.3174357, 0.41960785)
+position = Vector2(-3254.5474, -943.9724)
+scale = Vector2(1.755, 1.755)
+texture = ExtResource("3_jhy1g")
+
+[node name="Prop_GD_Body4" type="Sprite2D" parent="Spawns/Haut"]
+modulate = Color(1, 1, 1, 0.12156863)
+position = Vector2(1377.0002, -909)
+scale = Vector2(1.8323783, 1.8323781)
+texture = ExtResource("4_jhy1g")
+
+[node name="Prop_FG_DeadWoman1" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-1894, -1101)
+texture = ExtResource("4_nrjo1")
+
+[node name="Prop_FG_DeadWoman4" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-2667, -1182)
+texture = ExtResource("5_ppi1n")
+
+[node name="Prop_FG_DeadWoman6" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(711.99994, -1060)
+texture = ExtResource("6_x80t1")
+
+[node name="Prop_FG_DeadWoman7" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-5.000061, -1095)
+texture = ExtResource("7_d0qsa")
+
+[node name="Prop_FG_Toit" type="Sprite2D" parent="Spawns/Haut"]
+position = Vector2(-3.0000114, -2446)
+scale = Vector2(119.44951, 21.769768)
+texture = SubResource("GradientTexture2D_wg6x7")
+
+[node name="Bas" type="Node" parent="Spawns"]
+
+[node name="Gauche" type="Node" parent="Spawns"]
+
+[node name="Prop_FG_PropColonne1" type="Sprite2D" parent="Spawns/Gauche"]
+position = Vector2(-2308.5, -174.66687)
+scale = Vector2(4.4047613, 4.4047613)
+texture = ExtResource("8_hk8cb")
+
+[node name="Prop_FG_PropColonne2" type="Sprite2D" parent="Spawns/Gauche"]
+position = Vector2(360.49994, -174.66687)
+scale = Vector2(4.4047613, 4.4047613)
+texture = ExtResource("8_hk8cb")
+
+[node name="Prop_FG_PropColonne3" type="Sprite2D" parent="Spawns/Gauche"]
+position = Vector2(3278, -174.66687)
+scale = Vector2(4.4047613, 4.4047613)
+texture = ExtResource("8_hk8cb")
+
+[node name="Droite" type="Node" parent="Spawns"]
+
+[node name="Sol" type="Sprite2D" parent="."]
+position = Vector2(-66.00001, 2240.0002)
+scale = Vector2(119.44951, 21.769768)
+texture = SubResource("GradientTexture2D_wg6x7")
+
+[node name="DeadWoman2" type="Sprite2D" parent="."]
+position = Vector2(2982, -1005)
+texture = ExtResource("10_nrjo1")
+
+[node name="TacheSang" type="Sprite2D" parent="."]
+position = Vector2(-1521, 1489)
+texture = ExtResource("14_d0qsa")
+
+[node name="TacheSang2" type="Sprite2D" parent="."]
+position = Vector2(-956, 1489)
+texture = ExtResource("14_d0qsa")
+
+[node name="TacheSang3" type="Sprite2D" parent="."]
+position = Vector2(921, 1496)
+texture = ExtResource("14_d0qsa")
+
+[node name="Layer-Background" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="Background" type="ColorRect" parent="Layer-Background"]
+z_index = -1
+material = SubResource("ShaderMaterial_8ha8q")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_hk8cb")
