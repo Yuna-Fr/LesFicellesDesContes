@@ -39,8 +39,8 @@ zoom = Vector2(0.3, 0.3)
 [node name="Haut" type="Node" parent="Spawns"]
 
 [node name="PropsCloset" type="Sprite2D" parent="Spawns/Haut"]
-position = Vector2(-2608, 558)
-scale = Vector2(1.398682, 1.4625198)
+position = Vector2(-2563.0002, 307.00006)
+scale = Vector2(1.7967244, 1.8787293)
 texture = ExtResource("1_cvf32")
 
 [node name="PropsPainting2" type="Sprite2D" parent="Spawns/Haut"]
@@ -50,9 +50,9 @@ texture = ExtResource("2_6fy76")
 [node name="Bas" type="Node" parent="Spawns"]
 
 [node name="PropsBed" type="Sprite2D" parent="Spawns/Bas"]
-position = Vector2(1593, 643.00006)
+position = Vector2(1459, 312)
 rotation = -3.1415927
-scale = Vector2(1.2701914, -1.2799988)
+scale = Vector2(1.4214563, -1.8783916)
 texture = ExtResource("3_hxhw7")
 
 [node name="Gauche" type="Node" parent="Spawns"]
