@@ -32,7 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://cnv4nqwnhtwei" path="res://Assets/Decors/decor_bedroom.png" id="17_f5ywd"]
 [ext_resource type="Texture2D" uid="uid://12fyhi0sou0c" path="res://Assets/Props/DeadWomen/dead woman 2.png" id="18_r3q4u"]
 [ext_resource type="Texture2D" uid="uid://c4fvf3bk1qsor" path="res://Assets/Props/DeadWomen/tache sang.png" id="19_yllu4"]
+[ext_resource type="Texture2D" uid="uid://dtj6hieb3i56p" path="res://Assets/Icon/UI_titre.png" id="23_nnboc"]
 [ext_resource type="Texture2D" uid="uid://c5vbn6b3agje1" path="res://Assets/Props/Objets/ring.png" id="23_otauw"]
+[ext_resource type="Texture2D" uid="uid://byuyqmwf2yrp" path="res://Assets/Props/Objets/Prop_gun.png" id="24_bepfj"]
 [ext_resource type="Texture2D" uid="uid://cru53htusno8k" path="res://Assets/Props/Vegetation/props_shadow_tree.png" id="29_866p1"]
 [ext_resource type="Texture2D" uid="uid://dsvwwsadkqpoc" path="res://Assets/Props/Vegetation/props_bluefar_tree.png" id="30_wkry4"]
 [ext_resource type="Texture2D" uid="uid://6ae357ry0rar" path="res://Assets/Props/Vegetation/props_grass_green.png" id="31_tdkoh"]
@@ -86,13 +88,6 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_lge6m"]
 gradient = SubResource("Gradient_wf1x7")
-
-[sub_resource type="Gradient" id="Gradient_v8s55"]
-offsets = PackedFloat32Array(0.97979796, 1)
-colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 18.892157, 18.892157, 18.892157, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_iw4l2"]
-gradient = SubResource("Gradient_v8s55")
 
 [sub_resource type="Gradient" id="Gradient_7uc1y"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -450,15 +445,28 @@ texture = ExtResource("19_yllu4")
 [node name="Title" type="Sprite2D" parent="Decor"]
 visible = false
 z_index = 5
-position = Vector2(0, -94)
-scale = Vector2(51.120003, 14.879999)
-texture = SubResource("GradientTexture2D_iw4l2")
+position = Vector2(29, -486)
+scale = Vector2(1.886811, 1.886811)
+texture = ExtResource("23_nnboc")
+
+[node name="PropGun" type="Sprite2D" parent="Decor"]
+visible = false
+position = Vector2(466, 391.00006)
+scale = Vector2(-1.341518, 1.341518)
+texture = ExtResource("24_bepfj")
 
 [node name="Ring" type="Sprite2D" parent="Decor"]
 visible = false
 position = Vector2(-121.99997, 274)
 scale = Vector2(1.1709083, 1.1709083)
 texture = ExtResource("23_otauw")
+
+[node name="PropMouton3" type="Sprite2D" parent="Decor"]
+visible = false
+z_index = 10
+position = Vector2(227, 1213.0001)
+scale = Vector2(2.2040815, 2.2040815)
+texture = ExtResource("58_fvplv")
 
 [node name="Bedroom" type="Node2D" parent="Decor"]
 
