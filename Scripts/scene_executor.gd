@@ -172,42 +172,49 @@ func _spawn_characters(characters: Array[CharacterAppear]):
 		)
 	
 func _spawn_objects(spawn_list: Array[SpawnObject]):
-	if spawn_list.size() == 0:
+	if spawn_list.is_empty():
 		spawns_finished = true
 		return
 	
 	var z_offsets = {}
+	var spawned_count = 0
 
 	for spawn in spawn_list:
 		if not positions_root.has_node(spawn.target):
 			push_warning("Target node not found: " + str(spawn.target))
 			continue
-
+		
 		var obj_node: Node2D = positions_root.get_node(spawn.target)
+		
 		if active_objects.has(spawn.target):
 			continue # déjà présent, on ne fait rien
-
+			
+		spawned_count += 1
 		active_objects[spawn.target] = obj_node
-
+		
 		var final_pos = obj_node.global_position
 		var offset = _get_direction(spawn.direction)
 		obj_node.global_position = final_pos + offset
 		obj_node.visible = true
-
+		
 		var z_key = obj_node.z_index
 		var same_z_count = z_offsets.get(z_key, 0)
 		z_offsets[z_key] = same_z_count + 1
-
+		
 		var base_delay = z_key * 0.05
 		var extra_delay = same_z_count * 0.03
 		var total_delay = base_delay + extra_delay
-
+		
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_SINE)
 		tween.set_ease(Tween.EASE_OUT)
 		active_tweens += 1
 		tween.tween_property(obj_node, "global_position", final_pos, 0.5).set_delay(total_delay)
 		tween.finished.connect(Callable(self, "_on_single_spawn_finished"))
+	
+	# if nothing was spawned mark as finished
+	if spawned_count == 0:
+		spawns_finished = true
 
 func _remove_unused_objects(new_spawn_list: Array[SpawnObject]):
 	if active_objects.is_empty():
