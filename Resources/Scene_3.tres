@@ -39,6 +39,7 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("7_5ipkp")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
+music = 1
 dialogues = Array[ExtResource("3_g24uy")]([SubResource("Resource_4iknh")])
 characters_spawn = Array[ExtResource("1_4iknh")]([SubResource("Resource_ia2or")])
 next_events = Array[ExtResource("5_7kdg8")]([SubResource("Resource_jcese")])

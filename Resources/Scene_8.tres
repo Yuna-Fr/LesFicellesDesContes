@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=15 format=3 uid="uid://rxioi7ph3uoj"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=15 format=3 uid="uid://1i5c0ot0rlwd"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_hvcvc"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_by3ov"]
@@ -42,6 +42,7 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("5_0can8")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
+music = 4
 characters_spawn = Array[ExtResource("1_hvcvc")]([SubResource("Resource_0can8"), SubResource("Resource_6pted")])
 next_events = Array[ExtResource("4_br3go")]([SubResource("Resource_gw1r4")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

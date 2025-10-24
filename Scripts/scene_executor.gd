@@ -3,10 +3,8 @@ class_name SceneExecuter extends Node
 signal event_finished(next_event_id: String)
 signal scene_ready
 
-@export var music_fade_time : float = 2.0
+@export_category("Characters")
 @export var positions_root : Node
-
-'''Characters'''
 @export var Kat : Node2D
 @export var BB : Node2D
 @export var Anne : Node2D
@@ -15,13 +13,13 @@ signal scene_ready
 @export var Dead : Node2D
 @export var Brother : Node2D
 
-# Audio
-var audio_player
-var music_player_a
-var music_player_b
-var current_music_player: AudioStreamPlayer2D
-var next_music_player: AudioStreamPlayer2D
-var dialogues_finished: bool = false
+@export_category("Ambiances")
+@export var music_fade_time : float = 2.0
+@export var Onirique : AudioStream
+@export var Revelations : AudioStream
+@export var Soulagement : AudioStream
+@export var Tension : AudioStream
+@export var Violin : AudioStream
 
 # Mouvments
 var movements_finished: bool = false
@@ -32,6 +30,15 @@ var waiting_for_scene: bool = false
 var active_movements: Array = []
 var active_tweens = 0
 var active_objects: Dictionary = {}
+
+# Audio
+var audio_player
+var music_player_a
+var music_player_b
+var current_music_name := BaseEvent.MusicName.None
+var current_music_player: AudioStreamPlayer2D
+var next_music_player: AudioStreamPlayer2D
+var dialogues_finished: bool = false
 
 var background: BackgroundFader 
 var event_data: BaseEvent
@@ -61,7 +68,7 @@ func execute(_event_data: BaseEvent):
 	
 	if (event_data.background): background.fade_to(event_data.background)
 	
-	if (event_data.music): _play_music(event_data.music)
+	_play_music(event_data.music)
 	
 	_despawn_characters(event_data.characters_des)
 	_remove_unused_objects(event_data.spawns)
@@ -377,19 +384,29 @@ func _start_dialogues(dialogues : Array[Dialogue]):
 			
 	dialogues_finished = true
 
-func _play_music(new_stream: AudioStream):
-	if current_music_player != null && current_music_player.stream == new_stream: 
+func _play_music(new_stream: BaseEvent.MusicName):
+	if current_music_name == new_stream: 
 		return  # same track, no need to fade
-
-	next_music_player.stream = new_stream
+	
+	current_music_name = new_stream
+	next_music_player.stream = _find_music(new_stream)
 	next_music_player.volume_db = -80
 	next_music_player.play()
-
+	
 	var tween = create_tween()
 	tween.tween_property(current_music_player, "volume_db", -80, music_fade_time)
 	tween.parallel().tween_property(next_music_player, "volume_db", 0, music_fade_time)
-
+	
 	tween.tween_callback(Callable(self, "_swap_music_players"))
+
+func _find_music(new_stream: BaseEvent.MusicName) -> AudioStream:
+	if new_stream == BaseEvent.MusicName.None: return null
+	if new_stream == BaseEvent.MusicName.Violin: return Violin
+	if new_stream == BaseEvent.MusicName.Tension: return Tension
+	if new_stream == BaseEvent.MusicName.Onirique: return Onirique
+	if new_stream == BaseEvent.MusicName.Revelation: return Revelations
+	if new_stream == BaseEvent.MusicName.Soulagement: return Soulagement
+	return null
 
 func _swap_music_players():
 	current_music_player.stop()

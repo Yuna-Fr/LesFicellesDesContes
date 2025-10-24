@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=13 format=3 uid="uid://b6f1b8eyaeufl"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=13 format=3 uid="uid://ckcypb3eeno2h"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_xp7su"]
 [ext_resource type="Texture2D" uid="uid://b1fn4mlbqde3p" path="res://Assets/Characters/char_anne.png" id="2_xp7su"]
@@ -34,6 +34,7 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("7_bwx6f")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
+music = 1
 characters_spawn = Array[ExtResource("1_xp7su")]([SubResource("Resource_ia2or")])
 next_events = Array[ExtResource("5_slmt4")]([SubResource("Resource_jcese")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"
