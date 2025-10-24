@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=19 format=3 uid="uid://dsq2054ojnbus"]
+
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_yc7ua"]
+[ext_resource type="Texture2D" uid="uid://dyntww4asfd2n" path="res://Assets/Characters/char_bb_2.png" id="2_bfwpi"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="6_bgoex"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="7_dqosy"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="8_bkwdn"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="9_ugb7s"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="10_wg17k"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="11_53hku"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0.0066778064, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.60784316, 0.85490197, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_acrol"]
+script = ExtResource("1_yc7ua")
+name = "BB"
+sprite = ExtResource("2_bfwpi")
+target = NodePath("Positions/BB/19_Spawn")
+metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
+
+[sub_resource type="Resource" id="Resource_8a67e"]
+script = ExtResource("8_bkwdn")
+name = "Scene_21"
+icon = ExtResource("9_ugb7s")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_gkkog"]
+script = ExtResource("11_53hku")
+direction = "bas"
+target = NodePath("Decor/Castle/Bas/Prop_BG_PropMontagne")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_0md7w"]
+script = ExtResource("11_53hku")
+direction = "bas"
+target = NodePath("Decor/Castle/Bas/Prop_BG_DecorHill")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_abdnw"]
+script = ExtResource("11_53hku")
+direction = "gauche"
+target = NodePath("Decor/Castle/Gauche/Prop_MD_PropMouton1")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_xsdwq"]
+script = ExtResource("11_53hku")
+direction = "gauche"
+target = NodePath("Decor/Castle/Gauche/Prop_MD_PropMouton2")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_pidnb"]
+script = ExtResource("11_53hku")
+direction = "gauche"
+target = NodePath("Decor/Castle/Gauche/Prop_MD_PropMouton3")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[sub_resource type="Resource" id="Resource_u8uf5"]
+script = ExtResource("11_53hku")
+direction = "droite"
+target = NodePath("Decor/Castle/Droite/Prop_FG_PropTour")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("10_wg17k")
+description = "Titre"
+background = SubResource("GradientTexture2D_dinbm")
+characters_spawn = Array[ExtResource("1_yc7ua")]([SubResource("Resource_acrol")])
+spawns = Array[ExtResource("11_53hku")]([SubResource("Resource_gkkog"), SubResource("Resource_0md7w"), SubResource("Resource_abdnw"), SubResource("Resource_xsdwq"), SubResource("Resource_pidnb"), SubResource("Resource_u8uf5")])
+next_events = Array[ExtResource("8_bkwdn")]([SubResource("Resource_8a67e")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

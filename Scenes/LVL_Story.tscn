@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://bxtcibqfb4cpo"]
+[gd_scene load_steps=73 format=3 uid="uid://bxtcibqfb4cpo"]
 
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_v8s55"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_iw4l2"]
@@ -58,6 +58,11 @@
 [ext_resource type="Texture2D" uid="uid://d1rk13myy2573" path="res://Assets/Props/Objets/Prop_chaise2.png" id="51_yq4i7"]
 [ext_resource type="Texture2D" uid="uid://xicg34gfuitn" path="res://Assets/Props/Objets/props_painting6.png" id="52_o3doa"]
 [ext_resource type="Texture2D" uid="uid://cgiebrxhp88hm" path="res://Assets/Decors/decor_livingroom.png" id="53_hun6g"]
+[ext_resource type="Texture2D" uid="uid://b7ky6aerv76ao" path="res://Assets/Props/Objets/Prop_montagne.png" id="55_mqgvk"]
+[ext_resource type="Texture2D" uid="uid://crn5dowwadqj6" path="res://Assets/Decors/decor_hill.png" id="56_vqoho"]
+[ext_resource type="Texture2D" uid="uid://bpkqqn8k3fd8i" path="res://Assets/Props/Objets/Prop_mouton1.png" id="57_0ssp0"]
+[ext_resource type="Texture2D" uid="uid://m8seyj0xivix" path="res://Assets/Props/Objets/Prop_mouton3.png" id="58_fvplv"]
+[ext_resource type="Texture2D" uid="uid://c263howxqqi8w" path="res://Assets/Props/Objets/Prop_tour.png" id="59_i2mkb"]
 
 [sub_resource type="Gradient" id="Gradient_1kdmn"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -93,7 +98,7 @@ shader_parameter/fade = 0.0
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_v8s55")
-current_event_id = "Scene_18"
+current_event_id = "Scene_23"
 
 [node name="SceneExecuter" type="Node" parent="." node_paths=PackedStringArray("positions_root", "Kat", "BB", "Anne", "Mom", "Girls", "Dead", "Brother")]
 script = ExtResource("2_iw4l2")
@@ -120,42 +125,43 @@ zoom = Vector2(0.3, 0.3)
 [node name="Characters" type="Node" parent="."]
 
 [node name="BB" type="Node2D" parent="Characters"]
-visible = false
-position = Vector2(-1116, 742)
+z_index = 3
+position = Vector2(-1233, 742)
 
 [node name="Visual" type="Sprite2D" parent="Characters/BB"]
 texture = ExtResource("4_5mbgf")
 
 [node name="Kat" type="Node2D" parent="Characters"]
-visible = false
-position = Vector2(380, 856)
+z_index = 3
+position = Vector2(-3037, 897)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Kat"]
 texture = ExtResource("5_v8s55")
 
 [node name="Mom" type="Node2D" parent="Characters"]
-visible = false
-position = Vector2(992, 841)
+z_index = 3
+position = Vector2(-5018, 817)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Mom"]
 texture = ExtResource("6_1cl7o")
 
 [node name="Girls" type="Node2D" parent="Characters"]
-visible = false
-position = Vector2(2393, -46)
+z_index = 3
+position = Vector2(724, -46)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Girls"]
 texture = ExtResource("7_5mbgf")
 
 [node name="Anne" type="Node2D" parent="Characters"]
-visible = false
-position = Vector2(1413, 858)
+z_index = 3
+position = Vector2(-4047, 866)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Anne"]
 texture = ExtResource("7_dn353")
 
 [node name="Brother_1" type="Node2D" parent="Characters"]
 visible = false
+z_index = 3
 position = Vector2(-1695, 912)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Brother_1"]
@@ -163,6 +169,7 @@ texture = ExtResource("9_otauw")
 
 [node name="Brother_2" type="Node2D" parent="Characters"]
 visible = false
+z_index = 3
 position = Vector2(-2330, 859)
 
 [node name="Visual" type="Sprite2D" parent="Characters/Brother_2"]
@@ -187,6 +194,9 @@ position = Vector2(1628, 732)
 [node name="9_Moving" type="Node2D" parent="Positions/BB"]
 position = Vector2(624, 732)
 
+[node name="19_Spawn" type="Node2D" parent="Positions/BB"]
+position = Vector2(732, 732)
+
 [node name="Kat" type="Node" parent="Positions"]
 
 [node name="0_Presentation" type="Node2D" parent="Positions/Kat"]
@@ -201,6 +211,9 @@ position = Vector2(-780, 844)
 [node name="14_Move" type="Node2D" parent="Positions/Kat"]
 position = Vector2(-926, 844)
 
+[node name="19_Spawn" type="Node2D" parent="Positions/Kat"]
+position = Vector2(-1072, 844)
+
 [node name="Mom" type="Node" parent="Positions"]
 
 [node name="0_Presentation" type="Node2D" parent="Positions/Mom"]
@@ -213,7 +226,10 @@ position = Vector2(-792, 802)
 position = Vector2(-5689, 802)
 
 [node name="13_Move" type="Node2D" parent="Positions/Mom"]
-position = Vector2(-2735, 790)
+position = Vector2(-2735, 802)
+
+[node name="19_Spawn" type="Node2D" parent="Positions/Mom"]
+position = Vector2(-3053, 802)
 
 [node name="Anne" type="Node" parent="Positions"]
 
@@ -228,6 +244,9 @@ position = Vector2(-1638, 846)
 
 [node name="14_Move" type="Node2D" parent="Positions/Anne"]
 position = Vector2(-1784, 846)
+
+[node name="19_Spawn" type="Node2D" parent="Positions/Anne"]
+position = Vector2(-2082, 846)
 
 [node name="Girls" type="Node" parent="Positions"]
 
@@ -426,7 +445,6 @@ scale = Vector2(1.6648481, 1.6648481)
 texture = ExtResource("17_f5ywd")
 
 [node name="Forest" type="Node2D" parent="Decor"]
-visible = false
 
 [node name="Haut" type="Node2D" parent="Decor/Forest"]
 
@@ -519,11 +537,13 @@ scale = Vector2(1.7030162, -1.7578436)
 texture = ExtResource("34_0ssp0")
 
 [node name="PropsFGGrass2" type="Sprite2D" parent="Decor/Forest/Haut"]
+z_index = 4
 position = Vector2(-1203, 1530)
 scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("35_fvplv")
 
 [node name="PropsFGGrass3" type="Sprite2D" parent="Decor/Forest/Haut"]
+z_index = 4
 position = Vector2(-2799, 1465)
 scale = Vector2(1.746163, 1.746163)
 texture = ExtResource("35_fvplv")
@@ -564,11 +584,13 @@ texture = ExtResource("31_tdkoh")
 [node name="Gauche" type="Node2D" parent="Decor/Forest"]
 
 [node name="PropsFGGrasse2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(2083, 1680)
 scale = Vector2(3.1928816, 3.1928816)
 texture = ExtResource("37_nnboc")
 
 [node name="PropsFGGrasse1" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(-79, 1570)
 scale = Vector2(2.4900963, 2.4900963)
 texture = ExtResource("37_nnboc")
@@ -579,21 +601,25 @@ scale = Vector2(2.4900963, 2.4900963)
 texture = ExtResource("38_bepfj")
 
 [node name="PropsFGBigTree" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(-2832, -732)
 scale = Vector2(2.4900963, 2.4900963)
 texture = ExtResource("38_bepfj")
 
 [node name="PropsFGBigTree2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(3084, -164)
 scale = Vector2(1.7122005, 1.7122005)
 texture = ExtResource("38_bepfj")
 
 [node name="PropsFGBush" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(-3335, 1278)
 scale = Vector2(1.8589672, 1.8589672)
 texture = ExtResource("39_7uc1y")
 
 [node name="PropsFGBush2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(3415, 1413)
 scale = Vector2(1.8589672, 1.8589672)
 texture = ExtResource("39_7uc1y")
@@ -604,20 +630,24 @@ scale = Vector2(1.1803092, 1.1803092)
 texture = ExtResource("40_2xfyf")
 
 [node name="PropsFGBush3" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(-2372, 1539)
 scale = Vector2(1.8589672, 1.8589672)
 texture = ExtResource("39_7uc1y")
 
 [node name="PropsFGBushOrnement2" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(2497, 1386.0001)
 scale = Vector2(1.1803092, 1.1803092)
 texture = ExtResource("40_2xfyf")
 
 [node name="PropsFGBush4" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(3177, 1403)
 texture = ExtResource("41_wbyhb")
 
 [node name="PropsFGBush5" type="Sprite2D" parent="Decor/Forest/Gauche"]
+z_index = 4
 position = Vector2(515, 1484)
 texture = ExtResource("41_wbyhb")
 
@@ -883,6 +913,53 @@ z_index = -1
 position = Vector2(-2.5832424, -81.00021)
 scale = Vector2(1.668012, 1.5879629)
 texture = ExtResource("53_hun6g")
+
+[node name="Castle" type="Node2D" parent="Decor"]
+
+[node name="Haut" type="Node" parent="Decor/Castle"]
+
+[node name="Bas" type="Node" parent="Decor/Castle"]
+
+[node name="Prop_BG_PropMontagne" type="Sprite2D" parent="Decor/Castle/Bas"]
+visible = false
+modulate = Color(0.6, 0.94509804, 0.8235294, 0.6313726)
+position = Vector2(-6.80542, -247.5)
+scale = Vector2(4.055556, 4.0555553)
+texture = ExtResource("55_mqgvk")
+
+[node name="Prop_BG_DecorHill" type="Sprite2D" parent="Decor/Castle/Bas"]
+visible = false
+position = Vector2(-4.9442024, -10.999925)
+scale = Vector2(1.6666956, 1.6648147)
+texture = ExtResource("56_vqoho")
+
+[node name="Gauche" type="Node" parent="Decor/Castle"]
+
+[node name="Prop_MD_PropMouton1" type="Sprite2D" parent="Decor/Castle/Gauche"]
+visible = false
+position = Vector2(-1634, 589)
+scale = Vector2(0.5381819, 0.53818184)
+texture = ExtResource("57_0ssp0")
+
+[node name="Prop_MD_PropMouton2" type="Sprite2D" parent="Decor/Castle/Gauche"]
+visible = false
+position = Vector2(-1386, 695)
+scale = Vector2(0.8210526, 0.8210526)
+texture = ExtResource("11_yub8v")
+
+[node name="Prop_MD_PropMouton3" type="Sprite2D" parent="Decor/Castle/Gauche"]
+visible = false
+position = Vector2(-1499.9379, 516.75006)
+scale = Vector2(0.569728, 0.569728)
+texture = ExtResource("58_fvplv")
+
+[node name="Droite" type="Node" parent="Decor/Castle"]
+
+[node name="Prop_FG_PropTour" type="Sprite2D" parent="Decor/Castle/Droite"]
+visible = false
+position = Vector2(2751, 1184)
+scale = Vector2(5.1017966, 3.5405338)
+texture = ExtResource("59_i2mkb")
 
 [node name="CanvaControl" type="Control" parent="."]
 z_index = 20
