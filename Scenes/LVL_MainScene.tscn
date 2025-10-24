@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://l4d0yoybegsk"]
+[gd_scene load_steps=18 format=3 uid="uid://l4d0yoybegsk"]
 
+[ext_resource type="Script" uid="uid://bwfc70gkruiv3" path="res://Scenes/lvl_main_scene.gd" id="1_efycr"]
 [ext_resource type="Script" uid="uid://ct518snijelg0" path="res://Scripts/game_manager.gd" id="1_lavf1"]
 [ext_resource type="Script" uid="uid://bo6kdlbagocty" path="res://Scripts/scene_executor.gd" id="2_if72n"]
 [ext_resource type="Script" uid="uid://bm0t5saq1cr4k" path="res://Scripts/Specific/background_fader.gd" id="3_oxdji"]
@@ -32,6 +33,7 @@ shader = ExtResource("4_7exoh")
 shader_parameter/fade = 0.0
 
 [node name="LVL_MainScene" type="Node2D"]
+script = ExtResource("1_efycr")
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_lavf1")
