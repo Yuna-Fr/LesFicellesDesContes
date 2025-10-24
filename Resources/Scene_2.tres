@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=13 format=3 uid="uid://ckcypb3eeno2h"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=15 format=3 uid="uid://ckcypb3eeno2h"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_xp7su"]
 [ext_resource type="Texture2D" uid="uid://b1fn4mlbqde3p" path="res://Assets/Characters/char_anne.png" id="2_xp7su"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="3_h33fn"]
 [ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="4_6ij1s"]
+[ext_resource type="AudioStream" uid="uid://bodrohinlebpq" path="res://Sounds/Phrases/Exports_A_01.wav" id="4_yeud0"]
 [ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="5_slmt4"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="6_j0u8w"]
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="7_bwx6f"]
@@ -24,6 +25,11 @@ sprite = ExtResource("2_xp7su")
 target = NodePath("Positions/Anne/0_Presentation")
 metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
+[sub_resource type="Resource" id="Resource_h33fn"]
+script = ExtResource("3_h33fn")
+sound = ExtResource("4_yeud0")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
 [sub_resource type="Resource" id="Resource_jcese"]
 script = ExtResource("5_slmt4")
 name = "Scene_3"
@@ -35,6 +41,7 @@ script = ExtResource("7_bwx6f")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
 music = 1
+dialogues = Array[ExtResource("3_h33fn")]([SubResource("Resource_h33fn")])
 characters_spawn = Array[ExtResource("1_xp7su")]([SubResource("Resource_ia2or")])
 next_events = Array[ExtResource("5_slmt4")]([SubResource("Resource_jcese")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

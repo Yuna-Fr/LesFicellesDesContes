@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=16 format=3 uid="uid://b2nlymtsh8n7t"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=25 format=3 uid="uid://b2nlymtsh8n7t"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_dp3np"]
 [ext_resource type="Texture2D" uid="uid://dmlpho6vbhuqc" path="res://Assets/Characters/char_brother1.png" id="2_017d8"]
@@ -6,9 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://b3iih8vvc4ab6" path="res://Assets/Characters/char_brother2.png" id="3_ystpo"]
 [ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="4_ystpo"]
 [ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="5_8w5rw"]
+[ext_resource type="AudioStream" uid="uid://d3lqgln3cbabi" path="res://Sounds/Phrases/Exports_Amies_01.wav" id="5_ongbd"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="6_380ip"]
+[ext_resource type="AudioStream" uid="uid://bhqtfccjct2es" path="res://Sounds/Phrases/Exports_Amies_02.wav" id="6_bw0i3"]
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="7_ongbd"]
+[ext_resource type="AudioStream" uid="uid://bg81jv0plyx71" path="res://Sounds/Phrases/Exports_Amies_03.wav" id="7_rhghc"]
+[ext_resource type="AudioStream" uid="uid://cbadhf42lyc17" path="res://Sounds/Phrases/Exports_Amies_04.wav" id="8_2lpbn"]
 [ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="8_bw0i3"]
+[ext_resource type="AudioStream" uid="uid://cv5viav8dxrp8" path="res://Sounds/Phrases/Exports_Amies_05.wav" id="9_je4n3"]
 
 [sub_resource type="Gradient" id="Gradient_4vgof"]
 offsets = PackedFloat32Array(0, 0.9933222)
@@ -34,7 +39,28 @@ metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_017d8"]
 script = ExtResource("3_1h6mu")
+sound = ExtResource("5_ongbd")
 delay_after_sound = 1.0
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_88n25"]
+script = ExtResource("3_1h6mu")
+sound = ExtResource("6_bw0i3")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_js6c0"]
+script = ExtResource("3_1h6mu")
+sound = ExtResource("7_rhghc")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_vhlk7"]
+script = ExtResource("3_1h6mu")
+sound = ExtResource("8_2lpbn")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_7ywgy"]
+script = ExtResource("3_1h6mu")
+sound = ExtResource("9_je4n3")
 metadata/_custom_type_script = "uid://dg002uegqj7pq"
 
 [sub_resource type="Resource" id="Resource_jcese"]
@@ -48,7 +74,7 @@ script = ExtResource("7_ongbd")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
 music = 1
-dialogues = Array[ExtResource("3_1h6mu")]([SubResource("Resource_017d8")])
+dialogues = Array[ExtResource("3_1h6mu")]([SubResource("Resource_017d8"), SubResource("Resource_88n25"), SubResource("Resource_js6c0"), SubResource("Resource_vhlk7"), SubResource("Resource_7ywgy")])
 characters_spawn = Array[ExtResource("1_dp3np")]([SubResource("Resource_ia2or"), SubResource("Resource_8w5rw")])
 next_events = Array[ExtResource("5_8w5rw")]([SubResource("Resource_jcese")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

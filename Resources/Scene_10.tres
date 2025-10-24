@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=11 format=3 uid="uid://dm8joffl2fkje"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=15 format=3 uid="uid://dm8joffl2fkje"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_2n5mg"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_sl5l3"]
 [ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="3_wewhx"]
+[ext_resource type="AudioStream" uid="uid://bcip7y40kowl1" path="res://Sounds/Phrases/Exports_BB_seduction.wav" id="3_xtnxn"]
+[ext_resource type="AudioStream" uid="uid://drw3cb6po44bm" path="res://Sounds/Phrases/Exports_Ma_02.wav" id="4_msjww"]
 [ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="4_xtnxn"]
 [ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="5_2n5mg"]
 [ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="6_r5jyg"]
@@ -16,6 +18,16 @@ colors = PackedColorArray(1, 0, 0, 1, 0.26057518, 4.579641e-05, 0.26057312, 1)
 gradient = SubResource("Gradient_4vgof")
 fill_from = Vector2(1, 1)
 
+[sub_resource type="Resource" id="Resource_r5jyg"]
+script = ExtResource("2_sl5l3")
+sound = ExtResource("3_xtnxn")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_mrsb6"]
+script = ExtResource("2_sl5l3")
+sound = ExtResource("4_msjww")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
 [sub_resource type="Resource" id="Resource_4q8h0"]
 script = ExtResource("4_xtnxn")
 name = "Scene_11"
@@ -26,5 +38,6 @@ metadata/_custom_type_script = "uid://di3mx4lylnaqg"
 script = ExtResource("6_r5jyg")
 description = "Titre"
 background = SubResource("GradientTexture2D_dinbm")
+dialogues = Array[ExtResource("2_sl5l3")]([SubResource("Resource_r5jyg"), SubResource("Resource_mrsb6")])
 next_events = Array[ExtResource("4_xtnxn")]([SubResource("Resource_4q8h0")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"

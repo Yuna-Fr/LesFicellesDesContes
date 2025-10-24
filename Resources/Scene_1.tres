@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="BaseEvent" load_steps=14 format=3 uid="uid://eoqntyv3u41a"]
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=15 format=3 uid="uid://eoqntyv3u41a"]
 
 [ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_mpbvj"]
 [ext_resource type="Texture2D" uid="uid://das65c0wtxhil" path="res://Assets/Characters/char_kat.png" id="2_mpbvj"]
 [ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="3_02d5b"]
+[ext_resource type="AudioStream" uid="uid://22l2kmtab33h" path="res://Sounds/Phrases/Exports_Kat_01.wav" id="4_si42y"]
 [ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="4_yk3n3"]
 [ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="5_0v2ny"]
 [ext_resource type="Texture2D" uid="uid://cd5alsff4vn26" path="res://Assets/Icon/Icon.png" id="6_okwsb"]
@@ -26,6 +27,7 @@ metadata/_custom_type_script = "uid://bcrqwkmr3ct1c"
 
 [sub_resource type="Resource" id="Resource_mpbvj"]
 script = ExtResource("3_02d5b")
+sound = ExtResource("4_si42y")
 delay_after_sound = 1.0
 metadata/_custom_type_script = "uid://dg002uegqj7pq"
 

@@ -152,6 +152,7 @@ metadata/_custom_type_script = "uid://dmedebbw0lnsu"
 script = ExtResource("6_cs51a")
 description = "Dans la foret"
 background = SubResource("GradientTexture2D_dinbm")
+music = 2
 spawns = Array[ExtResource("7_l111g")]([SubResource("Resource_lh7ms"), SubResource("Resource_x6brc"), SubResource("Resource_opg74"), SubResource("Resource_d1e7s"), SubResource("Resource_wu1f6"), SubResource("Resource_cs51a"), SubResource("Resource_l111g"), SubResource("Resource_ho5te"), SubResource("Resource_qwsav"), SubResource("Resource_tadw2"), SubResource("Resource_5laca"), SubResource("Resource_ur0ca"), SubResource("Resource_s35tv"), SubResource("Resource_fyi28"), SubResource("Resource_milp8"), SubResource("Resource_6f2ls"), SubResource("Resource_dkufb"), SubResource("Resource_vqyii"), SubResource("Resource_tc8fw"), SubResource("Resource_kjkni"), SubResource("Resource_n0vus")])
 next_events = Array[ExtResource("4_d1e7s")]([SubResource("Resource_8a67e")])
 metadata/_custom_type_script = "uid://u2r1dgwpa4d5"
