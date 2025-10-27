@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="BaseEvent" load_steps=18 format=3 uid="uid://dr1w5qkpow6wm"]
+
+[ext_resource type="Script" uid="uid://bcrqwkmr3ct1c" path="res://Scripts/CharacterAppear.gd" id="1_jb1dl"]
+[ext_resource type="Script" uid="uid://dg002uegqj7pq" path="res://Scripts/base_dialogue.gd" id="2_ge4wt"]
+[ext_resource type="AudioStream" uid="uid://c2rwhub2vnbk7" path="res://Sounds/Phrases/Exports_BB_02.wav" id="3_8rmqk"]
+[ext_resource type="AudioStream" uid="uid://cjcdcdmrfwkwq" path="res://Sounds/Phrases/Exports_A_02.wav" id="4_pnq2w"]
+[ext_resource type="AudioStream" uid="uid://dxsq74lx8u057" path="res://Sounds/Phrases/Exports_Kat_froide.wav" id="5_6nae5"]
+[ext_resource type="Script" uid="uid://bsl3tjlwwx8sl" path="res://Scripts/Movement.gd" id="6_pjyu1"]
+[ext_resource type="Script" uid="uid://di3mx4lylnaqg" path="res://Scripts/Scene.gd" id="7_rfmvc"]
+[ext_resource type="Texture2D" uid="uid://cnjeviaoy2kyq" path="res://Assets/Icon/bulle.svg" id="8_e6ywx"]
+[ext_resource type="Script" uid="uid://u2r1dgwpa4d5" path="res://Scripts/base_event.gd" id="9_1anb7"]
+[ext_resource type="Script" uid="uid://dmedebbw0lnsu" path="res://Scripts/SpawnObject.gd" id="10_8erlm"]
+
+[sub_resource type="Gradient" id="Gradient_4vgof"]
+offsets = PackedFloat32Array(0, 0.9932886)
+colors = PackedColorArray(0.8117647, 0.9411765, 0.98039216, 1, 0, 0.60784316, 0.85490197, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinbm"]
+gradient = SubResource("Gradient_4vgof")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_ewlt2"]
+script = ExtResource("2_ge4wt")
+sound = ExtResource("3_8rmqk")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_t1kjd"]
+script = ExtResource("2_ge4wt")
+sound = ExtResource("4_pnq2w")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_a2ity"]
+script = ExtResource("2_ge4wt")
+sound = ExtResource("5_6nae5")
+metadata/_custom_type_script = "uid://dg002uegqj7pq"
+
+[sub_resource type="Resource" id="Resource_4q8h0"]
+script = ExtResource("7_rfmvc")
+name = "Scene_15"
+icon = ExtResource("8_e6ywx")
+metadata/_custom_type_script = "uid://di3mx4lylnaqg"
+
+[sub_resource type="Resource" id="Resource_y78um"]
+script = ExtResource("10_8erlm")
+direction = "haut"
+target = NodePath("Decor/Ring")
+metadata/_custom_type_script = "uid://dmedebbw0lnsu"
+
+[resource]
+script = ExtResource("9_1anb7")
+description = "Titre"
+background = SubResource("GradientTexture2D_dinbm")
+dialogues = Array[ExtResource("2_ge4wt")]([SubResource("Resource_ewlt2"), SubResource("Resource_t1kjd"), SubResource("Resource_a2ity")])
+spawns = Array[ExtResource("10_8erlm")]([SubResource("Resource_y78um")])
+next_events = Array[ExtResource("7_rfmvc")]([SubResource("Resource_4q8h0")])
+metadata/_custom_type_script = "uid://u2r1dgwpa4d5"
